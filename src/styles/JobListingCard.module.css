@@ -1,0 +1,68 @@
+.job_card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  width: 100%;
+  max-width: 500px;
+  text-align: left;
+}
+
+.job_card h3 {
+  margin-bottom: 5px;
+  color: #333;
+}
+.job_info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.job_logo {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 2px dashed #0073e6;
+  background-color: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.job_logo img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.job_info_col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: auto;
+}
+.company_name {
+  color: #0073e6;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.flex_gap {
+  display: flex;
+  align-items: center;
+  height: auto;
+  gap: 1px;
+}
+.flex_gap svg {
+  fill: red;
+  width: 16px;
+  height: 16px;
+}
+.flex_gap p {
+  color: #333;
+  font-weight: 600;
+}
+
+.price_range {
+  color: #00e60c;
+}
+.job_card a {
+  color: #0073e6;
+  text-decoration: none;
+}

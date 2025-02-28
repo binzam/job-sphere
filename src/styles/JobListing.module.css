@@ -1,0 +1,9 @@
+.job_list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  padding: 0.5rem 0;
+  margin: 0 auto 1rem;
+  max-width: 1400px;
+
+}

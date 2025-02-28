@@ -1,0 +1,43 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  background: #ffffffd2;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+.header_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 3rem;
+  height: 70px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.header h1 {
+  font-size: 2rem;
+  margin-right: 1rem;
+  letter-spacing: 2px;
+  color: #333;
+}
+.nav {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+.nav_list {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+}
+.nav_list a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.nav_list a:hover {
+  color: #f1356d;
+}

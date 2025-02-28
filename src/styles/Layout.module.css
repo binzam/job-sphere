@@ -1,0 +1,16 @@
+.App {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  background-color: rgb(255, 255, 255);
+  font-size: 1rem;
+  position: relative;
+}
+
+.main_content {
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  min-height: calc(100vh - 70px);
+  position: relative;
+  margin: 0 auto;
+}

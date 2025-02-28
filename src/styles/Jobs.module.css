@@ -1,0 +1,29 @@
+.job_listing_page {
+  background-color: #fff;
+  padding: 0.5rem 3rem;
+}
+.filters {
+  margin-bottom: 20px;
+  margin: auto;
+}
+
+.filters input,
+.filters select {
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.filters button {
+  padding: 6px 20px;
+  background-color: #0073e6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.filters button:hover {
+  background-color: #005bb5;
+}
