@@ -4,6 +4,7 @@ import { FaSearch } from 'react-icons/fa';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import JobListing from '../components/JobListing';
+import Container from '../components/Container';
 const Home = () => {
   const [featuredJobs, setFeaturedJobs] = useState([]);
 
@@ -44,16 +45,17 @@ const Home = () => {
           </div>
         </div>
       </section>
-      
 
-      <section className={styles.featured_jobs}>
-        <h2>Featured Jobs</h2>
-        <JobListing listing={featuredJobs} />
+      <Container className='no_pad'>
+        <section className={styles.featured_jobs}>
+          <h2>Featured Jobs</h2>
+          <JobListing listing={featuredJobs} />
 
-        <Link to="/jobs" className={styles.cta_button}>
-          See All Jobs
-        </Link>
-      </section>
+          <Link to="/jobs" className={styles.cta_button}>
+            See All Jobs
+          </Link>
+        </section>
+      </Container>
 
       <section className={styles.employer_cta}>
         <h2>Are You Hiring?</h2>

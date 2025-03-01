@@ -78,7 +78,8 @@
 }
 
 .featured_jobs {
-  padding: 4rem 3rem;
+  padding: 4rem 2rem;
+  margin: auto;
 }
 .featured_jobs h2 {
   font-size: 1.8rem;
@@ -88,12 +89,6 @@
 }
 
 
-.see_all_jobs {
-  padding: 0.5rem 1rem;
-  background-color: #0073e6;
-  color: #fff;
-  border-radius: 5px;
-}
 .employer_cta,
 .job_seeker_cta {
   padding: 50px 20px;

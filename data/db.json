@@ -14,8 +14,19 @@
       "location": "USA Only",
       "languages": ["HTML", "CSS", "JavaScript"],
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error fuga, a debitis tempore sunt dignissimos, aspernatur libero ducimus repellendus aliquam facere doloremque quidem sit soluta nemo, minima nobis architecto quasi ut doloribus laboriosam animi. Eum suscipit neque sint tempora tenetur.",
-      "priceRange": "$110,000 - $140,000",
-      "tools": []
+      "requirements": [
+        "Lorem, ipsum dolor sit amet ",
+        "consectetur adipisicing elit. Error fuga",
+        "a debitis tempore sunt dignissimos, aspernatur libero",
+        "ducimus repellendus aliquam facere doloremque quidem",
+        "sit soluta nemo, minima nobis architecto",
+        "quasi ut doloribus laboriosam animi. Eum suscipit",
+        "neque sint tempora tenetur."
+      ],
+      "salary": "$110,000 - $140,000",
+      "tools": [],
+      "slots": 2,
+      "category": "Information Technology"
     },
     {
       "id": 2,
@@ -31,7 +42,18 @@
       "location": "Remote",
       "languages": ["Python"],
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error fuga, a debitis tempore sunt dignissimos, aspernatur libero ducimus repellendus aliquam facere doloremque quidem sit soluta nemo, minima nobis architecto quasi ut doloribus laboriosam animi. Eum suscipit neque sint tempora tenetur.",
-      "priceRange": "$110,000 - $140,000",
+      "requirements": [
+        "Lorem, ipsum dolor sit amet ",
+        "consectetur adipisicing elit. Error fuga",
+        "a debitis tempore sunt dignissimos, aspernatur libero",
+        "ducimus repellendus aliquam facere doloremque quidem",
+        "sit soluta nemo, minima nobis architecto",
+        "quasi ut doloribus laboriosam animi. Eum suscipit",
+        "neque sint tempora tenetur."
+      ],
+      "salary": "$110,000 - $140,000",
+      "slots": 2,
+      "category": "Information Technology",
       "tools": ["React"]
     },
     {
@@ -48,7 +70,18 @@
       "location": "USA Only",
       "languages": ["JavaScript"],
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error fuga, a debitis tempore sunt dignissimos, aspernatur libero ducimus repellendus aliquam facere doloremque quidem sit soluta nemo, minima nobis architecto quasi ut doloribus laboriosam animi. Eum suscipit neque sint tempora tenetur.",
-      "priceRange": "$110,000 - $140,000",
+      "requirements": [
+        "Lorem, ipsum dolor sit amet ",
+        "consectetur adipisicing elit. Error fuga",
+        "a debitis tempore sunt dignissimos, aspernatur libero",
+        "ducimus repellendus aliquam facere doloremque quidem",
+        "sit soluta nemo, minima nobis architecto",
+        "quasi ut doloribus laboriosam animi. Eum suscipit",
+        "neque sint tempora tenetur."
+      ],
+      "salary": "$110,000 - $140,000",
+      "slots": 2,
+      "category": "Information Technology",
       "tools": ["React", "Sass"]
     },
     {
@@ -65,7 +98,18 @@
       "location": "USA Only",
       "languages": ["CSS", "JavaScript"],
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error fuga, a debitis tempore sunt dignissimos, aspernatur libero ducimus repellendus aliquam facere doloremque quidem sit soluta nemo, minima nobis architecto quasi ut doloribus laboriosam animi. Eum suscipit neque sint tempora tenetur.",
-      "priceRange": "$110,000 - $140,000",
+      "requirements": [
+        "Lorem, ipsum dolor sit amet ",
+        "consectetur adipisicing elit. Error fuga",
+        "a debitis tempore sunt dignissimos, aspernatur libero",
+        "ducimus repellendus aliquam facere doloremque quidem",
+        "sit soluta nemo, minima nobis architecto",
+        "quasi ut doloribus laboriosam animi. Eum suscipit",
+        "neque sint tempora tenetur."
+      ],
+      "salary": "$110,000 - $140,000",
+      "slots": 2,
+      "category": "Information Technology",
       "tools": []
     },
     {
@@ -82,7 +126,18 @@
       "location": "Worldwide",
       "languages": ["JavaScript"],
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error fuga, a debitis tempore sunt dignissimos, aspernatur libero ducimus repellendus aliquam facere doloremque quidem sit soluta nemo, minima nobis architecto quasi ut doloribus laboriosam animi. Eum suscipit neque sint tempora tenetur.",
-      "priceRange": "$110,000 - $140,000",
+      "requirements": [
+        "Lorem, ipsum dolor sit amet ",
+        "consectetur adipisicing elit. Error fuga",
+        "a debitis tempore sunt dignissimos, aspernatur libero",
+        "ducimus repellendus aliquam facere doloremque quidem",
+        "sit soluta nemo, minima nobis architecto",
+        "quasi ut doloribus laboriosam animi. Eum suscipit",
+        "neque sint tempora tenetur."
+      ],
+      "salary": "$110,000 - $140,000",
+      "slots": 2,
+      "category": "Information Technology",
       "tools": ["Ruby", "Sass"]
     },
     {
@@ -99,7 +154,18 @@
       "location": "UK Only",
       "languages": ["Ruby"],
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error fuga, a debitis tempore sunt dignissimos, aspernatur libero ducimus repellendus aliquam facere doloremque quidem sit soluta nemo, minima nobis architecto quasi ut doloribus laboriosam animi. Eum suscipit neque sint tempora tenetur.",
-      "priceRange": "$110,000 - $140,000",
+      "requirements": [
+        "Lorem, ipsum dolor sit amet ",
+        "consectetur adipisicing elit. Error fuga",
+        "a debitis tempore sunt dignissimos, aspernatur libero",
+        "ducimus repellendus aliquam facere doloremque quidem",
+        "sit soluta nemo, minima nobis architecto",
+        "quasi ut doloribus laboriosam animi. Eum suscipit",
+        "neque sint tempora tenetur."
+      ],
+      "salary": "$110,000 - $140,000",
+      "slots": 2,
+      "category": "Information Technology",
       "tools": ["RoR"]
     },
     {
@@ -116,7 +182,18 @@
       "location": "Worldwide",
       "languages": ["HTML", "JavaScript"],
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error fuga, a debitis tempore sunt dignissimos, aspernatur libero ducimus repellendus aliquam facere doloremque quidem sit soluta nemo, minima nobis architecto quasi ut doloribus laboriosam animi. Eum suscipit neque sint tempora tenetur.",
-      "priceRange": "$110,000 - $140,000",
+      "requirements": [
+        "Lorem, ipsum dolor sit amet ",
+        "consectetur adipisicing elit. Error fuga",
+        "a debitis tempore sunt dignissimos, aspernatur libero",
+        "ducimus repellendus aliquam facere doloremque quidem",
+        "sit soluta nemo, minima nobis architecto",
+        "quasi ut doloribus laboriosam animi. Eum suscipit",
+        "neque sint tempora tenetur."
+      ],
+      "salary": "$110,000 - $140,000",
+      "slots": 2,
+      "category": "Information Technology",
       "tools": ["Sass"]
     },
     {
@@ -133,7 +210,18 @@
       "location": "USA Only",
       "languages": ["JavaScript"],
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error fuga, a debitis tempore sunt dignissimos, aspernatur libero ducimus repellendus aliquam facere doloremque quidem sit soluta nemo, minima nobis architecto quasi ut doloribus laboriosam animi. Eum suscipit neque sint tempora tenetur.",
-      "priceRange": "$110,000 - $140,000",
+      "requirements": [
+        "Lorem, ipsum dolor sit amet ",
+        "consectetur adipisicing elit. Error fuga",
+        "a debitis tempore sunt dignissimos, aspernatur libero",
+        "ducimus repellendus aliquam facere doloremque quidem",
+        "sit soluta nemo, minima nobis architecto",
+        "quasi ut doloribus laboriosam animi. Eum suscipit",
+        "neque sint tempora tenetur."
+      ],
+      "salary": "$110,000 - $140,000",
+      "slots": 2,
+      "category": "Information Technology",
       "tools": ["Vue", "Sass"]
     },
     {
@@ -150,7 +238,18 @@
       "location": "Worldwide",
       "languages": ["JavaScript", "Python"],
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error fuga, a debitis tempore sunt dignissimos, aspernatur libero ducimus repellendus aliquam facere doloremque quidem sit soluta nemo, minima nobis architecto quasi ut doloribus laboriosam animi. Eum suscipit neque sint tempora tenetur.",
-      "priceRange": "$110,000 - $140,000",
+      "requirements": [
+        "Lorem, ipsum dolor sit amet ",
+        "consectetur adipisicing elit. Error fuga",
+        "a debitis tempore sunt dignissimos, aspernatur libero",
+        "ducimus repellendus aliquam facere doloremque quidem",
+        "sit soluta nemo, minima nobis architecto",
+        "quasi ut doloribus laboriosam animi. Eum suscipit",
+        "neque sint tempora tenetur."
+      ],
+      "salary": "$110,000 - $140,000",
+      "slots": 2,
+      "category": "Information Technology",
       "tools": ["Django"]
     },
     {
@@ -167,7 +266,18 @@
       "location": "Worldwide",
       "languages": ["JavaScript"],
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error fuga, a debitis tempore sunt dignissimos, aspernatur libero ducimus repellendus aliquam facere doloremque quidem sit soluta nemo, minima nobis architecto quasi ut doloribus laboriosam animi. Eum suscipit neque sint tempora tenetur.",
-      "priceRange": "$110,000 - $140,000",
+      "requirements": [
+        "Lorem, ipsum dolor sit amet ",
+        "consectetur adipisicing elit. Error fuga",
+        "a debitis tempore sunt dignissimos, aspernatur libero",
+        "ducimus repellendus aliquam facere doloremque quidem",
+        "sit soluta nemo, minima nobis architecto",
+        "quasi ut doloribus laboriosam animi. Eum suscipit",
+        "neque sint tempora tenetur."
+      ],
+      "salary": "$110,000 - $140,000",
+      "slots": 2,
+      "category": "Information Technology",
       "tools": ["React", "Sass"]
     },
     {
@@ -184,7 +294,18 @@
       "location": "Los Angeles, CA",
       "languages": ["JavaScript"],
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error fuga, a debitis tempore sunt dignissimos, aspernatur libero ducimus repellendus aliquam facere doloremque quidem sit soluta nemo, minima nobis architecto quasi ut doloribus laboriosam animi. Eum suscipit neque sint tempora tenetur.",
-      "priceRange": "$110,000 - $140,000",
+      "requirements": [
+        "Lorem, ipsum dolor sit amet ",
+        "consectetur adipisicing elit. Error fuga",
+        "a debitis tempore sunt dignissimos, aspernatur libero",
+        "ducimus repellendus aliquam facere doloremque quidem",
+        "sit soluta nemo, minima nobis architecto",
+        "quasi ut doloribus laboriosam animi. Eum suscipit",
+        "neque sint tempora tenetur."
+      ],
+      "salary": "$110,000 - $140,000",
+      "slots": 2,
+      "category": "Information Technology",
       "tools": ["Adobe Illustrator", "Adobe photoshop"]
     },
     {
@@ -201,7 +322,18 @@
       "location": "New York, NY ",
       "languages": ["JavaScript"],
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error fuga, a debitis tempore sunt dignissimos, aspernatur libero ducimus repellendus aliquam facere doloremque quidem sit soluta nemo, minima nobis architecto quasi ut doloribus laboriosam animi. Eum suscipit neque sint tempora tenetur.",
-      "priceRange": "$110,000 - $140,000",
+      "requirements": [
+        "Lorem, ipsum dolor sit amet ",
+        "consectetur adipisicing elit. Error fuga",
+        "a debitis tempore sunt dignissimos, aspernatur libero",
+        "ducimus repellendus aliquam facere doloremque quidem",
+        "sit soluta nemo, minima nobis architecto",
+        "quasi ut doloribus laboriosam animi. Eum suscipit",
+        "neque sint tempora tenetur."
+      ],
+      "salary": "$110,000 - $140,000",
+      "slots": 2,
+      "category": "Information Technology",
       "tools": ["Adobe Illustrator", "Adobe photoshop"]
     }
   ]

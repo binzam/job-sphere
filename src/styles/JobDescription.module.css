@@ -1,0 +1,262 @@
+.job_description_page {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 2rem 5rem;
+}
+.job_description {
+  flex: 1;
+  padding: 1rem 2rem 4rem;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  border-right: 2px solid #808080;
+}
+.job_description h4 {
+  color: #333;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.logo {
+  width: 82px;
+  height: 82px;
+  border-radius: 50%;
+  border: 2px dashed #0073e6;
+}
+.company_name {
+  color: #0073e6;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.header_text h1 {
+  font-size: 1.6rem;
+  color: #333;
+  line-height: 1;
+}
+.flex_gap {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+}
+.flex_gap p {
+  color: #333;
+  font-weight: 600;
+}
+
+.location_icon {
+  fill: red;
+  width: 16px;
+  height: 16px;
+}
+
+.meta_desc_wrap {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 0.5rem;
+  gap: 2rem;
+}
+.desc_req_wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.meta {
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-right: 3rem;
+  border-right: 3px solid #ddd;
+}
+.meta span {
+  color: #808080;
+  display: inline-block;
+  font-size: 0.9rem;
+}
+.meta svg {
+  margin-right: 0.5rem;
+}
+.meta_icon {
+  fill: #333;
+  min-width: 16px;
+  min-height: 16px;
+}
+.salary {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #2c3e50;
+}
+.bag_icon {
+  width: 20px;
+  height: 20px;
+  color: #0056b3;
+}
+
+.apply_button {
+  display: block;
+  color: #ffffff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  border-radius: 100vw;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  background-color: #0056b3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: 1px dashed #ffffff;
+  box-shadow: 0px 0px 10px #0056b3;
+}
+
+.apply_button:hover {
+  background-color: #007bff;
+  box-shadow: 0px 0px 2px #0056b3;
+  gap: 0.1rem;
+  border: 1px solid #000000;
+}
+
+.description {
+  color: #2c3e50;
+  font-size: 0.9rem;
+  font-weight: 500;
+  max-width: 550px;
+  text-align: justify;
+}
+.requirements {
+  display: flex;
+  flex-direction: column;
+}
+.requirement {
+  color: #2c3e50;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+.requirement::before {
+  content: '✔';
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  font-size: 0.9rem;
+  color: #808080;
+}
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tag {
+  font-size: 0.9rem;
+  padding: 0.2rem 1rem;
+  background-color: #808080;
+  color: #ffffff;
+  font-weight: 600;
+  line-height: 1;
+  border-radius: 3px;
+  box-shadow: 0 1px 5px #0000007e;
+}
+.similar_listings {
+  width: 300px;
+}
+.similar_listings small {
+  color: #2c3e50;
+  font-weight: 600;
+  margin-left: 1rem;
+  margin-bottom: 3rem;
+}
+
+.cta_button {
+  padding: 0.3rem 1rem;
+  background: #2c3e50;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  display: block;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+@media only screen and (max-width: 1200px) {
+  .job_description_page {
+    padding: 1rem 1rem 5rem;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .job_description_page {
+    flex-direction: column;
+    padding: 1rem 1rem 5rem;
+  }
+  .job_description {
+    width: 100%;
+  }
+  .similar_listings {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 770px) {
+  .job_description_page {
+    padding: 1rem 0 4rem;
+  }
+  .job_description {
+    border: none;
+    box-shadow: none;
+    border-bottom: 1px solid #ddd;
+  }
+  .meta_desc_wrap {
+    flex-direction: column-reverse;
+  }
+  .header {
+    justify-content: center;
+  }
+  .meta {
+    padding: 0;
+    border: none;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .description {
+    line-height: 1.3;
+  }
+  .requirement {
+    margin-bottom: 0.3rem;
+  }
+
+}
+@media only screen and (max-width: 500px) {
+  .job_description {
+    padding: 1rem 0.5rem 4rem;
+  }
+  .logo {
+    width: 52px;
+    height: 52px;
+  }
+  .header {
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+  .header_text h1 {
+    font-size: 1.3rem;
+  }
+}

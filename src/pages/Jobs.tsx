@@ -2,9 +2,11 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import JobListing from '../components/JobListing';
 import styles from '../styles/Jobs.module.css';
+import { Job } from '../interfaces';
+import Container from '../components/Container';
 const Jobs = () => {
-  const [jobs, setJobs] = useState([]);
-  const [filteredJobs, setFilteredJobs] = useState([]);
+  const [jobs, setJobs] = useState<Job[]>([]);
+  const [filteredJobs, setFilteredJobs] = useState<Job[]>([]);
 
   const [category, setCategory] = useState('');
   const [location, setLocation] = useState('');
@@ -53,42 +55,44 @@ const Jobs = () => {
     getJobs();
   }, []);
   return (
-    <div className={styles.job_listing_page}>
-      <div className={styles.filters}>
-        <input
-          type="text"
-          placeholder="Filter by category (e.g., Frontend, JavaScript)"
-          value={category}
-          onChange={(e) => setCategory(e.target.value)}
-        />
-        <input
-          type="text"
-          placeholder="Filter by location (e.g., Remote, USA)"
-          value={location}
-          onChange={(e) => setLocation(e.target.value)}
-        />
-        <select
-          value={experienceLevel}
-          onChange={(e) => setExperienceLevel(e.target.value)}
-        >
-          <option value="">All Experience Levels</option>
-          <option value="Junior">Entry-Level</option>
-          <option value="Midweight">Mid-Level</option>
-          <option value="Senior">Senior</option>
-        </select>
-        <button
-          onClick={() => {
-            setCategory('');
-            setLocation('');
-            setExperienceLevel('');
-          }}
-        >
-          Clear Filters
-        </button>
-      </div>
+    <Container>
+      <div className={styles.job_listing_page}>
+        <div className={styles.filters}>
+          <input
+            type="text"
+            placeholder="Filter by category (e.g., Frontend, JavaScript)"
+            value={category}
+            onChange={(e) => setCategory(e.target.value)}
+          />
+          <input
+            type="text"
+            placeholder="Filter by location (e.g., Remote, USA)"
+            value={location}
+            onChange={(e) => setLocation(e.target.value)}
+          />
+          <select
+            value={experienceLevel}
+            onChange={(e) => setExperienceLevel(e.target.value)}
+          >
+            <option value="">All Experience Levels</option>
+            <option value="Junior">Entry-Level</option>
+            <option value="Midweight">Mid-Level</option>
+            <option value="Senior">Senior</option>
+          </select>
+          <button
+            onClick={() => {
+              setCategory('');
+              setLocation('');
+              setExperienceLevel('');
+            }}
+          >
+            Clear Filters
+          </button>
+        </div>
 
-      <JobListing listing={filteredJobs} />
-    </div>
+        <JobListing listing={filteredJobs} />
+      </div>
+    </Container>
   );
 };
 
