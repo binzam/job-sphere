@@ -4,7 +4,7 @@
   z-index: 100;
   width: 100%;
   background: #ffffffd2;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
 }
 .header_wrapper {
   display: flex;
@@ -30,11 +30,22 @@
   fill: #000000;
 }
 
-.header h1 {
+.logo {
+  height: 100%;
+}
+.logo_link {
   font-size: 2rem;
-  margin-right: 1rem;
-  letter-spacing: 2px;
-  color: #333;
+  letter-spacing: 1px;
+  color: #2c3e50;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  font-weight: 900;
+}
+.logo_link svg{
+  width: 28px;
+  height: 28px;
 }
 .nav {
   display: flex;
@@ -56,54 +67,6 @@
 .nav_list a:hover {
   color: #f1356d;
 }
-.mobile_menu {
-  position: fixed;
-  top: 0;
-  left: -100%;
-  width: 250px;
-  height: 100%;
-  background: #fff;
-  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
-  transition: left 0.3s ease-in-out;
-  z-index: 1000;
-  display: flex;
-  flex-direction: column;
-  padding: 1.5rem;
-}
-
-.mobile_menu.open {
-  left: -100%;
-}
-
-.mobile_nav_list li {
-  margin: 1rem 0;
-}
-
-.mobile_nav_list a {
-  text-decoration: none;
-  color: #333;
-  font-size: 18px;
-}
-
-.close_btn {
-  background: none;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
-  align-self: flex-end;
-  margin-bottom: 20px;
-}
-
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 0;
-  background: rgba(0, 0, 0, 0);
-  z-index: -999;
-  visibility: hidden;
-}
 
 @media only screen and (max-width: 1000px) {
   .nav,
@@ -120,20 +83,5 @@
   }
   .menu_btn {
     display: flex;
-  }
-
-  .mobile_menu.open {
-    left: 0;
-  }
-  .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    z-index: 999;
-    visibility: visible;
-    transition: opacity 0.3s ease-in-out;
   }
 }

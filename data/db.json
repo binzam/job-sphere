@@ -26,7 +26,7 @@
       "salary": "$110,000 - $140,000",
       "tools": [],
       "slots": 2,
-      "category": "Information Technology"
+      "category": "Finance"
     },
     {
       "id": 2,
@@ -53,7 +53,8 @@
       ],
       "salary": "$110,000 - $140,000",
       "slots": 2,
-      "category": "Information Technology",
+      "category": "Finance",
+      "categoryLink": "ict",
       "tools": ["React"]
     },
     {
@@ -81,7 +82,8 @@
       ],
       "salary": "$110,000 - $140,000",
       "slots": 2,
-      "category": "Information Technology",
+      "category": "Finance",
+      "categoryLink": "ict",
       "tools": ["React", "Sass"]
     },
     {
@@ -109,7 +111,8 @@
       ],
       "salary": "$110,000 - $140,000",
       "slots": 2,
-      "category": "Information Technology",
+      "category": "Social Science",
+      "categoryLink": "ict",
       "tools": []
     },
     {
@@ -137,7 +140,8 @@
       ],
       "salary": "$110,000 - $140,000",
       "slots": 2,
-      "category": "Information Technology",
+      "category": "ICT",
+      "categoryLink": "ict",
       "tools": ["Ruby", "Sass"]
     },
     {
@@ -165,7 +169,8 @@
       ],
       "salary": "$110,000 - $140,000",
       "slots": 2,
-      "category": "Information Technology",
+      "category": "ICT",
+      "categoryLink": "ict",
       "tools": ["RoR"]
     },
     {
@@ -193,7 +198,8 @@
       ],
       "salary": "$110,000 - $140,000",
       "slots": 2,
-      "category": "Information Technology",
+      "category": "ICT",
+      "categoryLink": "ict",
       "tools": ["Sass"]
     },
     {
@@ -221,7 +227,8 @@
       ],
       "salary": "$110,000 - $140,000",
       "slots": 2,
-      "category": "Information Technology",
+      "category": "ICT",
+      "categoryLink": "ict",
       "tools": ["Vue", "Sass"]
     },
     {
@@ -249,7 +256,8 @@
       ],
       "salary": "$110,000 - $140,000",
       "slots": 2,
-      "category": "Information Technology",
+      "category": "Finance",
+      "categoryLink": "ict",
       "tools": ["Django"]
     },
     {
@@ -277,7 +285,8 @@
       ],
       "salary": "$110,000 - $140,000",
       "slots": 2,
-      "category": "Information Technology",
+      "category": "Business",
+      "categoryLink": "ict",
       "tools": ["React", "Sass"]
     },
     {
@@ -305,7 +314,8 @@
       ],
       "salary": "$110,000 - $140,000",
       "slots": 2,
-      "category": "Information Technology",
+      "category": "Education",
+      "categoryLink": "ict",
       "tools": ["Adobe Illustrator", "Adobe photoshop"]
     },
     {
@@ -333,8 +343,53 @@
       ],
       "salary": "$110,000 - $140,000",
       "slots": 2,
-      "category": "Information Technology",
+      "category": "ICT",
+      "categoryLink": "ict",
       "tools": ["Adobe Illustrator", "Adobe photoshop"]
+    }
+  ],
+  "sectors": [
+    {
+      "title": "ICT",
+      "icon": "/assets/images/ict.svg",
+      "link": "ict",
+      "count": 2
+    },
+    {
+      "title": "Business",
+      "icon": "/assets/images/business.svg",
+      "link": "business",
+      "count": 12
+    },
+    {
+      "title": "Education",
+      "icon": "/assets/images/education.svg",
+      "link": "education",
+      "count": 32
+    },
+    {
+      "title": "Engineering",
+      "icon": "/assets/images/enginnering.svg",
+      "link": "engineering",
+      "count": 22
+    },
+    {
+      "title": "Finance",
+      "icon": "/assets/images/finance.svg",
+      "link": "finance",
+      "count": 98
+    },
+    {
+      "title": "Science",
+      "icon": "/assets/images/science.svg",
+      "link": "science",
+      "count": 3
+    },
+    {
+      "title": "Social Science",
+      "icon": "/assets/images/social-science.svg",
+      "link": "social-science",
+      "count": 48
     }
   ]
 }

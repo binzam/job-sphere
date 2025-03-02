@@ -5,8 +5,10 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import JobListing from '../components/JobListing';
 import Container from '../components/Container';
+import JobCategoryListing from '../components/JobCategoryListing';
 const Home = () => {
   const [featuredJobs, setFeaturedJobs] = useState([]);
+  const [jobSectors, setJobSectors] = useState([]);
 
   const getFeaturedJobs = async () => {
     try {
@@ -21,8 +23,19 @@ const Home = () => {
       console.log(error);
     }
   };
+
+  const getJobSectors = async () => {
+    try {
+      const response = await axios.get('http://localhost:3000/sectors');
+      console.log(response);
+      setJobSectors(response.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
   useEffect(() => {
     getFeaturedJobs();
+    getJobSectors();
   }, []);
 
   return (
@@ -46,11 +59,21 @@ const Home = () => {
         </div>
       </section>
 
-      <Container className='no_pad'>
+      <Container className="no_pad">
         <section className={styles.featured_jobs}>
           <h2>Featured Jobs</h2>
           <JobListing listing={featuredJobs} />
 
+          <Link to="/jobs" className={styles.cta_button}>
+            See All Jobs
+          </Link>
+        </section>
+      </Container>
+
+      <Container className="no_pad">
+        <section className={styles.featured_jobs}>
+          <h2>Find Jobs</h2>
+          <JobCategoryListing listing={jobSectors} />
           <Link to="/jobs" className={styles.cta_button}>
             See All Jobs
           </Link>

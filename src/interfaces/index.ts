@@ -15,6 +15,14 @@ export interface Job {
   salary: string;
   tools: string[];
   category: string;
+  categoryLink: string;
   slots: number;
   requirements: string[];
+}
+
+export interface JobCategory {
+  title: string;
+  icon: string;
+  count: number;
+  link: string;
 }

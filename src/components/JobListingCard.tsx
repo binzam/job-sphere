@@ -36,7 +36,7 @@ const JobListingCard: React.FC<JobListingCardProps> = ({ job }) => {
       <TbMoneybag />
         <strong>{job.salary}</strong>
       </div>
-      <Link to={`/job/${job.id}`}>View Details</Link>
+      <Link to={`/jobs/${encodeURIComponent(job.category)}/${job.id}`}>View Details</Link>
     </article>
   );
 };
