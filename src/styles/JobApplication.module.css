@@ -6,17 +6,17 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   display: flex;
-    align-items: flex-start;
-    gap: 1rem;
+  align-items: flex-start;
+  gap: 1rem;
 }
 
-h2 {
+.application_wrap h2 {
   text-align: center;
   color: #333;
   margin-bottom: 15px;
 }
 
-p {
+.application_wrap p {
   text-align: center;
   font-size: 14px;
   color: #666;
@@ -29,7 +29,7 @@ p {
   gap: 15px;
 }
 
-label {
+.application_wrap label {
   font-weight: 600;
   color: #444;
   display: flex;
@@ -37,8 +37,8 @@ label {
   gap: 5px;
 }
 
-input,
-textarea {
+.application_wrap input,
+.application_wrap textarea {
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
@@ -46,19 +46,19 @@ textarea {
   font-size: 16px;
 }
 
-input:focus,
-textarea:focus {
+.application_wrap input:focus,
+.application_wrap textarea:focus {
   border-color: #007bff;
   outline: none;
   box-shadow: 0 0 4px rgba(0, 123, 255, 0.2);
 }
 
-textarea {
+.application_wrap textarea {
   resize: vertical;
   min-height: 100px;
 }
 
-button {
+.application_wrap button {
   background: #007bff;
   color: #fff;
   font-size: 16px;
@@ -70,11 +70,11 @@ button {
   transition: background 0.3s ease;
 }
 
-button:hover {
+.application_wrap button:hover {
   background: #0056b3;
 }
 
-button:disabled {
+.application_wrap button:disabled {
   background: #ccc;
   cursor: not-allowed;
 }

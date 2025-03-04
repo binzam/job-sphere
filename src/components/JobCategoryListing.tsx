@@ -24,17 +24,17 @@ const JobCategoryListing: React.FC<JobCategoryListingProps> = ({
   if (isDropdown && onClose) {
     return (
       <div className={styles.dropdown}>
-        <div className={styles.dropdownMenu}>
+        <ul className={styles.dropdownMenu}>
           {listing.map((sector) => (
-            <div
+            <li
               key={sector.title}
               className={styles.dropdownItem}
               onClick={() => handleCategoryClick(sector.title)}
             >
               <img src={sector.icon} alt={sector.title} /> <p>{sector.title}</p>
-            </div>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     );
   }
@@ -42,7 +42,7 @@ const JobCategoryListing: React.FC<JobCategoryListingProps> = ({
     <div className={styles.job_category_list}>
       {listing.map((sector) => (
         <div className={styles.category_card_wrap} key={sector.title}>
-          <Link to={`/jobs/${sector.title}`}>
+          <Link to={`/jobs?category=${sector.title}`}>
             <article className={styles.category_card}>
               <h3>{sector.title}</h3>
               <img src={sector.icon} alt="" />

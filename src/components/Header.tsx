@@ -1,17 +1,19 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import styles from '../styles/Header.module.css';
 import { HiOutlineMenuAlt2 } from 'react-icons/hi';
 import { useState } from 'react';
 import MobileMenu from './MobileMenu';
 import { ImSphere } from 'react-icons/im';
 const Header = () => {
+  const location = useLocation();
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const staticHeader = location.pathname.startsWith('/jobs');
 
   const toggleModal = () => {
     setIsModalOpen((prev) => !prev);
   };
   return (
-    <header className={styles.header}>
+    <header className={`${styles.header} ${staticHeader && styles.static}`}>
       <div className={styles.header_wrapper}>
         <button className={styles.menu_btn} onClick={toggleModal}>
           <HiOutlineMenuAlt2 />

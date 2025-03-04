@@ -11,7 +11,7 @@ interface JobListingCardProps {
 const JobListingCard: React.FC<JobListingCardProps> = ({ job }) => {
   return (
     <article className={styles.job_card}>
-      {job.featured && <span className={styles.featured_tag}>Featured</span> }
+      {job.featured && <span className={styles.featured_tag}>Featured</span>}
       <h3>{job.position}</h3>
       <div className={styles.job_info}>
         <div className={styles.job_logo}>
@@ -31,12 +31,17 @@ const JobListingCard: React.FC<JobListingCardProps> = ({ job }) => {
           </div>
         </div>
       </div>
-      <p className={styles.contract}>{job.contract}</p>
+      <div>
+        <span className={styles.level}>{job.level},</span>
+        <span className={styles.contract}>{job.contract}</span>
+      </div>
       <div className={styles.salary}>
-      <TbMoneybag />
+        <TbMoneybag />
         <strong>{job.salary}</strong>
       </div>
-      <Link to={`/jobs/${encodeURIComponent(job.category)}/${job.id}`}>View Details</Link>
+      <Link to={`/jobs/${encodeURIComponent(job.category)}/${job.id}`}>
+        View Details
+      </Link>
     </article>
   );
 };

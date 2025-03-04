@@ -1,12 +1,10 @@
-import axios from 'axios';
-import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { Job } from '../interfaces';
 import styles from '../styles/JobDescription.module.css';
 import Container from '../components/Container';
 import { Loader } from '../components/Loader';
 import JobListing from '../components/JobListing';
 import JobDetailCard from '../components/JobDetailCard';
+import { useJob, useSimilarJobs } from '../hooks/useJobs';
 const JobDescription = () => {
   const { category: categoryParam, id } = useParams<{
     category?: string;
@@ -16,44 +14,8 @@ const JobDescription = () => {
     ? decodeURIComponent(categoryParam)
     : '';
 
-  const [similarJobs, setSimilarJobs] = useState<Job[]>([]);
-  const [job, setJob] = useState<Job | null>(null);
-  const [loading, setLoading] = useState<boolean>(true);
-  const [error, setError] = useState<string | null>(null);
-  useEffect(() => {
-    const fetchJob = async () => {
-      try {
-        const response = await axios.get<Job>(
-          `http://localhost:3000/jobs/${id}/`
-        );
-        console.log(response);
-
-        setJob(response.data);
-      } catch (error) {
-        console.log(error);
-        setError('Failed to fetch job details');
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    const getSimilarJobs = async () => {
-      try {
-        const response = await axios.get('http://localhost:3000/jobs', {
-          params: {
-            category: decodedCategory,
-          },
-        });
-        console.log(response);
-        setSimilarJobs(response.data.slice(0, 3));
-      } catch (error) {
-        console.log(error);
-      }
-    };
-
-    fetchJob();
-    getSimilarJobs();
-  }, [id, decodedCategory]);
+  const { job, loading, error } = useJob(id!);
+  const { similarJobs } = useSimilarJobs(decodedCategory);
 
   if (loading) return <Loader />;
   if (error) return <p className={styles.error}>{error}</p>;

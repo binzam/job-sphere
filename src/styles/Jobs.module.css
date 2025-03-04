@@ -1,58 +1,28 @@
 .job_listing_page {
   background-color: #fff;
-  padding: 1rem 2rem;
+  padding: 0.5rem 0;
 }
-.filters {
-  margin-bottom: 20px;
-  margin: auto;
-  position: relative;
+
+.listing_header {
   display: flex;
   align-items: center;
-  gap: 3rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid #ddd;
+  gap: 1rem;
+  margin: 1rem 0 0rem;
 }
-.category_filter {
-  width: 200px;
-}
-
-.filters input,
-.filters select {
-  padding: 10px;
-  margin-right: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.filters button {
-  padding: 0.3rem 1rem;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-}
-.dropdownButton {
-  box-sizing: border-box;
-  width: 100%;
-  background-color: #0073e6;
-  justify-content: space-between;
-  gap: 0.5rem;
-  font-size: 0.9rem;
-  font-weight: 600;
-}
-.clear_Button {
-  background-color: red;
-  gap: 0.5rem;
-}
-
-.dropdownButton:hover {
-  background-color: #005bb5;
-}
-.listing_title{
+.listing_title {
   color: #333;
   letter-spacing: 1px;
-  margin: 1rem 0 0rem;
+  font-size: 1rem;
+  /* line-height: 1; */
+}
+
+.option_display {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #005bb5;
 }
 .no_listing {
   color: #666;
@@ -64,4 +34,7 @@
   align-items: center;
   justify-content: center;
   gap: 0.3rem;
+}
+@media only screen and (max-width: 888px){
+
 }

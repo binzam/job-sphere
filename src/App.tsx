@@ -11,6 +11,7 @@ import JobDescription from './pages/JobDescription';
 import PostJob from './pages/PostJob';
 import ScrollToTop from './components/ScrollToTop';
 import JobApplication from './pages/JobApplication';
+import { JobFilterProvider } from './context/JobFilterContext';
 
 function App() {
   return (
@@ -22,10 +23,20 @@ function App() {
         <Route path="*" element={<NotFound />} />
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="/jobs" element={<Jobs />} />
-          <Route path="/jobs/:category" element={<Jobs />} />
+          <Route
+            path="/jobs"
+            element={
+              <JobFilterProvider>
+                <Jobs />
+              </JobFilterProvider>
+            }
+          />
+
           <Route path="/jobs/:category/:id" element={<JobDescription />} />
-          <Route path="/jobs/:category/:id/apply" element={<JobApplication />} />
+          <Route
+            path="/jobs/:category/:id/apply"
+            element={<JobApplication />}
+          />
           <Route path="/post-a-job" element={<PostJob />} />
           <Route path="/contact" element={<Contact />} />
         </Route>

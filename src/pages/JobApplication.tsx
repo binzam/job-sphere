@@ -86,7 +86,7 @@ const JobApplication = () => {
   return (
     <div className={styles.applicationPage}>
       <JobListingCard job={job || {}} />
-      <div>
+      <div className={styles.application_wrap}>
         <h2>Apply for this Job</h2>
         <p>Category: {category}</p>
         <form onSubmit={handleSubmit} className={styles.applicationForm}>

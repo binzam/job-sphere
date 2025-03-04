@@ -11,7 +11,7 @@
       "level": "Senior",
       "postedAt": "1d ago",
       "contract": "Full Time",
-      "location": "USA Only",
+      "location": "USA",
       "languages": ["HTML", "CSS", "JavaScript"],
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error fuga, a debitis tempore sunt dignissimos, aspernatur libero ducimus repellendus aliquam facere doloremque quidem sit soluta nemo, minima nobis architecto quasi ut doloribus laboriosam animi. Eum suscipit neque sint tempora tenetur.",
       "requirements": [
@@ -36,7 +36,7 @@
       "featured": true,
       "position": "Fullstack Developer",
       "role": "Fullstack",
-      "level": "Midweight",
+      "level": "Mid Level",
       "postedAt": "1d ago",
       "contract": "Part Time",
       "location": "Remote",
@@ -68,7 +68,7 @@
       "level": "Junior",
       "postedAt": "2d ago",
       "contract": "Part Time",
-      "location": "USA Only",
+      "location": "Remote",
       "languages": ["JavaScript"],
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error fuga, a debitis tempore sunt dignissimos, aspernatur libero ducimus repellendus aliquam facere doloremque quidem sit soluta nemo, minima nobis architecto quasi ut doloribus laboriosam animi. Eum suscipit neque sint tempora tenetur.",
       "requirements": [
@@ -97,7 +97,7 @@
       "level": "Junior",
       "postedAt": "5d ago",
       "contract": "Contract",
-      "location": "USA Only",
+      "location": "USA",
       "languages": ["CSS", "JavaScript"],
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error fuga, a debitis tempore sunt dignissimos, aspernatur libero ducimus repellendus aliquam facere doloremque quidem sit soluta nemo, minima nobis architecto quasi ut doloribus laboriosam animi. Eum suscipit neque sint tempora tenetur.",
       "requirements": [
@@ -123,10 +123,10 @@
       "featured": false,
       "position": "Software Engineer",
       "role": "Fullstack",
-      "level": "Midweight",
+      "level": "Mid Level",
       "postedAt": "1w ago",
       "contract": "Full Time",
-      "location": "Worldwide",
+      "location": "Japan",
       "languages": ["JavaScript"],
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error fuga, a debitis tempore sunt dignissimos, aspernatur libero ducimus repellendus aliquam facere doloremque quidem sit soluta nemo, minima nobis architecto quasi ut doloribus laboriosam animi. Eum suscipit neque sint tempora tenetur.",
       "requirements": [
@@ -155,7 +155,7 @@
       "level": "Junior",
       "postedAt": "2w ago",
       "contract": "Full Time",
-      "location": "UK Only",
+      "location": "UK",
       "languages": ["Ruby"],
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error fuga, a debitis tempore sunt dignissimos, aspernatur libero ducimus repellendus aliquam facere doloremque quidem sit soluta nemo, minima nobis architecto quasi ut doloribus laboriosam animi. Eum suscipit neque sint tempora tenetur.",
       "requirements": [
@@ -184,7 +184,7 @@
       "level": "Junior",
       "postedAt": "2w ago",
       "contract": "Full Time",
-      "location": "Worldwide",
+      "location": "Canada",
       "languages": ["HTML", "JavaScript"],
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error fuga, a debitis tempore sunt dignissimos, aspernatur libero ducimus repellendus aliquam facere doloremque quidem sit soluta nemo, minima nobis architecto quasi ut doloribus laboriosam animi. Eum suscipit neque sint tempora tenetur.",
       "requirements": [
@@ -213,7 +213,7 @@
       "level": "Junior",
       "postedAt": "2w ago",
       "contract": "Full Time",
-      "location": "USA Only",
+      "location": "USA",
       "languages": ["JavaScript"],
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error fuga, a debitis tempore sunt dignissimos, aspernatur libero ducimus repellendus aliquam facere doloremque quidem sit soluta nemo, minima nobis architecto quasi ut doloribus laboriosam animi. Eum suscipit neque sint tempora tenetur.",
       "requirements": [
@@ -239,10 +239,10 @@
       "featured": false,
       "position": "Full Stack Engineer",
       "role": "Fullstack",
-      "level": "Midweight",
+      "level": "Mid Level",
       "postedAt": "3w ago",
       "contract": "Full Time",
-      "location": "Worldwide",
+      "location": "Canada",
       "languages": ["JavaScript", "Python"],
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error fuga, a debitis tempore sunt dignissimos, aspernatur libero ducimus repellendus aliquam facere doloremque quidem sit soluta nemo, minima nobis architecto quasi ut doloribus laboriosam animi. Eum suscipit neque sint tempora tenetur.",
       "requirements": [
@@ -271,7 +271,7 @@
       "level": "Junior",
       "postedAt": "1mo ago",
       "contract": "Part Time",
-      "location": "Worldwide",
+      "location": "Canada",
       "languages": ["JavaScript"],
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error fuga, a debitis tempore sunt dignissimos, aspernatur libero ducimus repellendus aliquam facere doloremque quidem sit soluta nemo, minima nobis architecto quasi ut doloribus laboriosam animi. Eum suscipit neque sint tempora tenetur.",
       "requirements": [

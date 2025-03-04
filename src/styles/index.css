@@ -58,7 +58,7 @@ button {
   all: unset;
   cursor: pointer;
 }
-input:focus {
+/* input:focus {
   outline: 2px solid #0073e6;
   outline-offset: 2px;
-}
+} */
