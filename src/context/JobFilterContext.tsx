@@ -17,7 +17,9 @@ type JobFilterContextType = {
   handleSearchTermChange: (matchedJob: Record<string, string>) => void;
   handleFilterChange: (filterKey: string, filterValue: string) => void;
   isAnyFilterApplied: boolean;
-  clearSpecificFilter: (filterType: keyof JobFilterContextType) => void;
+  clearSpecificFilter: (
+    filterType: 'category' | 'location' | 'experienceLevel' | 'search'
+  ) => void;
 };
 
 const JobFilterContext = createContext<JobFilterContextType | null>(null);
@@ -84,6 +86,7 @@ const JobFilterProvider: React.FC<{
   const handleSearchTermChange = (matchedJob: Record<string, string>) => {
     if (!matchedJob) return;
     const [key, value] = Object.entries(matchedJob)[0];
+    setSearchTerm(matchedJob);
     switch (key) {
       case 'company':
         setCompany(value);
@@ -141,10 +144,46 @@ const JobFilterProvider: React.FC<{
   //   newSearchParams.delete(filterType);
   //   setSearchParams(newSearchParams);
   // };
-  const clearSpecificFilter = (filterType: keyof JobFilterContextType) => {
-    updateSearchParams({ [filterType]: '' });
-  };
+  // const clearSpecificFilter = (filterType: keyof JobFilterContextType) => {
+  //   updateSearchParams({ [filterType]: '' });
+  // };
+  const clearSpecificFilter = (
+    filterType: 'category' | 'location' | 'experienceLevel' | 'search'
+  ) => {
+    const newSearchParams = new URLSearchParams(searchParams);
 
+    switch (filterType) {
+      case 'category':
+        newSearchParams.delete('category');
+        setCategory('');
+        break;
+      case 'location':
+        newSearchParams.delete('location');
+        setLocation('');
+        break;
+
+      case 'experienceLevel':
+        newSearchParams.delete('experienceLevel');
+        setLocation('');
+        break;
+
+      case 'search':
+        newSearchParams.delete('postion');
+        newSearchParams.delete('role');
+        newSearchParams.delete('company');
+        setSearchTerm({});
+        setSearchInput('');
+        setPosition('')
+        setRole('')
+        setCompany('')
+        break;
+
+      default:
+        break;
+    }
+
+    setSearchParams(newSearchParams);
+  };
   const clearSearchFilter = () => {
     const newSearchParams = new URLSearchParams(searchParams);
     ['role', 'position', 'company'].forEach((key) =>

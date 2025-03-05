@@ -9,6 +9,7 @@ import { Loader } from '../components/Loader';
 import { useJobFilters } from '../hooks/useJobFilters';
 import useFilteredJobs from '../hooks/useFilteredJobs';
 import JobFilters from '../components/JobFilters';
+import { IoMdClose } from 'react-icons/io';
 const Jobs = () => {
   const { jobs, jobSectors, locations, experienceLevels, loading } = useJobs();
   const {
@@ -19,12 +20,15 @@ const Jobs = () => {
     role,
     position,
     company,
+    isAnyFilterApplied,
+    clearAllFilters,
   } = useJobFilters();
   const filteredJobs = useFilteredJobs(jobs, searchTerm, {
     category,
     location,
     experienceLevel,
   });
+
   if (loading) return <Loader />;
 
   let title = 'All Jobs';
@@ -41,22 +45,32 @@ const Jobs = () => {
         experienceLevels={experienceLevels}
       />
       <Container>
-        <div className={styles.listing_header}>
-        <h2 className={styles.listing_title}>{title}</h2>
-          {location && (
-            <div className={styles.option_display}>
-              <FaLocationDot />
-              <p>{location} </p>
+        <section className={styles.job_listing_section}>
+          <div className={styles.listing_header_wrap}>
+            <div className={styles.listing_header}>
+              <h2 className={styles.listing_title}>{title}</h2>
+              {location && (
+                <div className={styles.option_display}>
+                  <FaLocationDot />
+                  <p>{location} </p>
+                </div>
+              )}
+              {experienceLevel && (
+                <div className={styles.option_display}>
+                  <SiLevelsdotfyi />
+                  <p>{experienceLevel} </p>
+                </div>
+              )}
             </div>
-          )}
-          {experienceLevel && (
-            <div className={styles.option_display}>
-              <SiLevelsdotfyi />
-              <p>{experienceLevel} </p>
-            </div>
-          )}
-        </div>
-        <section>
+            {isAnyFilterApplied && (
+              <button
+                className={styles.clear_all_Button}
+                onClick={clearAllFilters}
+              >
+                <IoMdClose /> Clear All Filters
+              </button>
+            )}
+          </div>
           {filteredJobs.length > 0 ? (
             <JobListing listing={filteredJobs} />
           ) : (

@@ -64,6 +64,7 @@ const JobSearch: React.FC<JobSearchProps> = ({
     );
     setSuggestions(uniqueSuggestions);
   };
+  
   const handleClearSearch = () => {
     setSearchInput('');
     setSuggestions([]);

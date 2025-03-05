@@ -1,7 +1,7 @@
 .job_card {
   border: 1px solid #9b9b9b;
   border-radius: 5px;
-  padding: 1rem 1.5rem;
+  padding: 1rem 1.5rem 2rem;
   width: 100%;
   max-width: 370px;
   text-align: left;
@@ -9,10 +9,15 @@
   background-color: #fff;
   box-shadow: 0 1px 5px #0000009a;
   transition: all 0.3s ease;
+  background-image: url(../../public/assets/images/briefcase-icon.svg);
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  background-position: bottom 40px right 50px;
 }
 .job_card:hover {
   border: 1px solid #00e60c;
   box-shadow: 0 1px 2px #0000009a;
+  scale: 1.02;
 }
 .featured_tag {
   position: absolute;
@@ -113,18 +118,32 @@
 }
 
 .job_card a {
-  color: #ffffff;
   text-decoration: none;
   text-align: center;
   display: block;
   font-size: 0.8rem;
-  font-weight: 600;
-  padding: 0.3rem 1rem;
-  background-color: #0066cc;
+  font-weight: 800;
+  padding: 0.2rem 1rem;
+  letter-spacing: 1px;
   border-radius: 5px;
   margin-left: auto;
   width: max-content;
+  position: absolute;
+  right: 0.3rem;
+  bottom: 0.3rem;
+  background-color: #ffffff;
+  border: 2px dashed #0073e6;
+  color: #004183;
+  transition: all 0.3s ease-in-out;
 }
 .job_card a:hover {
-  background-color: #333;
+  border: 2px solid #4a90ac;
+  background-color: #004183;
+  color: #fff;
+  border-radius: 2px;
+}
+@media only screen and (max-width: 1100px) {
+  .job_card {
+    max-width: 100%;
+  }
 }

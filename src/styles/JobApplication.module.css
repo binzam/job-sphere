@@ -1,73 +1,99 @@
 .applicationPage {
-  /* max-width: 600px; */
-  margin: 50px auto;
-  padding: 20px;
-  background: #ffffff;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  width: 100%;
+  padding: 1rem;
+}
+.applicationPage_wrapper {
+  padding: 1rem 3rem 4rem;
+  background-color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
   border-radius: 8px;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 1rem;
+  width: 80%;
+  margin: 0 auto;
 }
-
 .application_wrap h2 {
   text-align: center;
   color: #333;
-  margin-bottom: 15px;
+  margin-bottom: 0.5rem;
+  letter-spacing: 2px;
 }
 
-.application_wrap p {
-  text-align: center;
-  font-size: 14px;
-  color: #666;
-  margin-bottom: 20px;
+.application_wrap {
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .applicationForm {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 1rem;
 }
 
-.application_wrap label {
-  font-weight: 600;
+.form_input_row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.form_input_sml {
+  width: 50%;
+}
+.form_input {
+  width: 100%;
+}
+
+.applicationForm label {
   color: #444;
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 1px;
+  font-size: 0.9rem;
+  font-weight: 600;
 }
-
-.application_wrap input,
-.application_wrap textarea {
+.applicationForm input {
   width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
+  color: #333;
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: #ffffff;
   border-radius: 5px;
-  font-size: 16px;
+  padding: 0.3rem 2rem 0.3rem 1rem;
+  border: 1px solid #aaaaaa;
 }
 
-.application_wrap input:focus,
-.application_wrap textarea:focus {
-  border-color: #007bff;
-  outline: none;
-  box-shadow: 0 0 4px rgba(0, 123, 255, 0.2);
+.applicationForm input:focus {
+  outline: 2px solid blue;
+  outline-offset: 2px;
 }
 
-.application_wrap textarea {
-  resize: vertical;
+.form_input textarea {
+  resize: none;
   min-height: 100px;
+  border: 1px solid #aaaaaa;
+  border-radius: 5px;
+}
+.form_input textarea:focus {
+  outline: 2px solid blue;
+  outline-offset: 2px;
 }
 
 .application_wrap button {
   background: #007bff;
   color: #fff;
-  font-size: 16px;
-  font-weight: bold;
-  padding: 12px;
+  padding: 0.3rem;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: background 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: 1rem;
+  font-weight: 600;
 }
 
 .application_wrap button:hover {

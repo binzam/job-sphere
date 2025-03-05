@@ -18,7 +18,6 @@ const useFilteredJobs = (
       Object.keys(searchTerm).length === 0
         ? ''
         : searchTerm[Object.keys(searchTerm)[0]]?.toLowerCase() || '';
-
     return jobs.filter((job) => {
       const matchesSearchTerm = trimmedSearchTerm
         ? Object.values(job).some(

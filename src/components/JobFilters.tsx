@@ -1,9 +1,8 @@
 import { useState } from 'react';
 import styles from '../styles/JobFilters.module.css';
-import { FaChevronDown, FaChevronUp } from 'react-icons/fa6';
-import { IoMdClose } from 'react-icons/io';
+import { FaChevronDown, FaChevronUp, FaXmark } from 'react-icons/fa6';
 import JobCategoryListing from './JobCategoryListing';
-import JobLocationListing from './JobLocationListing';
+import JobFilterOptionsListing from './JobFilterOptionsListing';
 import JobSearch from './JobSearch';
 import { useJobFilters } from '../hooks/useJobFilters';
 import { Job, JobCategory } from '../interfaces';
@@ -23,92 +22,132 @@ const JobFilters: React.FC<JobFiltersProps> = ({
 }) => {
   const {
     handleFilterChange,
-    clearAllFilters,
     category,
     location,
     experienceLevel,
-    isAnyFilterApplied,
+    clearSpecificFilter,
   } = useJobFilters();
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
-  const [isCategoryDropdownOpen, setCategoryDropdownOpen] = useState(false);
-  const [isLocationDropdownOpen, setLocationDropdownOpen] = useState(false);
-  const [isExperienceDropdownOpen, setExperienceDropdownOpen] = useState(false);
-
-  const handleCategorySelect = (selectedCategory: string) => {
-    handleFilterChange('category', selectedCategory);
-    setCategoryDropdownOpen(false);
+  const toggleDropdown = (dropdown: string) => {
+    setOpenDropdown((prev) => (prev === dropdown ? null : dropdown));
   };
 
-  const handleLevelSelect = (selectedLevel: string) => {
-    handleFilterChange('experienceLevel', selectedLevel);
-    setExperienceDropdownOpen(false);
+  const handleSelect = (
+    filterType: 'category' | 'location' | 'experienceLevel',
+    value: string
+  ) => {
+    handleFilterChange(filterType, value);
+    setOpenDropdown(null);
   };
-
-  const handleLocationSelect = (selectedLocation: string) => {
-    handleFilterChange('location', selectedLocation);
-    setLocationDropdownOpen(false);
+  const clearSelection = (
+    filterType: 'category' | 'location' | 'experienceLevel'
+  ) => {
+    clearSpecificFilter(filterType);
   };
-
   return (
     <div className={styles.filters}>
       <div className={styles.filters_wrapper}>
         <div className={styles.search_filter}>
           <JobSearch jobs={jobs} layoutType="filter" />
         </div>
-        <div className={styles.category_filter}>
+        <div className={`${styles.category_filter} `}>
           <button
-            className={styles.dropdownButton}
-            onClick={() => setCategoryDropdownOpen(!isCategoryDropdownOpen)}
+            className={`${styles.dropdownButton} ${
+              category && styles.selected
+            }`}
+            onClick={() => toggleDropdown('category')}
           >
-            {category || 'Choose Category'}
-            {isCategoryDropdownOpen ? <FaChevronUp /> : <FaChevronDown />}
+           <p className={styles.btn_txt}>{category || 'Choose Category'}</p> 
+            {category ? (
+              <span
+                className={styles.filter_clear}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  clearSelection('category');
+                }}
+              >
+                <FaXmark />
+              </span>
+            ) : openDropdown === 'category' ? (
+              <FaChevronUp />
+            ) : (
+              <FaChevronDown />
+            )}
           </button>
-          {isCategoryDropdownOpen && (
+          {openDropdown === 'category' && (
             <JobCategoryListing
               listing={jobSectors}
               isDropdown={true}
-              onCategorySelect={handleCategorySelect}
-              onClose={() => setCategoryDropdownOpen(false)}
+              onCategorySelect={(value) => handleSelect('category', value)}
+              onClose={() => setOpenDropdown(null)}
             />
           )}
         </div>
         <div className={styles.location_filter}>
           <button
-            className={styles.dropdownButton}
-            onClick={() => setLocationDropdownOpen(!isLocationDropdownOpen)}
+            className={`${styles.dropdownButton} ${
+              location && styles.selected
+            }`}
+            onClick={() => toggleDropdown('location')}
           >
-            {location || 'Choose Location'}
-            {isLocationDropdownOpen ? <FaChevronUp /> : <FaChevronDown />}
+           <p className={styles.btn_txt}>{location || 'Location'}</p> 
+            {location ? (
+              <span
+                className={styles.filter_clear}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  clearSelection('location');
+                }}
+              >
+                <FaXmark />
+              </span>
+            ) : openDropdown === 'location' ? (
+              <FaChevronUp />
+            ) : (
+              <FaChevronDown />
+            )}
           </button>
-          {isLocationDropdownOpen && (
-            <JobLocationListing
+          {openDropdown === 'location' && (
+            <JobFilterOptionsListing
               listing={locations}
-              onLocationSelect={handleLocationSelect}
-              onClose={() => setLocationDropdownOpen(false)}
+              onOptionSelect={(value) => handleSelect('location', value)}
+              onClose={() => setOpenDropdown(null)}
             />
           )}
         </div>
         <div className={styles.experience_filter}>
           <button
-            className={styles.dropdownButton}
-            onClick={() => setExperienceDropdownOpen(!isExperienceDropdownOpen)}
+            className={`${styles.dropdownButton} ${
+              experienceLevel && styles.selected
+            }`}
+            onClick={() => toggleDropdown('experienceLevel')}
           >
-            {experienceLevel || 'Experience Level'}
-            {isExperienceDropdownOpen ? <FaChevronUp /> : <FaChevronDown />}
+          <p className={styles.btn_txt}>{experienceLevel || 'Experience'}</p>  
+            {experienceLevel ? (
+              <span
+                className={styles.filter_clear}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  clearSelection('experienceLevel');
+                }}
+              >
+                <FaXmark />
+              </span>
+            ) : openDropdown === 'experienceLevel' ? (
+              <FaChevronUp />
+            ) : (
+              <FaChevronDown />
+            )}
           </button>
-          {isExperienceDropdownOpen && (
-            <JobLocationListing
+          {openDropdown === 'experienceLevel' && (
+            <JobFilterOptionsListing
               listing={experienceLevels}
-              onLocationSelect={handleLevelSelect}
-              onClose={() => setExperienceDropdownOpen(false)}
+              onOptionSelect={(value) => handleSelect('experienceLevel', value)}
+              onClose={() => setOpenDropdown(null)}
             />
           )}
         </div>
-        {isAnyFilterApplied && (
-          <button className={styles.clear_Button} onClick={clearAllFilters}>
-            <IoMdClose /> Clear Filters 
-          </button>
-        )}
       </div>
     </div>
   );

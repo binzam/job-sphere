@@ -1,13 +1,19 @@
 import styles from '../styles/JobDetail.module.css';
-import { FaBusinessTime, FaLocationDot, FaPeopleGroup } from 'react-icons/fa6';
+import {
+  FaBusinessTime,
+  FaFileSignature,
+  FaLocationDot,
+  FaPeopleGroup,
+} from 'react-icons/fa6';
 import { TbMoneybag } from 'react-icons/tb';
 import { BiCategory } from 'react-icons/bi';
-import { FaFileUpload, FaRunning } from 'react-icons/fa';
+import { FaFileUpload } from 'react-icons/fa';
 import { SiLevelsdotfyi } from 'react-icons/si';
 import { MdOutlineDescription, MdOutlineWork } from 'react-icons/md';
 import { IoMdInformationCircleOutline } from 'react-icons/io';
 import { Job } from '../interfaces';
 import { Link } from 'react-router-dom';
+import { HiOutlineIdentification } from 'react-icons/hi';
 
 interface JobDetailCardProps {
   job: Job;
@@ -40,16 +46,16 @@ const JobDetailCard: React.FC<JobDetailCardProps> = ({ job }) => {
             <span>{job.category}</span>
           </div>
           <div className={styles.flex_gap}>
-            <FaFileUpload className={styles.meta_icon} />
-            <span>{job.postedAt}</span>
-          </div>
-          <div className={styles.flex_gap}>
-            <FaBusinessTime className={styles.meta_icon} />
-            <span>{job.contract}</span>
+            <HiOutlineIdentification className={styles.meta_icon} />
+            <span>{job.role}</span>
           </div>
           <div className={styles.flex_gap}>
             <SiLevelsdotfyi className={styles.meta_icon} />
             <span>{job.level}</span>
+          </div>
+          <div className={styles.flex_gap}>
+            <FaBusinessTime className={styles.meta_icon} />
+            <span>{job.contract}</span>
           </div>
           <div className={styles.flex_gap}>
             <FaPeopleGroup className={styles.meta_icon} />
@@ -57,6 +63,10 @@ const JobDetailCard: React.FC<JobDetailCardProps> = ({ job }) => {
               {job.slots}
               {job.slots > 1 ? ' Positions' : ' Position'}
             </span>
+          </div>
+          <div className={styles.flex_gap}>
+            <FaFileUpload className={styles.meta_icon} />
+            <span>{job.postedAt}</span>
           </div>
           <div className={styles.flex_gap}>
             <TbMoneybag className={styles.bag_icon} />
@@ -67,7 +77,7 @@ const JobDetailCard: React.FC<JobDetailCardProps> = ({ job }) => {
             to={`/jobs/${job.category}/${job.id}/apply`}
             className={styles.apply_button}
           >
-            <FaRunning />
+            <FaFileSignature />
             Apply Now!
           </Link>
         </div>

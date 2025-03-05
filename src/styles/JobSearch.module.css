@@ -9,9 +9,7 @@
 }
 .search_bar_container.filter {
   height: 40px;
-  /* width: 350px; */
-  min-width: 360px;
-  flex: 1 1 400px;
+  width: 100%;
 }
 .search_form {
   width: auto;
@@ -177,8 +175,8 @@
   background-color: #f0f0f0;
 }
 @media (max-width: 770px) {
-  .search_bar_container {
-    width: 90%;
+  .search_bar_container.filter {
+    height: 34px;
   }
 
   .search_form.hero {
@@ -198,17 +196,19 @@
     height: 20px;
   }
 
-  .search_bar_container.filter {
-    min-width: 100%;
-    flex: 1;
-    height: 36px;
-  }
   .search_input.filter {
     padding: 0.2rem 3rem 0.3rem 1rem;
+  }
+  .search_input.filter:focus {
+    outline: 1px solid #0000ff;
+    outline-offset: 1px;
+    border: 1px solid #33333349;
   }
   .search_btn.filter {
     width: 28px;
     height: 28px;
+    top: 3px;
+    right: 3px;
   }
   .search_btn.filter svg {
     width: 18px;

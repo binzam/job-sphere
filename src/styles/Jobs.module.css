@@ -3,17 +3,29 @@
   padding: 0.5rem 0;
 }
 
+.job_listing_section {
+  width: 100%;
+  padding: 0 2rem;
+  margin: 0.5rem 0;
+}
+.listing_header_wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.2rem;
+  position: relative;
+}
 .listing_header {
   display: flex;
   align-items: center;
   gap: 1rem;
-  margin: 1rem 0 0rem;
 }
 .listing_title {
   color: #333;
   letter-spacing: 1px;
-  font-size: 1rem;
-  /* line-height: 1; */
+  line-height: 1;
+  font-size: 1.4rem;
 }
 
 .option_display {
@@ -24,6 +36,29 @@
   font-weight: 600;
   color: #005bb5;
 }
+
+.clear_all_Button {
+  background-color: rgba(255, 0, 0, 0.699);
+  padding: 0.2rem 0.5rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  /* position: absolute;
+  top: 0;
+  right: 0; */
+}
+.clear_all_Button svg {
+  width: 19px;
+  height: 19px;
+}
+.clear_all_Button:hover {
+  background-color: rgba(199, 14, 14, 0.753);
+}
+
 .no_listing {
   color: #666;
   font-size: 0.9rem;
@@ -35,6 +70,26 @@
   justify-content: center;
   gap: 0.3rem;
 }
-@media only screen and (max-width: 888px){
+@media only screen and (max-width: 1100px) {
+  .job_listing_section {
+    padding: 0 1rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .job_listing_section {
+    padding: 0;
+  }
 
+  .listing_header {
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .listing_title {
+    font-size: 1.2rem;
+  }
 }
