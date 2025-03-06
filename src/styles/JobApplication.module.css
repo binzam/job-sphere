@@ -1,89 +1,168 @@
-.applicationPage {
+.application_page {
   background-color: #ffffff;
   width: 100%;
-  padding: 1rem;
+  padding: 1rem 0;
 }
-.applicationPage_wrapper {
-  padding: 1rem 3rem 4rem;
+.application_page_wrapper {
+  padding: 0rem 2rem 2rem;
   background-color: #ffffff;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-  border-radius: 8px;
   display: flex;
-  align-items: center;
-  gap: 1rem;
-  width: 80%;
-  margin: 0 auto;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2rem;
 }
-.application_wrap h2 {
+.job_card_wrapper {
+  width: 300px;
+  min-width: 300px;
+  padding: 0.5rem 1rem 0.5rem 2rem;
+  background-color: #007bff11;
+  border-radius: 10px;
+  border: 1px solid #0056b3;
+}
+
+.application_form_wrapper {
+  padding: 1rem 5rem 3rem;
+  background-color: #007bff1e;
+  border-radius: 10px;
+  flex: 1;
+  max-width: 56%;
+  border: 1px dashed #0056b3;
+}
+.application_form_wrapper h2 {
   text-align: center;
-  color: #333;
+  color: #006986;
   margin-bottom: 0.5rem;
   letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
-.application_wrap {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.applicationForm {
+.application_form {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.3rem;
 }
 
 .form_input_row {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 0.5rem;
 }
 .form_input_sml {
   width: 50%;
+  position: relative;
 }
-.form_input {
+.form_input,
+.form_input_file {
   width: 100%;
-}
-
-.applicationForm label {
-  color: #444;
+  position: relative;
   display: flex;
   flex-direction: column;
-  gap: 1px;
+  height: fit-content;
+}
+.form_input_file {
+  margin-top: 1rem;
+}
+
+.form_input label,
+.form_input_sml label {
+  color: #444;
   font-size: 0.9rem;
   font-weight: 600;
 }
-.applicationForm input {
+.input_field {
   width: 100%;
   color: #333;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 500;
   background-color: #ffffff;
   border-radius: 5px;
   padding: 0.3rem 2rem 0.3rem 1rem;
-  border: 1px solid #aaaaaa;
+  border: 1px solid #006986;
 }
-
-.applicationForm input:focus {
+.input_field.error_border {
+  border: 1px solid red;
+}
+.error_text {
+  position: absolute;
+  left: 0.5rem;
+  bottom: -18px;
+  color: red;
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1;
+  height: 14px;
+}
+.input_field:focus {
   outline: 2px solid blue;
   outline-offset: 2px;
 }
-
-.form_input textarea {
-  resize: none;
-  min-height: 100px;
+.input_field_file {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+.form_input_file .file_input_label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.8rem;
+  border-radius: 5px;
+  width: 100%;
+  font-weight: 600;
+  background-color: #ffffff;
+  color: #000000;
+  box-shadow: 0px 1px 5px #00000083;
+  transition: all 0.3s ease;
+  border: 1px solid #006986;
+}
+.file_input_label.selected {
+  background-color: #006986;
+  border: 1px solid #006986;
+  color: #ffffff;
+}
+.file_input_label:hover {
+  background-color: rgb(255, 255, 255);
+  color: #000;
+  border: 1px solid #006986;
+  box-shadow: none;
+}
+.input_text_area {
+  /* resize: none; */
+  resize: vertical;
   border: 1px solid #aaaaaa;
   border-radius: 5px;
+  padding: 0.4rem 1rem;
+  min-height: 70px;
+  width: 100%;
+  max-height: 100px;
 }
-.form_input textarea:focus {
+.input_text_area:focus {
   outline: 2px solid blue;
   outline-offset: 2px;
 }
+.input_text_area.error_border {
+  border: 1px solid red;
+}
+.file_selected {
+  color: #28a745;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1;
+  text-align: center;
+}
 
-.application_wrap button {
+.application_form_wrapper button {
   background: #007bff;
   color: #fff;
-  padding: 0.3rem;
+  padding: 0.5rem;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -92,15 +171,16 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  font-family: 1rem;
+  font-size: 1rem;
   font-weight: 600;
+  margin-top: 0.5rem;
 }
 
-.application_wrap button:hover {
+.application_form_wrapper button:hover {
   background: #0056b3;
 }
 
-.application_wrap button:disabled {
+.application_form_wrapper button:disabled {
   background: #ccc;
   cursor: not-allowed;
 }
@@ -115,4 +195,41 @@
   color: #dc3545;
   font-weight: bold;
   text-align: center;
+}
+@media only screen and (max-width: 1200px) {
+  .application_page_wrapper {
+    padding: 0 0 2rem;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .application_page_wrapper {
+    gap: 1rem;
+  }
+  .application_form_wrapper {
+    padding: 1rem 2rem 3rem;
+  }
+}
+@media only screen and (max-width: 770px) {
+  .application_page_wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .job_card_wrapper {
+    width: 100%;
+  }
+  .application_form_wrapper {
+    padding: 1rem 2rem 3rem;
+    max-width: 100%;
+    width: 100%;
+  }
+  .application_form_wrapper h2 {
+    letter-spacing: 0;
+    margin-bottom: 1rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .application_form_wrapper {
+    padding: 1rem 1rem 3rem;
+  }
 }

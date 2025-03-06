@@ -7,6 +7,7 @@ import JobSearch from '../components/JobSearch';
 import useJobs from '../hooks/useJobs';
 import { Loader } from '../components/Loader';
 import { JobFilterProvider } from '../context/JobFilterContext';
+import { FaLongArrowAltRight } from 'react-icons/fa';
 const Home = () => {
   const { featuredJobs, jobSectors, loading, error, jobs } = useJobs();
   const navigate = useNavigate();
@@ -42,17 +43,17 @@ const Home = () => {
           <JobListing listing={featuredJobs} />
 
           <Link to="/jobs" className={styles.cta_button}>
-            See All Jobs
+            See All Jobs<FaLongArrowAltRight />
           </Link>
         </section>
       </Container>
 
       <Container className="no_pad">
         <section className={styles.featured_jobs}>
-          <h2>Find Jobs</h2>
+          <h2>Find Jobs by Category</h2>
           <JobCategoryListing listing={jobSectors} />
           <Link to="/jobs" className={styles.cta_button}>
-            See All Jobs
+            See All Jobs <FaLongArrowAltRight />
           </Link>
         </section>
       </Container>

@@ -1,6 +1,6 @@
 .job_detail_card {
   flex: 1;
-  padding: 1rem 2rem 4rem;
+  padding: 2rem 2rem 4rem;
   background-color: #ffffff;
   border-radius: 5px;
   box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.1);
@@ -200,6 +200,7 @@
   }
   .card_icon {
     right: 0;
+    top: 0;
   }
   .card_icon svg{
     width: 24px;
@@ -220,7 +221,7 @@
 }
 @media only screen and (max-width: 500px) {
   .job_detail_card {
-    padding: 1rem 0.5rem 4rem;
+    padding: 2rem 0.5rem 4rem;
   }
   .logo {
     width: 52px;

@@ -3,16 +3,16 @@
 }
 
 .hero {
-  /* background-color: #6eb9ff; */
+  background-color: #6eb9ff;
   /* background-color: #ebedf0; */
   /* background-color: #ffb2b2; */
   /* background-color: #dab8e0; */
-  background-color: #ebf8ae;
+  /* background-color: #ebf8ae; */
   color: white;
   background-image: url(/assets/images/job-hero.svg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: auto;
   position: relative;
   height: 500px;
   width: 100%;
@@ -30,23 +30,27 @@
   flex-direction: column;
   justify-content: center;
   z-index: 1;
+  padding: 3rem 1rem 3rem 1rem;
 }
-.hero_content{
+.hero_content {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
 }
 .hero h1 {
   font-size: 3rem;
+  letter-spacing: 1px;
 }
 
 .hero p {
   font-size: 1rem;
-  margin-bottom: 30px;
+  margin-bottom: 2rem;
   font-weight: 500;
   color: #f7ffd5;
 }
-
 
 .featured_jobs {
   padding: 4rem 2rem;
@@ -58,7 +62,6 @@
   letter-spacing: 1px;
   text-align: left;
 }
-
 
 .employer_cta,
 .job_seeker_cta {
@@ -72,14 +75,64 @@
 }
 
 .cta_button {
-  padding: 10px 20px;
-  background: #0073e6;
+  padding: 10px 40px;
   color: white;
+  font-size: 1.2rem;
+  font-weight: 700;
   text-decoration: none;
   border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: max-content;
+  margin: auto;
+  background-color: #1d1d1d;
 }
-@media only screen and (max-width: 770px){
-  .featured_jobs h2{
+.cta_button:hover {
+  background-color: #0073e6;
+}
+
+@media only screen and (max-width: 770px) {
+  .hero {
+    background-position: top 30px center;
+    height: 400px;
+  }
+  .hero_content {
+    justify-content: flex-end;
+  }
+  .hero_overlay h1 {
+    font-size: 2.6rem;
+  }
+  .hero_overlay p {
+    margin-bottom: 1rem;
+  }
+  .featured_jobs h2 {
     text-align: center;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .hero {
+    background-position: top 30px center;
+  }
+  .hero_overlay {
+    padding: 3rem 1rem 5rem 1rem;
+  }
+  .hero_overlay h1 {
+    font-size: 2rem;
+    line-height: 1.1 ;
+    margin-bottom: 0.4rem;
+  }
+  .hero_overlay p {
+    font-size: 0.9rem;
+    line-height: 1.3;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .hero {
+    background-position: top 60px center;
+  }
+  .hero_overlay {
+    padding: 3rem 1rem 4rem 1rem;
   }
 }

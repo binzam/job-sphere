@@ -34,7 +34,10 @@
   border: 1px dashed #000000;
   letter-spacing: 1px;
 }
-.job_card h3 {
+.job_card_header{
+  width: 100%;
+}
+.job_card_header h3 {
   margin: 0.5rem 0;
   color: #333;
   font-size: 1rem;

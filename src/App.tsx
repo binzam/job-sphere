@@ -1,5 +1,5 @@
 import './styles/index.css';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import Layout from './layouts/Layout';
 import Home from './pages/Home';
 import Jobs from './pages/Jobs';
@@ -12,19 +12,20 @@ import PostJob from './pages/PostJob';
 import ScrollToTop from './components/ScrollToTop';
 import JobApplication from './pages/JobApplication';
 import { JobFilterProvider } from './context/JobFilterContext';
+import About from './pages/About';
 
 function App() {
   return (
-    <BrowserRouter>
+    <>
       <ScrollToTop />
       <Routes>
-        <Route path="/join" element={<Join />} />
-        <Route path="/sign-in" element={<SignIn />} />
+        <Route path="join" element={<Join />} />
+        <Route path="sign-in" element={<SignIn />} />
         <Route path="*" element={<NotFound />} />
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route
-            path="/jobs"
+            path="jobs"
             element={
               <JobFilterProvider>
                 <Jobs />
@@ -32,16 +33,17 @@ function App() {
             }
           />
 
-          <Route path="/jobs/:category/:id" element={<JobDescription />} />
+          <Route path="jobs/:category/:id" element={<JobDescription />} />
           <Route
-            path="/jobs/:category/:id/apply"
+            path="jobs/:category/:id/apply"
             element={<JobApplication />}
           />
-          <Route path="/post-a-job" element={<PostJob />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="post-a-job" element={<PostJob />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="about" element={<About />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </>
   );
 }
 

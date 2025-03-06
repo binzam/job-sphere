@@ -64,12 +64,12 @@
 }
 .nav_list a {
   text-decoration: none;
-  color: #333;
   font-size: 1rem;
+  color: #00366b;
   font-weight: 600;
 }
 .nav_list a:hover {
-  color: #f1356d;
+  color: #333;
 }
 
 @media only screen and (max-width: 1000px) {

@@ -3,7 +3,7 @@ import { Job, JobCategory } from '../interfaces';
 
 export const fetchFeaturedJobs = async () => {
   try {
-    const response = await axios.get<Job[]>(`${import.meta.env.VITE_API_URL}/jobs`, {
+    const response = await axios.get<Job[]>(`${import.meta.env.VITE_API_URL}jobs/`, {
       params: { featured: true },
     });
     return response.data;
@@ -15,7 +15,7 @@ export const fetchFeaturedJobs = async () => {
 
 export const fetchJobSectors = async () => {
   try {
-    const response = await axios.get<JobCategory[]>(`${import.meta.env.VITE_API_URL}/sectors`);
+    const response = await axios.get<JobCategory[]>(`${import.meta.env.VITE_API_URL}sectors/`);
     return response.data;
   } catch (error) {
     console.error('Error fetching job sectors:', error);
@@ -26,7 +26,7 @@ export const fetchJobSectors = async () => {
 export const fetchJobs = async () => {
   try {
     const response = await axios.get<Job[]>(
-      `${import.meta.env.VITE_API_URL}/jobs`
+      `${import.meta.env.VITE_API_URL}jobs/`
     );
     return response.data;
   } catch (error) {
@@ -37,7 +37,7 @@ export const fetchJobs = async () => {
 export const fetchJobById = async (id: string) => {
   try {
     const response = await axios.get<Job>(
-      `${import.meta.env.VITE_API_URL}/jobs/${id}`
+      `${import.meta.env.VITE_API_URL}jobs/${id}/`
     );
     console.log(response);
     return response.data;
@@ -49,7 +49,7 @@ export const fetchJobById = async (id: string) => {
 export const fetchJobsByCategory = async (category: string) => {
   try {
     const response = await axios.get<Job[]>(
-      `${import.meta.env.VITE_API_URL}/jobs`,
+      `${import.meta.env.VITE_API_URL}jobs/`,
       {
         params: {
           category,

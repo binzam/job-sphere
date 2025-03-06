@@ -29,13 +29,16 @@ const Header = () => {
         <nav className={styles.nav}>
           <ul className={styles.nav_list}>
             <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
               <Link to="/jobs">Find jobs</Link>
             </li>
             <li>
               <Link to="/contact">Contact us</Link>
             </li>
             <li>
-              <Link to="/contact">Add Jobs</Link>
+              <Link to="/about">About</Link>
             </li>
           </ul>
           <ul className={styles.nav_list}>
