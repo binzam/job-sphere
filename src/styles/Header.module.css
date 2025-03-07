@@ -6,7 +6,7 @@
   background: #ffffffd2;
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
 }
-.header.static{
+.header.static {
   position: static;
   border-bottom: 1px solid #ddd;
 }
@@ -47,7 +47,7 @@
   gap: 2px;
   font-weight: 900;
 }
-.logo_link svg{
+.logo_link svg {
   width: 28px;
   height: 28px;
 }
@@ -71,8 +71,29 @@
 .nav_list a:hover {
   color: #333;
 }
+.logout_btn {
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  transition: all 0.3s ease; 
+  background-color: #eee;
+  color: rgb(255, 0, 0);
+}
+.logout_btn:hover{
+  background-color: #000000;
+  color: #fff;
 
+}
 @media only screen and (max-width: 1000px) {
+  .header_wrapper {
+    padding: 0.5rem 2rem;
+  }
   .nav,
   .nav_list {
     gap: 1.4rem;

@@ -13,15 +13,24 @@ import ScrollToTop from './components/ScrollToTop';
 import JobApplication from './pages/JobApplication';
 import { JobFilterProvider } from './context/JobFilterContext';
 import About from './pages/About';
+import AuthLayout from './layouts/AuthLayout';
+import Privacy from './pages/Privacy';
+import Terms from './pages/Terms';
+import ProtectedRoute from './components/ProtectedRoute';
+import { UserProvider } from './context/UserContext';
 
 function App() {
   return (
-    <>
+    <UserProvider>
       <ScrollToTop />
       <Routes>
-        <Route path="join" element={<Join />} />
-        <Route path="sign-in" element={<SignIn />} />
         <Route path="*" element={<NotFound />} />
+
+        <Route path="/auth" element={<AuthLayout />}>
+          <Route path="join" element={<Join />} />
+          <Route path="sign-in" element={<SignIn />} />
+        </Route>
+
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route
@@ -36,14 +45,20 @@ function App() {
           <Route path="jobs/:category/:id" element={<JobDescription />} />
           <Route
             path="jobs/:category/:id/apply"
-            element={<JobApplication />}
+            element={
+              <ProtectedRoute>
+                <JobApplication />
+              </ProtectedRoute>
+            }
           />
           <Route path="post-a-job" element={<PostJob />} />
           <Route path="contact" element={<Contact />} />
           <Route path="about" element={<About />} />
+          <Route path="privacy-policy" element={<Privacy />} />
+          <Route path="terms-and-conditions" element={<Terms />} />
         </Route>
       </Routes>
-    </>
+    </UserProvider>
   );
 }
 

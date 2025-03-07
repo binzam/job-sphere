@@ -1,7 +1,7 @@
 {
   "jobs": [
     {
-      "id": 1,
+      "id": "1",
       "company": "Photosnap",
       "logo": "/assets/images/photosnap.svg",
       "new": true,
@@ -29,7 +29,7 @@
       "category": "Finance"
     },
     {
-      "id": 2,
+      "id": "2",
       "company": "Manage",
       "logo": "/assets/images/manage.svg",
       "new": true,
@@ -58,7 +58,7 @@
       "tools": ["React"]
     },
     {
-      "id": 3,
+      "id": "3",
       "company": "Account",
       "logo": "/assets/images/account.svg",
       "new": true,
@@ -87,7 +87,7 @@
       "tools": ["React", "Sass"]
     },
     {
-      "id": 4,
+      "id": "4",
       "company": "MyHome",
       "logo": "/assets/images/myhome.svg",
       "new": false,
@@ -116,7 +116,7 @@
       "tools": []
     },
     {
-      "id": 5,
+      "id": "5",
       "company": "Loop Studios",
       "logo": "/assets/images/loop-studios.svg",
       "new": false,
@@ -145,7 +145,7 @@
       "tools": ["Ruby", "Sass"]
     },
     {
-      "id": 6,
+      "id": "6",
       "company": "FaceIt",
       "logo": "/assets/images/faceit.svg",
       "new": false,
@@ -174,7 +174,7 @@
       "tools": ["RoR"]
     },
     {
-      "id": 7,
+      "id": "7",
       "company": "Shortly",
       "logo": "/assets/images/shortly.svg",
       "new": false,
@@ -203,7 +203,7 @@
       "tools": ["Sass"]
     },
     {
-      "id": 8,
+      "id": "8",
       "company": "Insure",
       "logo": "/assets/images/insure.svg",
       "new": false,
@@ -232,7 +232,7 @@
       "tools": ["Vue", "Sass"]
     },
     {
-      "id": 9,
+      "id": "9",
       "company": "Eyecam Co.",
       "logo": "/assets/images/eyecam-co.svg",
       "new": false,
@@ -261,7 +261,7 @@
       "tools": ["Django"]
     },
     {
-      "id": 10,
+      "id": "10",
       "company": "The Air Filter Company",
       "logo": "/assets/images/the-air-filter-company.svg",
       "new": false,
@@ -290,7 +290,7 @@
       "tools": ["React", "Sass"]
     },
     {
-      "id": 11,
+      "id": "11",
       "company": "Creative Studio",
       "logo": "/assets/images/the-air-filter-company.svg",
       "new": false,
@@ -319,7 +319,7 @@
       "tools": ["Adobe Illustrator", "Adobe photoshop"]
     },
     {
-      "id": 12,
+      "id": "12",
       "company": "Innovate Inc",
       "logo": "/assets/images/the-air-filter-company.svg",
       "new": false,
@@ -353,43 +353,59 @@
       "title": "ICT",
       "icon": "/assets/images/ict.svg",
       "link": "ict",
-      "count": 2
+      "count": 2,
+      "id": "863c"
     },
     {
       "title": "Business",
       "icon": "/assets/images/business.svg",
       "link": "business",
-      "count": 12
+      "count": 12,
+      "id": "7af6"
     },
     {
       "title": "Education",
       "icon": "/assets/images/education.svg",
       "link": "education",
-      "count": 32
+      "count": 32,
+      "id": "8719"
     },
     {
       "title": "Engineering",
       "icon": "/assets/images/enginnering.svg",
       "link": "engineering",
-      "count": 22
+      "count": 22,
+      "id": "55e9"
     },
     {
       "title": "Finance",
       "icon": "/assets/images/finance.svg",
       "link": "finance",
-      "count": 98
+      "count": 98,
+      "id": "6b6d"
     },
     {
       "title": "Science",
       "icon": "/assets/images/science.svg",
       "link": "science",
-      "count": 3
+      "count": 3,
+      "id": "bebd"
     },
     {
       "title": "Social Science",
       "icon": "/assets/images/social-science.svg",
       "link": "social-science",
-      "count": 48
+      "count": 48,
+      "id": "87ce"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "firstName": "Binyam",
+      "lastName": "Techan",
+      "email": "binyam@gmail.com",
+      "password": "123456"
     }
   ]
 }

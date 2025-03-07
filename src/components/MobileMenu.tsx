@@ -32,12 +32,12 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
               </Link>
             </li>
             <li>
-              <Link to="/sign-in" onClick={onClose}>
+              <Link to="/auth/sign-in" onClick={onClose}>
                 Sign In
               </Link>
             </li>
             <li>
-              <Link to="/join" onClick={onClose}>
+              <Link to="/auth/join" onClick={onClose}>
                 Register
               </Link>
             </li>

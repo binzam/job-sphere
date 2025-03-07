@@ -1,0 +1,50 @@
+.legal_container {
+  max-width: 700px;
+  padding: 1.5rem;
+  background-color: #fff;
+  text-align: left;
+  margin: 1rem auto;
+}
+
+.legal_container h1 {
+  font-size: 1.6rem;
+  color: #00366b;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.legal_container h2 {
+  font-size: 1.1rem;
+  color: #333;
+  margin-top: 1.5rem;
+}
+
+.legal_container p {
+  font-size: 1rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.footer_note {
+  font-size: 0.9rem;
+  color: #777;
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 600px) {
+  .legal_container {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+}

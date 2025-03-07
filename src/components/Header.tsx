@@ -1,16 +1,24 @@
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import styles from '../styles/Header.module.css';
 import { HiOutlineMenuAlt2 } from 'react-icons/hi';
 import { useState } from 'react';
 import MobileMenu from './MobileMenu';
 import { ImSphere } from 'react-icons/im';
+import { MdLogout } from 'react-icons/md';
+import { useUser } from '../hooks/useUser';
 const Header = () => {
   const location = useLocation();
+  const navigate = useNavigate();
+  const { user, logout } = useUser();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const staticHeader = location.pathname.startsWith('/jobs');
 
   const toggleModal = () => {
     setIsModalOpen((prev) => !prev);
+  };
+  const handleLogout = () => {
+    logout();
+    navigate('/', { replace: true });
   };
   return (
     <header className={`${styles.header} ${staticHeader && styles.static}`}>
@@ -41,14 +49,20 @@ const Header = () => {
               <Link to="/about">About</Link>
             </li>
           </ul>
-          <ul className={styles.nav_list}>
-            <li>
-              <Link to="/sign-in">Sign In</Link>
-            </li>
-            <li>
-              <Link to="/join">Register</Link>
-            </li>
-          </ul>
+          {!user ? (
+            <ul className={styles.nav_list}>
+              <li>
+                <Link to="/auth/sign-in">Sign In</Link>
+              </li>
+              <li>
+                <Link to="/auth/join">Register</Link>
+              </li>
+            </ul>
+          ) : (
+            <button className={styles.logout_btn} onClick={handleLogout}>
+              <MdLogout />Sign out
+            </button>
+          )}
         </nav>
       </div>
       <MobileMenu isOpen={isModalOpen} onClose={toggleModal} />
