@@ -50,12 +50,12 @@ const Header = () => {
             </li>
           </ul>
           {!user ? (
-            <ul className={styles.nav_list}>
+            <ul className={styles.nav_list_auth}>
               <li>
-                <Link to="/auth/sign-in">Sign In</Link>
+                <Link to="/auth/sign-in" className={styles.sign_in}>Sign In</Link>
               </li>
               <li>
-                <Link to="/auth/join">Register</Link>
+                <Link to="/auth/join" className={styles.sign_up}>Register</Link>
               </li>
             </ul>
           ) : (

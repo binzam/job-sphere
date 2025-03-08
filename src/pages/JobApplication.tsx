@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
 import styles from '../styles/JobApplication.module.css';
 import { useJob } from '../hooks/useJobs';
@@ -8,6 +8,9 @@ import { FaFileUpload } from 'react-icons/fa';
 import { TbHandClick } from 'react-icons/tb';
 import Container from '../components/Container';
 import JobListingCardHeader from '../components/JobListingCardHeader';
+import MessageDisplayCard from '../components/MessageDisplayCard';
+import { useUser } from '../hooks/useUser';
+import { GridLoader } from 'react-spinners';
 interface FormDataState {
   firstName: string;
   lastName: string;
@@ -19,11 +22,12 @@ interface FormDataState {
 const JobApplication: React.FC = () => {
   const { id } = useParams<{ category: string; id: string }>();
   const { job } = useJob(id!);
-
+  const { user } = useUser();
+  const navigate = useNavigate();
   const [formData, setFormData] = useState<FormDataState>({
-    firstName: '',
-    lastName: '',
-    email: '',
+    firstName: user?.firstName || '',
+    lastName: user?.lastName || '',
+    email: user?.email || '',
     resume: null,
     coverLetter: '',
   });
@@ -51,7 +55,7 @@ const JobApplication: React.FC = () => {
       setErrors((prev) => ({ ...prev, resume: '' }));
     }
   };
-  const validateForm = () => {
+  const validateApplicationForm = () => {
     const newErrors: Partial<Record<keyof FormDataState, string>> = {};
     if (!formData.firstName.trim())
       newErrors.firstName = 'This field is required';
@@ -70,41 +74,43 @@ const JobApplication: React.FC = () => {
   };
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!validateForm()) return;
+    if (!validateApplicationForm()) return;
     setLoading(true);
     setError('');
     setSuccess(false);
 
     try {
-      const formDataToSend = new FormData();
-      formDataToSend.append('firstName', formData.firstName);
-      formDataToSend.append('lastName', formData.lastName);
-      formDataToSend.append('email', formData.email);
-      formDataToSend.append('coverLetter', formData.coverLetter);
-      if (formData.resume) {
-        formDataToSend.append('resume', formData.resume);
-      }
-
-      await axios.post(
-       `${import.meta.env.VITE_API_URL}jobs/${id}/apply`,
-        formDataToSend,
+      const response = await axios.post(
+        `${import.meta.env.VITE_API_URL}applications`,
         {
-          headers: { 'Content-Type': 'multipart/form-data' },
+          jobId: id,
+          firstName: formData.firstName,
+          lastName: formData.lastName,
+          email: formData.email,
+          coverLetter: formData.coverLetter,
+          resume: fileName || formData.resume?.name || '',
         }
       );
-
-      setSuccess(true);
-      setFormData({
-        firstName: '',
-        lastName: '',
-        email: '',
-        resume: null,
-        coverLetter: '',
-      });
-      if (fileInputRef.current) {
-        fileInputRef.current.value = '';
+      console.log(response);
+      if (response.status === 201) {
+        setSuccess(true);
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          resume: null,
+          coverLetter: '',
+        });
+        if (fileInputRef.current) {
+          fileInputRef.current.value = '';
+        }
+        setFileName(null);
+        setTimeout(() => {
+          navigate('/jobs');
+        }, 3000);
+      } else {
+        setError('Failed to submit application. Please try again.');
       }
-      setFileName(null);
     } catch (error) {
       console.log(error);
       setError('Failed to submit application. Please try again.');
@@ -112,11 +118,17 @@ const JobApplication: React.FC = () => {
       setLoading(false);
     }
   };
-  if (loading || !job) return <Loader />;
+  if (!job) return <Loader />;
 
   return (
     <Container>
       <div className={styles.application_page}>
+        {success && (
+          <MessageDisplayCard
+            message="Application submitted! Check your email."
+            type="success"
+          />
+        )}
         <div className={styles.application_page_wrapper}>
           <div className={styles.job_card_wrapper}>
             <JobListingCardHeader job={job} />
@@ -128,6 +140,14 @@ const JobApplication: React.FC = () => {
               className={styles.application_form}
               noValidate
             >
+              {loading && (
+                <GridLoader
+                  color="#006986"
+                  margin={30}
+                  size={50}
+                  className={styles.application_loading}
+                />
+              )}
               <div className={styles.form_input_row}>
                 <div className={styles.form_input_sml}>
                   <label htmlFor="firstName">First Name</label>
@@ -181,6 +201,7 @@ const JobApplication: React.FC = () => {
                   }`}
                   type="email"
                   name="email"
+                  autoComplete="true"
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="Email address"
@@ -249,14 +270,13 @@ const JobApplication: React.FC = () => {
                 )}
               </div>
 
-              {error && <p className={styles.error}>{error}</p>}
-              {success && (
-                <p className={styles.success}>
-                  Application submitted successfully!
-                </p>
-              )}
+              {error && <MessageDisplayCard message={error} type="error" />}
 
-              <button type="submit" disabled={loading}>
+              <button
+                type="submit"
+                disabled={loading}
+                className={styles.submit_btn}
+              >
                 <FaFileUpload />
                 {loading ? 'Submitting...' : 'Submit Application'}
               </button>

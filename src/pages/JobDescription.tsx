@@ -5,6 +5,9 @@ import { Loader } from '../components/Loader';
 import JobListing from '../components/JobListing';
 import JobDetailCard from '../components/JobDetailCard';
 import { useJob, useSimilarJobs } from '../hooks/useJobs';
+import MessageDisplayCard from '../components/MessageDisplayCard';
+import { IoMdArrowRoundBack } from 'react-icons/io';
+import { useUser } from '../hooks/useUser';
 const JobDescription = () => {
   const { category: categoryParam, id } = useParams<{
     category?: string;
@@ -16,14 +19,33 @@ const JobDescription = () => {
 
   const { job, loading, error } = useJob(id!);
   const { similarJobs } = useSimilarJobs(decodedCategory);
-
+  const { user } = useUser();
+  const isAuthenticated = user ? true : false;
   if (loading) return <Loader />;
-  if (error) return <p className={styles.error}>{error}</p>;
-  if (!job) return <p className={styles.not_found}>Job not found</p>;
+  if (error)
+    return (
+      <MessageDisplayCard
+        message={error || 'Unexpected Error. Please refresh the page.'}
+        type="error"
+      />
+    );
+  if (!job)
+    return (
+      <>
+        <MessageDisplayCard
+          message={'Job not found. Please go back.'}
+          type="error"
+        />
+        <Link to="/jobs" className={styles.not_found_link}>
+          <IoMdArrowRoundBack /> Back to All Jobs
+        </Link>
+      </>
+    );
+
   return (
     <Container>
       <div className={styles.job_description_page}>
-        <JobDetailCard job={job} />
+        <JobDetailCard job={job} isAuthenticated={isAuthenticated} />
 
         <div className={styles.similar_listings}>
           <small>Similar Jobs</small>

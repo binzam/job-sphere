@@ -16,7 +16,8 @@
   margin-bottom: 3rem;
 }
 
-.cta_button {
+.cta_button,
+.not_found_link {
   padding: 0.3rem 1rem;
   background: #2c3e50;
   color: white;
@@ -27,7 +28,17 @@
   font-size: 0.9rem;
   font-weight: 600;
 }
+.not_found_link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
 
+.cta_button:hover,
+.not_found_link:hover {
+  background-color: black;
+}
 @media only screen and (max-width: 1200px) {
   .job_description_page {
     padding: 1rem 1rem 5rem;

@@ -18,7 +18,7 @@
   height: 30px;
   fill: #2c3e50;
 }
-.job_detail_card h4 {
+.job_detail_card h3 {
   color: #333;
   letter-spacing: 1px;
   display: flex;
@@ -108,7 +108,8 @@
 }
 
 .apply_button {
-  display: block;
+  box-sizing: border-box;
+  width: 100%;
   color: #ffffff;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -132,7 +133,6 @@
 .apply_button:hover {
   background-color: #007bff;
   box-shadow: 0px 0px 2px #0056b3;
-  gap: 0.1rem;
   border: 1px solid #000000;
 }
 

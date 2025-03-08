@@ -165,11 +165,7 @@
 .form_redirect_link a:hover {
   color: #333;
 }
-.error {
-  color: red;
-  font-size: 14px;
-  margin-top: 5px;
-}
+
 
 @media only screen and (max-width: 770px) {
   .auth_wrapper {

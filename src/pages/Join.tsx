@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import styles from '../styles/Auth.module.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { IoArrowBackCircleSharp } from 'react-icons/io5';
 import Container from '../components/Container';
 import { FaEye, FaEyeSlash } from 'react-icons/fa6';
-import { useAuth } from '../hooks/useAuth';
 import { GridLoader } from 'react-spinners';
+import { useUser } from '../hooks/useUser';
+import MessageDisplayCard from '../components/MessageDisplayCard';
 interface AuthData {
   email: string;
   password: string;
@@ -16,7 +17,8 @@ interface AuthData {
 }
 
 const Join = () => {
-  const { signUp, loading, error } = useAuth();
+  const { signUp, loading, signUpError } = useUser();
+  const navigate = useNavigate();
   const [formData, setFormData] = useState<AuthData>({
     email: '',
     lastName: '',
@@ -47,7 +49,22 @@ const Join = () => {
       confirmPassword: formData.confirmPassword,
       agreeToTerms: formData.agreeToTerms,
     });
-    if (success) alert('Registration successful! You can now log in.');
+
+    if (success) {
+      setFormData({
+        email: '',
+        lastName: '',
+        firstName: '',
+        password: '',
+        confirmPassword: '',
+        agreeToTerms: false,
+      });
+      navigate('/auth/sign-in', {
+        state: {
+          successMessage: 'Account created successfully! Sign in to continue.',
+        },
+      });
+    }
   };
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
@@ -64,6 +81,7 @@ const Join = () => {
             <IoArrowBackCircleSharp />
             Back to website
           </Link>
+
           <div className={styles.auth_form_container}>
             {loading && (
               <GridLoader
@@ -165,13 +183,17 @@ const Join = () => {
                   </span>
                 </label>
               </div>
-              {error && (
-                <p className={styles.error} role="alert" aria-live="assertive">
-                  {error}
-                </p>
+              {signUpError && (
+                <div role="alert" aria-live="assertive">
+                  <MessageDisplayCard message={signUpError} type="error" />
+                </div>
               )}
 
-              <button type="submit" className={styles.form_btn}>
+              <button
+                type="submit"
+                className={styles.form_btn}
+                disabled={loading}
+              >
                 Create An Account
               </button>
             </form>

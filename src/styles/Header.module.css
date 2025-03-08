@@ -62,6 +62,12 @@
   gap: 2rem;
   list-style: none;
 }
+.nav_list_auth {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  list-style: none;
+}
 .nav_list a {
   text-decoration: none;
   font-size: 1rem;
@@ -70,6 +76,32 @@
 }
 .nav_list a:hover {
   color: #333;
+}
+.sign_in,
+.sign_up {
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.3rem 1rem;
+  border-radius: 5px;
+}
+.sign_in {
+  border: 1px dashed green;
+  background-color: rgb(255, 255, 255);
+  color: #2c3e50;
+}
+.sign_up {
+  color: #ffffff;
+  border: 1px dashed #000000;
+
+  background-color: #2c3e50;
+}
+.sign_in:hover {
+  background-color: green;
+  color: #ffffff;
+}
+.sign_up:hover {
+  background-color: #000000;
 }
 .logout_btn {
   text-decoration: none;
@@ -81,14 +113,13 @@
   align-items: center;
   justify-content: center;
   gap: 5px;
-  transition: all 0.3s ease; 
+  transition: all 0.3s ease;
   background-color: #eee;
   color: rgb(255, 0, 0);
 }
-.logout_btn:hover{
+.logout_btn:hover {
   background-color: #000000;
   color: #fff;
-
 }
 @media only screen and (max-width: 1000px) {
   .header_wrapper {
@@ -96,7 +127,17 @@
   }
   .nav,
   .nav_list {
-    gap: 1.4rem;
+    gap: 1rem;
+  }
+  .nav_list_auth {
+    gap: 0.5rem;
+  }
+  .nav_list a {
+    font-size: 0.9rem;
+  }
+  .sign_in,
+  .sign_up {
+    padding: 0.2rem 0.6rem;
   }
 }
 @media only screen and (max-width: 770px) {

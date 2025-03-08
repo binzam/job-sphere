@@ -1,14 +1,18 @@
 import { useState } from 'react';
 import styles from '../styles/Auth.module.css';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { IoArrowBackCircleSharp } from 'react-icons/io5';
 import Container from '../components/Container';
 import { FaEye, FaEyeSlash } from 'react-icons/fa6';
 import { GridLoader } from 'react-spinners';
-import { useAuth } from '../hooks/useAuth';
+import MessageDisplayCard from '../components/MessageDisplayCard';
+import { useUser } from '../hooks/useUser';
 
 const SignIn = () => {
-  const { signIn, loading, error } = useAuth();
+  const { signIn, loading, signInError } = useUser();
+  const navigate = useNavigate();
+  const location = useLocation();
+  const successMessage = location.state?.successMessage;
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -22,7 +26,13 @@ const SignIn = () => {
     e.preventDefault();
 
     const success = await signIn(formData.email, formData.password);
-    if (success) alert('Login successful!');
+    if (success) {
+      navigate('/', {
+        state: {
+          successMessage: `Welcome ${formData.email}!`,
+        },
+      });
+    }
   };
 
   const togglePasswordVisibility = () => {
@@ -36,7 +46,9 @@ const SignIn = () => {
             <IoArrowBackCircleSharp />
             Back to website
           </Link>
-
+          {successMessage && (
+            <MessageDisplayCard message={successMessage} type="success" />
+          )}
           <div className={styles.auth_form_container}>
             {loading && (
               <GridLoader
@@ -78,10 +90,10 @@ const SignIn = () => {
                   {showPassword ? <FaEyeSlash /> : <FaEye />}
                 </span>
               </div>
-              {error && (
-                <p className={styles.error} role="alert" aria-live="assertive">
-                  {error}
-                </p>
+              {signInError && (
+                <div role="alert" aria-live="assertive">
+                  <MessageDisplayCard message={signInError} type="error" />
+                </div>
               )}
 
               <button type="submit" className={styles.form_btn}>

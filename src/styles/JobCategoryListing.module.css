@@ -3,7 +3,7 @@
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1rem;
   padding: 0.5rem 0;
-  margin: 0 auto 1rem;
+  margin: 0 auto 3rem;
 }
 .category_card_wrap {
   width: 100%;
@@ -21,6 +21,7 @@
 .category_card h3 {
   letter-spacing: 1px;
   margin-bottom: 1rem;
+  color: #2c3e50;
 }
 .category_card img {
   width: 70px;
@@ -72,12 +73,27 @@
   background-color: #f4f4f4;
 }
 
-/* @media only screen and (max-width: 600px) {
-  .dropdownButton {
-    width: 100%;
+@media only screen and (max-width: 770px) {
+  .job_category_list {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.5rem;
   }
-
-  .dropdownMenu {
-    width: 100%;
+  .category_card_wrap {
+    padding: 1rem 0.5rem;
+    box-shadow: 1px 3px 5px #33333355;
   }
-} */
+  
+  .category_card h3 {
+    font-size: 1rem;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+  }
+  .category_card img {
+    width: 50px;
+    height: 50px;
+  }
+  .category_card p {
+    font-size: 0.9rem;
+    margin-top: 1rem;
+  }
+}

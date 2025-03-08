@@ -10,8 +10,10 @@ import { useJobFilters } from '../hooks/useJobFilters';
 import useFilteredJobs from '../hooks/useFilteredJobs';
 import JobFilters from '../components/JobFilters';
 import { IoMdClose } from 'react-icons/io';
+import MessageDisplayCard from '../components/MessageDisplayCard';
 const Jobs = () => {
-  const { jobs, jobSectors, locations, experienceLevels, loading } = useJobs();
+  const { jobs, jobSectors, locations, experienceLevels, loading, error } =
+    useJobs();
   const {
     searchTerm,
     category,
@@ -30,6 +32,13 @@ const Jobs = () => {
   });
 
   if (loading) return <Loader />;
+  if (error)
+    return (
+      <MessageDisplayCard
+        message={error || 'Unexpected Error. Please Refresh the page.'}
+        type="success"
+      />
+    );
 
   let title = 'All Jobs';
   if (category) title = `${category} Jobs`;

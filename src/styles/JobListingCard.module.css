@@ -3,7 +3,7 @@
   border-radius: 5px;
   padding: 1rem 1.5rem 2rem;
   width: 100%;
-  max-width: 370px;
+  /* max-width: 370px; */
   text-align: left;
   position: relative;
   background-color: #fff;
@@ -145,8 +145,8 @@
   color: #fff;
   border-radius: 2px;
 }
-@media only screen and (max-width: 1100px) {
+/* @media only screen and (max-width: 1100px) {
   .job_card {
     max-width: 100%;
   }
-}
+} */

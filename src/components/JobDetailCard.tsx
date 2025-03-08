@@ -17,8 +17,12 @@ import { HiOutlineIdentification } from 'react-icons/hi';
 
 interface JobDetailCardProps {
   job: Job;
+  isAuthenticated: boolean;
 }
-const JobDetailCard: React.FC<JobDetailCardProps> = ({ job }) => {
+const JobDetailCard: React.FC<JobDetailCardProps> = ({
+  job,
+  isAuthenticated,
+}) => {
   return (
     <div className={styles.job_detail_card}>
       <span className={styles.card_icon}>
@@ -78,22 +82,22 @@ const JobDetailCard: React.FC<JobDetailCardProps> = ({ job }) => {
             className={styles.apply_button}
           >
             <FaFileSignature />
-            Apply Now!
+            {isAuthenticated ? ' Apply Now!' : 'Sign In to Apply'}
           </Link>
         </div>
         <div className={styles.desc_req_wrap}>
           <div>
-            <h4>
+            <h3>
               <MdOutlineDescription />
               Job Description
-            </h4>
+            </h3>
             <p className={styles.description}>{job.description}</p>
           </div>
           <div>
-            <h4>
+            <h3>
               <IoMdInformationCircleOutline />
               Job Requirements
-            </h4>
+            </h3>
             <ul className={styles.requirements}>
               {job.requirements.map((req) => (
                 <li key={req} className={styles.requirement}>
@@ -103,10 +107,10 @@ const JobDetailCard: React.FC<JobDetailCardProps> = ({ job }) => {
             </ul>
           </div>
           <div>
-            <h4>
+            <h3>
               <IoMdInformationCircleOutline />
               Skills Required
-            </h4>
+            </h3>
 
             <div className={styles.tags}>
               {job.languages.map((lang) => (

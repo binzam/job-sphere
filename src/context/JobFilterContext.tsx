@@ -29,17 +29,6 @@ const JobFilterProvider: React.FC<{
 }> = ({ children }) => {
   const [searchParams, setSearchParams] = useSearchParams();
   const getParam = (key: string) => searchParams.get(key) || '';
-  // const [searchTerm, setSearchTerm] = useState<{ [key: string]: string }>(
-  //   () => {
-  //     const term: { [key: string]: string } = {};
-  //     searchParams.forEach((value, key) => {
-  //       if (['role', 'position', 'company'].includes(key)) {
-  //         term[key] = value;
-  //       }
-  //     });
-  //     return term;
-  //   }
-  // );
   const [searchTerm, setSearchTerm] = useState<Record<string, string>>(() => {
     const term: Record<string, string> = {};
     searchParams.forEach((value, key) => {
@@ -61,17 +50,6 @@ const JobFilterProvider: React.FC<{
   const [role, setRole] = useState(getParam('role'));
   const [company, setCompany] = useState(getParam('company'));
 
-  // const updateSearchParams = (newParams: Record<string, string>) => {
-  //   const updatedParams = {
-  //     ...Object.fromEntries(searchParams.entries()),
-  //     ...Object.entries(newParams).reduce(
-  //       (acc, [key, value]) => ({ ...acc, [key]: String(value) }),
-  //       {}
-  //     ),
-  //   };
-
-  //   setSearchParams(updatedParams);
-  // };
   const updateSearchParams = (newParams: Record<string, string>) => {
     setSearchParams((prev) => {
       const updatedParams = new URLSearchParams(prev);
@@ -131,22 +109,6 @@ const JobFilterProvider: React.FC<{
     setSearchParams({});
   };
 
-  // const clearSpecificFilter = (
-  //   filterType:
-  //     | 'category'
-  //     | 'role'
-  //     | 'position'
-  //     | 'location'
-  //     | 'experienceLevel'
-  //     | 'company'
-  // ) => {
-  //   const newSearchParams = new URLSearchParams(searchParams);
-  //   newSearchParams.delete(filterType);
-  //   setSearchParams(newSearchParams);
-  // };
-  // const clearSpecificFilter = (filterType: keyof JobFilterContextType) => {
-  //   updateSearchParams({ [filterType]: '' });
-  // };
   const clearSpecificFilter = (
     filterType: 'category' | 'location' | 'experienceLevel' | 'search'
   ) => {

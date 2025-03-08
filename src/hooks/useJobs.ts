@@ -21,7 +21,7 @@ const useJobs = () => {
     const getJobsData = async () => {
       setLoading(true);
       setError(null);
-
+      console.log("APU")
       try {
         const [featured, sectors, allJobs] = await Promise.all([
           fetchFeaturedJobs(),

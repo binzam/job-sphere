@@ -11,6 +11,24 @@
   padding: 1.5rem;
   visibility: hidden;
 }
+
+.close_btn {
+  background: none;
+  border: none;
+  align-self: flex-end;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 0.5rem;
+  width: 40px;
+  height: 40px;
+}
+.close_btn svg {
+  width: 26px;
+  height: 26px;
+  color: #000000;
+  fill: #000000;
+}
 .mobile_menu_content {
   width: 100%;
   height: 100%;
@@ -30,35 +48,57 @@
   align-items: center;
   gap: 0.3rem;
 }
-.mobile_nav_list li {
-  margin: 1rem 0;
+.mobile_nav_list,
+.mobile_nav_list_auth {
+  display: flex;
+  flex-direction: column;
 }
-
+.mobile_nav_list li {
+  margin: 0.5rem 0;
+  width: 100%;
+}
 .mobile_nav_list a {
   text-decoration: none;
   color: #333;
   font-size: 1.1rem;
   font-weight: 600;
+  width: 100%;
 }
-
-.close_btn {
-  background: none;
-  border: none;
-  align-self: flex-end;
+.mob_nav_sign_in,
+.mob_nav_sign_up {
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.3rem 1rem;
+  border-radius: 5px;
+  display: block;
+  margin: 0.5rem 0;
+  text-align: center;
+}
+.mob_nav_sign_in {
+  border: 1px dashed green;
+  background-color: rgb(255, 255, 255);
+  color: #2c3e50;
+}
+.mob_nav_sign_up {
+  color: #ffffff;
+  border: 1px dashed #000000;
+  background-color: #2c3e50;
+}
+.mobile_nav_logout_btn{
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  margin-bottom: 0.5rem;
-  width: 40px;
-  height: 40px;
+  gap: 0.5rem;
+  color: #fff;
+  background-color: #ae0000;
+  border-radius: 5px;
+  border: 1px solid #333;
+  padding: 0.3rem 1rem;
+  margin: 1.5rem 0;
+  font-size: 0.9rem;
+  font-weight: 600;
 }
-.close_btn svg {
-  width: 26px;
-  height: 26px;
-  color: #000000;
-  fill: #000000;
-}
-
 @media only screen and (max-width: 770px) {
   .mobile_menu {
     visibility: visible;
