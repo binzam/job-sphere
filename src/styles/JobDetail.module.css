@@ -3,15 +3,13 @@
   padding: 2rem 2rem 4rem;
   background-color: #ffffff;
   border-radius: 5px;
-  box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.1);
-  border: 1px solid #ddd;
   border-right: 2px solid #808080;
   position: relative;
 }
 .card_icon {
   position: absolute;
   top: 1rem;
-  right: 1rem;
+  right: 2rem;
 }
 .card_icon svg {
   width: 30px;
@@ -30,6 +28,7 @@
   display: flex;
   align-items: center;
   gap: 1.5rem;
+  position: relative;
 }
 
 .logo {
@@ -111,11 +110,10 @@
   box-sizing: border-box;
   width: 100%;
   color: #ffffff;
-  letter-spacing: 1px;
   text-transform: uppercase;
   padding: 0.5rem 1rem;
   border-radius: 100vw;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 600;
   text-align: center;
   margin-top: 20px;
@@ -199,7 +197,7 @@
     justify-content: center;
   }
   .card_icon {
-    right: 0;
+    right: 1rem;
     top: 0;
   }
   .card_icon svg{
@@ -232,6 +230,6 @@
     align-items: flex-start;
   }
   .header_text h1 {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
 }

@@ -12,11 +12,7 @@
       "postedAt": "1d ago",
       "contract": "Full Time",
       "location": "USA",
-      "languages": [
-        "HTML",
-        "CSS",
-        "JavaScript"
-      ],
+      "languages": ["HTML", "CSS", "JavaScript"],
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error fuga, a debitis tempore sunt dignissimos, aspernatur libero ducimus repellendus aliquam facere doloremque quidem sit soluta nemo, minima nobis architecto quasi ut doloribus laboriosam animi. Eum suscipit neque sint tempora tenetur.",
       "requirements": [
         "Lorem, ipsum dolor sit amet ",
@@ -44,9 +40,7 @@
       "postedAt": "1d ago",
       "contract": "Part Time",
       "location": "Remote",
-      "languages": [
-        "Python"
-      ],
+      "languages": ["Python"],
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error fuga, a debitis tempore sunt dignissimos, aspernatur libero ducimus repellendus aliquam facere doloremque quidem sit soluta nemo, minima nobis architecto quasi ut doloribus laboriosam animi. Eum suscipit neque sint tempora tenetur.",
       "requirements": [
         "Lorem, ipsum dolor sit amet ",
@@ -61,9 +55,7 @@
       "slots": 2,
       "category": "Finance",
       "categoryLink": "ict",
-      "tools": [
-        "React"
-      ]
+      "tools": ["React"]
     },
     {
       "id": "3",
@@ -77,9 +69,7 @@
       "postedAt": "2d ago",
       "contract": "Part Time",
       "location": "Remote",
-      "languages": [
-        "JavaScript"
-      ],
+      "languages": ["JavaScript"],
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error fuga, a debitis tempore sunt dignissimos, aspernatur libero ducimus repellendus aliquam facere doloremque quidem sit soluta nemo, minima nobis architecto quasi ut doloribus laboriosam animi. Eum suscipit neque sint tempora tenetur.",
       "requirements": [
         "Lorem, ipsum dolor sit amet ",
@@ -94,10 +84,7 @@
       "slots": 2,
       "category": "Finance",
       "categoryLink": "ict",
-      "tools": [
-        "React",
-        "Sass"
-      ]
+      "tools": ["React", "Sass"]
     },
     {
       "id": "4",
@@ -105,16 +92,13 @@
       "logo": "/assets/images/myhome.svg",
       "new": false,
       "featured": false,
-      "position": "Junior Frontend Developer",
-      "role": "Frontend",
+      "position": "Social Worker",
+      "role": "Social Worker",
       "level": "Junior",
       "postedAt": "5d ago",
       "contract": "Contract",
       "location": "USA",
-      "languages": [
-        "CSS",
-        "JavaScript"
-      ],
+      "languages": ["CSS", "JavaScript"],
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error fuga, a debitis tempore sunt dignissimos, aspernatur libero ducimus repellendus aliquam facere doloremque quidem sit soluta nemo, minima nobis architecto quasi ut doloribus laboriosam animi. Eum suscipit neque sint tempora tenetur.",
       "requirements": [
         "Lorem, ipsum dolor sit amet ",
@@ -143,9 +127,7 @@
       "postedAt": "1w ago",
       "contract": "Full Time",
       "location": "Japan",
-      "languages": [
-        "JavaScript"
-      ],
+      "languages": ["JavaScript"],
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error fuga, a debitis tempore sunt dignissimos, aspernatur libero ducimus repellendus aliquam facere doloremque quidem sit soluta nemo, minima nobis architecto quasi ut doloribus laboriosam animi. Eum suscipit neque sint tempora tenetur.",
       "requirements": [
         "Lorem, ipsum dolor sit amet ",
@@ -160,10 +142,7 @@
       "slots": 2,
       "category": "ICT",
       "categoryLink": "ict",
-      "tools": [
-        "Ruby",
-        "Sass"
-      ]
+      "tools": ["Ruby", "Sass"]
     },
     {
       "id": "6",
@@ -177,9 +156,7 @@
       "postedAt": "2w ago",
       "contract": "Full Time",
       "location": "UK",
-      "languages": [
-        "Ruby"
-      ],
+      "languages": ["Ruby"],
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error fuga, a debitis tempore sunt dignissimos, aspernatur libero ducimus repellendus aliquam facere doloremque quidem sit soluta nemo, minima nobis architecto quasi ut doloribus laboriosam animi. Eum suscipit neque sint tempora tenetur.",
       "requirements": [
         "Lorem, ipsum dolor sit amet ",
@@ -194,9 +171,7 @@
       "slots": 2,
       "category": "ICT",
       "categoryLink": "ict",
-      "tools": [
-        "RoR"
-      ]
+      "tools": ["RoR"]
     },
     {
       "id": "7",
@@ -210,10 +185,7 @@
       "postedAt": "2w ago",
       "contract": "Full Time",
       "location": "Canada",
-      "languages": [
-        "HTML",
-        "JavaScript"
-      ],
+      "languages": ["HTML", "JavaScript"],
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error fuga, a debitis tempore sunt dignissimos, aspernatur libero ducimus repellendus aliquam facere doloremque quidem sit soluta nemo, minima nobis architecto quasi ut doloribus laboriosam animi. Eum suscipit neque sint tempora tenetur.",
       "requirements": [
         "Lorem, ipsum dolor sit amet ",
@@ -228,9 +200,7 @@
       "slots": 2,
       "category": "ICT",
       "categoryLink": "ict",
-      "tools": [
-        "Sass"
-      ]
+      "tools": ["Sass"]
     },
     {
       "id": "8",
@@ -244,9 +214,7 @@
       "postedAt": "2w ago",
       "contract": "Full Time",
       "location": "USA",
-      "languages": [
-        "JavaScript"
-      ],
+      "languages": ["JavaScript"],
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error fuga, a debitis tempore sunt dignissimos, aspernatur libero ducimus repellendus aliquam facere doloremque quidem sit soluta nemo, minima nobis architecto quasi ut doloribus laboriosam animi. Eum suscipit neque sint tempora tenetur.",
       "requirements": [
         "Lorem, ipsum dolor sit amet ",
@@ -261,10 +229,7 @@
       "slots": 2,
       "category": "ICT",
       "categoryLink": "ict",
-      "tools": [
-        "Vue",
-        "Sass"
-      ]
+      "tools": ["Vue", "Sass"]
     },
     {
       "id": "9",
@@ -278,10 +243,7 @@
       "postedAt": "3w ago",
       "contract": "Full Time",
       "location": "Canada",
-      "languages": [
-        "JavaScript",
-        "Python"
-      ],
+      "languages": ["JavaScript", "Python"],
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error fuga, a debitis tempore sunt dignissimos, aspernatur libero ducimus repellendus aliquam facere doloremque quidem sit soluta nemo, minima nobis architecto quasi ut doloribus laboriosam animi. Eum suscipit neque sint tempora tenetur.",
       "requirements": [
         "Lorem, ipsum dolor sit amet ",
@@ -296,9 +258,7 @@
       "slots": 2,
       "category": "Finance",
       "categoryLink": "ict",
-      "tools": [
-        "Django"
-      ]
+      "tools": ["Django"]
     },
     {
       "id": "10",
@@ -312,9 +272,7 @@
       "postedAt": "1mo ago",
       "contract": "Part Time",
       "location": "Canada",
-      "languages": [
-        "JavaScript"
-      ],
+      "languages": ["JavaScript"],
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error fuga, a debitis tempore sunt dignissimos, aspernatur libero ducimus repellendus aliquam facere doloremque quidem sit soluta nemo, minima nobis architecto quasi ut doloribus laboriosam animi. Eum suscipit neque sint tempora tenetur.",
       "requirements": [
         "Lorem, ipsum dolor sit amet ",
@@ -329,10 +287,7 @@
       "slots": 2,
       "category": "Business",
       "categoryLink": "ict",
-      "tools": [
-        "React",
-        "Sass"
-      ]
+      "tools": ["React", "Sass"]
     },
     {
       "id": "11",
@@ -346,9 +301,7 @@
       "postedAt": "1mo ago",
       "contract": "Part Time",
       "location": "Los Angeles, CA",
-      "languages": [
-        "JavaScript"
-      ],
+      "languages": ["JavaScript"],
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error fuga, a debitis tempore sunt dignissimos, aspernatur libero ducimus repellendus aliquam facere doloremque quidem sit soluta nemo, minima nobis architecto quasi ut doloribus laboriosam animi. Eum suscipit neque sint tempora tenetur.",
       "requirements": [
         "Lorem, ipsum dolor sit amet ",
@@ -363,10 +316,7 @@
       "slots": 2,
       "category": "Education",
       "categoryLink": "ict",
-      "tools": [
-        "Adobe Illustrator",
-        "Adobe photoshop"
-      ]
+      "tools": ["Adobe Illustrator", "Adobe photoshop"]
     },
     {
       "id": "12",
@@ -380,9 +330,7 @@
       "postedAt": "1mo ago",
       "contract": "Part Time",
       "location": "New York, NY ",
-      "languages": [
-        "JavaScript"
-      ],
+      "languages": ["JavaScript"],
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error fuga, a debitis tempore sunt dignissimos, aspernatur libero ducimus repellendus aliquam facere doloremque quidem sit soluta nemo, minima nobis architecto quasi ut doloribus laboriosam animi. Eum suscipit neque sint tempora tenetur.",
       "requirements": [
         "Lorem, ipsum dolor sit amet ",
@@ -397,10 +345,123 @@
       "slots": 2,
       "category": "ICT",
       "categoryLink": "ict",
-      "tools": [
-        "Adobe Illustrator",
-        "Adobe photoshop"
-      ]
+      "tools": ["Adobe Illustrator", "Adobe photoshop"]
+    },
+    {
+      "id": "13",
+      "company": "Vladn Inc",
+      "logo": "/assets/images/the-air-filter-company.svg",
+      "new": false,
+      "featured": true,
+      "position": "DevOps enginner",
+      "role": "Software Engineer",
+      "level": "Senior",
+      "postedAt": "1mo ago",
+      "contract": "Part Time",
+      "location": "New York, NY ",
+      "languages": ["JavaScript"],
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error fuga, a debitis tempore sunt dignissimos, aspernatur libero ducimus repellendus aliquam facere doloremque quidem sit soluta nemo, minima nobis architecto quasi ut doloribus laboriosam animi. Eum suscipit neque sint tempora tenetur.",
+      "requirements": [
+        "Lorem, ipsum dolor sit amet ",
+        "consectetur adipisicing elit. Error fuga",
+        "a debitis tempore sunt dignissimos, aspernatur libero",
+        "ducimus repellendus aliquam facere doloremque quidem",
+        "sit soluta nemo, minima nobis architecto",
+        "quasi ut doloribus laboriosam animi. Eum suscipit",
+        "neque sint tempora tenetur."
+      ],
+      "salary": "$110,000 - $140,000",
+      "slots": 2,
+      "category": "ICT",
+      "categoryLink": "ict",
+      "tools": ["Adobe Illustrator", "Adobe photoshop"]
+    },
+    {
+      "id": "14",
+      "company": "GYS inc.",
+      "logo": "/assets/images/myhome.svg",
+      "new": false,
+      "featured": false,
+      "position": "Business Consultant",
+      "role": "Consultant",
+      "level": "Senior",
+      "postedAt": "1mo ago",
+      "contract": "Full Time",
+      "location": "Ethiopia",
+      "languages": ["JavaScript"],
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error fuga, a debitis tempore sunt dignissimos, aspernatur libero ducimus repellendus aliquam facere doloremque quidem sit soluta nemo, minima nobis architecto quasi ut doloribus laboriosam animi. Eum suscipit neque sint tempora tenetur.",
+      "requirements": [
+        "Lorem, ipsum dolor sit amet ",
+        "consectetur adipisicing elit. Error fuga",
+        "a debitis tempore sunt dignissimos, aspernatur libero",
+        "ducimus repellendus aliquam facere doloremque quidem",
+        "sit soluta nemo, minima nobis architecto",
+        "quasi ut doloribus laboriosam animi. Eum suscipit",
+        "neque sint tempora tenetur."
+      ],
+      "salary": "$110,000 - $140,000",
+      "slots": 2,
+      "category": "Business",
+      "categoryLink": "ict",
+      "tools": ["React", "Sass"]
+    },
+    {
+      "id": "15",
+      "company": "GYS inc.",
+      "logo": "/assets/images/myhome.svg",
+      "new": false,
+      "featured": false,
+      "position": "Electrical Engineer",
+      "role": "Electrician",
+      "level": "Senior",
+      "postedAt": "1mo ago",
+      "contract": "Full Time",
+      "location": "Ethiopia",
+      "languages": ["JavaScript"],
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error fuga, a debitis tempore sunt dignissimos, aspernatur libero ducimus repellendus aliquam facere doloremque quidem sit soluta nemo, minima nobis architecto quasi ut doloribus laboriosam animi. Eum suscipit neque sint tempora tenetur.",
+      "requirements": [
+        "Lorem, ipsum dolor sit amet ",
+        "consectetur adipisicing elit. Error fuga",
+        "a debitis tempore sunt dignissimos, aspernatur libero",
+        "ducimus repellendus aliquam facere doloremque quidem",
+        "sit soluta nemo, minima nobis architecto",
+        "quasi ut doloribus laboriosam animi. Eum suscipit",
+        "neque sint tempora tenetur."
+      ],
+      "salary": "$110,000 - $140,000",
+      "slots": 2,
+      "category": "Education",
+      "categoryLink": "ict",
+      "tools": ["React", "Sass"]
+    },
+    {
+      "id": "16",
+      "company": "EastSide",
+      "logo": "/assets/images/faceit.svg",
+      "new": false,
+      "featured": false,
+      "position": "Electrical Engineer",
+      "role": "Electrician",
+      "level": "Senior",
+      "postedAt": "1mo ago",
+      "contract": "Full Time",
+      "location": "Ethiopia",
+      "languages": ["JavaScript"],
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error fuga, a debitis tempore sunt dignissimos, aspernatur libero ducimus repellendus aliquam facere doloremque quidem sit soluta nemo, minima nobis architecto quasi ut doloribus laboriosam animi. Eum suscipit neque sint tempora tenetur.",
+      "requirements": [
+        "Lorem, ipsum dolor sit amet ",
+        "consectetur adipisicing elit. Error fuga",
+        "a debitis tempore sunt dignissimos, aspernatur libero",
+        "ducimus repellendus aliquam facere doloremque quidem",
+        "sit soluta nemo, minima nobis architecto",
+        "quasi ut doloribus laboriosam animi. Eum suscipit",
+        "neque sint tempora tenetur."
+      ],
+      "salary": "$110,000 - $140,000",
+      "slots": 2,
+      "category": "Engineering",
+      "categoryLink": "ict",
+      "tools": ["React", "Sass"]
     }
   ],
   "sectors": [
@@ -456,62 +517,11 @@
   ],
   "users": [
     {
-      "id": "1",
-      "firstName": "Binyam",
-      "lastName": "Techan",
-      "email": "binyam@gmail.com",
-      "password": "123456"
-    },
-    {
-      "id": "619e",
-      "firstName": "jo",
-      "lastName": "nine",
-      "email": "u3@u.com",
-      "password": "$2b$10$8F1v5Vii3Ctbwwm7gyZTxOc/bJ/OgYtvGySWjWmOb0zrg7EYMs7h2",
-      "confirmPassword": "123",
-      "agreeToTerms": true
-    },
-    {
-      "id": "51df",
-      "firstName": "binyam",
-      "lastName": "Techan",
-      "email": "u1@u.com",
-      "password": "$2b$10$UpGczrFLWSilIVVfn67a.e.E8FRVuZeKojvPFJmbjrs4f9p2wDIy2"
-    },
-    {
-      "id": "be02",
-      "firstName": "new",
-      "lastName": "user",
-      "email": "u4@u.com",
-      "password": "$2b$10$P7KO.LSJN45Wip81JE1jIuZlVn//fopOm2zNS1f4a.d3LNy/t6UTK"
-    },
-    {
-      "id": "bf47",
-      "firstName": "a",
-      "lastName": "a",
-      "email": "btechan@gmail.com",
-      "password": "$2b$10$repU0g3ph44tMgiQTF/rLeuYWDUIATeDwJkqv99xS4zs9ndrHEqrK"
-    },
-    {
       "id": "7b90",
       "firstName": "jo",
       "lastName": "niness",
       "email": "u0@u.com",
       "password": "$2b$10$HSUszP3yDntaLF6V9ds1muEd7KejnxsGWSv8rPZEg3TOP82pTNodS"
-    },
-    {
-      "id": "86a6",
-      "firstName": "jo",
-      "lastName": "black",
-      "email": "u9@u.com",
-      "password": "$2b$10$ux1bUi9..zWFORiB2BXjDecaBMXGTaVVodp1.onC7LqzU5FHLx/8W"
-    },
-    {
-      "id": "3374",
-      "firstName": "asd",
-      "lastName": "asd",
-      "email": "u99@u.com",
-      "password": "$2b$10$tQg4S2UIvcA2Gv4o.wkgxuuXZTJPbYuGNoKnUQcumXSLd.vkP2Nc2"
     }
   ],
   "applications": [
@@ -523,78 +533,6 @@
       "email": "email@example.com",
       "coverLetter": "I am excited to apply!",
       "resume": "resume.pdf"
-    },
-    {
-      "id": "5d88",
-      "jobId": "1",
-      "firstName": "meee",
-      "lastName": "ama",
-      "email": "btechan@gmail.com",
-      "coverLetter": "sdfsdfdgdfggf",
-      "resume": "Binyam Techan cv.docx"
-    },
-    {
-      "id": "5484",
-      "jobId": "3",
-      "firstName": "a",
-      "lastName": "a",
-      "email": "btechan@gmail.com",
-      "coverLetter": "asgdfgsfg",
-      "resume": "Binyam Techan cv.docx"
-    },
-    {
-      "id": "0b0c",
-      "jobId": "4",
-      "firstName": "a",
-      "lastName": "a",
-      "email": "btechan@gmail.com",
-      "coverLetter": "sadfsdgdgdfg",
-      "resume": "Binyam Techan cv.docx"
-    },
-    {
-      "id": "1483",
-      "jobId": "1",
-      "firstName": "a",
-      "lastName": "a",
-      "email": "btechan@gmail.com",
-      "coverLetter": "sadgdgd",
-      "resume": "Binyam Techan cv.docx"
-    },
-    {
-      "id": "81fa",
-      "jobId": "3",
-      "firstName": "a",
-      "lastName": "a",
-      "email": "btechan@gmail.com",
-      "coverLetter": "asgfsdfhfhf",
-      "resume": "Binyam Techan cv.docx"
-    },
-    {
-      "id": "1faa",
-      "jobId": "2",
-      "firstName": "jo",
-      "lastName": "nine",
-      "email": "u3@u.com",
-      "coverLetter": "asdsdgdfgdg",
-      "resume": "Binyam Techan cv.docx"
-    },
-    {
-      "id": "82f4",
-      "jobId": "2",
-      "firstName": "jo",
-      "lastName": "niness",
-      "email": "u0@u.com",
-      "coverLetter": "sdfsgd",
-      "resume": "Binyam Techan cv.docx"
-    },
-    {
-      "id": "5357",
-      "jobId": "2",
-      "firstName": "asd",
-      "lastName": "asd",
-      "email": "u99@u.com",
-      "coverLetter": "asfsdgfds",
-      "resume": "Binyam Techan cv.docx"
     }
   ]
 }

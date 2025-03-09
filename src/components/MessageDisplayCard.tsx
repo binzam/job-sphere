@@ -4,13 +4,14 @@ type MessageDisplayCardProps = {
   message: string;
   type?: 'success' | 'error';
   autoHide?: boolean;
+  fixed?: boolean;
 };
 const MessageDisplayCard = ({
   message,
   type = 'success',
   autoHide = false,
+  fixed = false,
 }: MessageDisplayCardProps) => {
-  
   const [visible, setVisible] = useState(true);
   useEffect(() => {
     if (autoHide) {
@@ -20,7 +21,13 @@ const MessageDisplayCard = ({
   }, [autoHide]);
   if (!visible) return null;
   return (
-    <div className={`${styles.message_card} ${styles[type]}`}>{message}</div>
+    <div
+      className={`${styles.message_card} ${styles[type]} ${
+        fixed ? styles.fixed : ''
+      } `}
+    >
+      {message}
+    </div>
   );
 };
 

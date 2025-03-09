@@ -21,7 +21,7 @@ const useJobs = () => {
     const getJobsData = async () => {
       setLoading(true);
       setError(null);
-      console.log("APU")
+      // console.log("APU")
       try {
         const [featured, sectors, allJobs] = await Promise.all([
           fetchFeaturedJobs(),
@@ -82,7 +82,7 @@ export const useJob = (id: string) => {
   return { job, loading, error };
 };
 
-export const useSimilarJobs = (category: string) => {
+export const useSimilarJobs = (category: string, jobId: string) => {
   const [similarJobs, setSimilarJobs] = useState<Job[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
@@ -94,7 +94,8 @@ export const useSimilarJobs = (category: string) => {
 
       try {
         const data = await fetchJobsByCategory(category);
-        setSimilarJobs(data);
+        const filteredJobs = data.filter((job) => job.id !== jobId).slice(0, 3);
+        setSimilarJobs(filteredJobs);
       } catch (error) {
         setError(error instanceof Error ? error.message : String(error));
       } finally {
@@ -105,7 +106,7 @@ export const useSimilarJobs = (category: string) => {
     if (category) {
       getSimilarJobs();
     }
-  }, [category]);
+  }, [category, jobId]);
 
   return { similarJobs, loading, error };
 };

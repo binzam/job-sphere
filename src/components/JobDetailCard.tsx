@@ -14,6 +14,7 @@ import { IoMdInformationCircleOutline } from 'react-icons/io';
 import { Job } from '../interfaces';
 import { Link } from 'react-router-dom';
 import { HiOutlineIdentification } from 'react-icons/hi';
+import ShareJob from './ShareJob';
 
 interface JobDetailCardProps {
   job: Job;
@@ -28,6 +29,7 @@ const JobDetailCard: React.FC<JobDetailCardProps> = ({
       <span className={styles.card_icon}>
         <MdOutlineWork />
       </span>
+
       <div className={styles.header}>
         <img
           src={job.logo}
@@ -42,6 +44,7 @@ const JobDetailCard: React.FC<JobDetailCardProps> = ({
             <p>{job.location}</p>
           </div>
         </div>
+        <ShareJob jobCategory={job.category} jobId={job.id} />
       </div>
       <div className={styles.meta_desc_wrap}>
         <div className={styles.meta}>

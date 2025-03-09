@@ -4,6 +4,8 @@
   justify-content: space-between;
   gap: 1rem;
   padding: 1rem 2rem 5rem;
+  position: relative;
+  z-index: 1;
 }
 
 .similar_listings {
@@ -12,8 +14,8 @@
 .similar_listings small {
   color: #2c3e50;
   font-weight: 600;
-  margin-left: 1rem;
-  margin-bottom: 3rem;
+  text-align: center;
+  display: block;
 }
 
 .cta_button,
@@ -23,16 +25,16 @@
   color: white;
   text-decoration: none;
   border-radius: 5px;
-  display: block;
   text-align: center;
   font-size: 0.9rem;
   font-weight: 600;
-}
-.not_found_link {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+}
+.cta_button{
+  padding: 0.5rem 1rem;
 }
 
 .cta_button:hover,
@@ -53,6 +55,9 @@
   .similar_listings {
     max-width: 100%;
     width: 100%;
+  }
+  .similar_listings small {
+    text-align: left;
   }
 }
 @media only screen and (max-width: 770px) {

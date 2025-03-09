@@ -11,6 +11,7 @@ import useFilteredJobs from '../hooks/useFilteredJobs';
 import JobFilters from '../components/JobFilters';
 import { IoMdClose } from 'react-icons/io';
 import MessageDisplayCard from '../components/MessageDisplayCard';
+import { useEffect } from 'react';
 const Jobs = () => {
   const { jobs, jobSectors, locations, experienceLevels, loading, error } =
     useJobs();
@@ -25,6 +26,9 @@ const Jobs = () => {
     isAnyFilterApplied,
     clearAllFilters,
   } = useJobFilters();
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [category, location, experienceLevel]);
   const filteredJobs = useFilteredJobs(jobs, searchTerm, {
     category,
     location,
@@ -40,7 +44,7 @@ const Jobs = () => {
       />
     );
 
-  let title = 'All Jobs';
+  let title = 'Explore Jobs';
   if (category) title = `${category} Jobs`;
   if (role) title = `${role} Jobs`;
   if (company) title = `Jobs @${company}`;
@@ -56,6 +60,14 @@ const Jobs = () => {
       <Container>
         <section className={styles.job_listing_section}>
           <div className={styles.listing_header_wrap}>
+            {isAnyFilterApplied && (
+              <button
+                className={styles.clear_all_Button}
+                onClick={clearAllFilters}
+              >
+                <IoMdClose /> Clear All Filters
+              </button>
+            )}
             <div className={styles.listing_header}>
               <h2 className={styles.listing_title}>{title}</h2>
               {location && (
@@ -71,14 +83,6 @@ const Jobs = () => {
                 </div>
               )}
             </div>
-            {isAnyFilterApplied && (
-              <button
-                className={styles.clear_all_Button}
-                onClick={clearAllFilters}
-              >
-                <IoMdClose /> Clear All Filters
-              </button>
-            )}
           </div>
           {filteredJobs.length > 0 ? (
             <JobListing listing={filteredJobs} />

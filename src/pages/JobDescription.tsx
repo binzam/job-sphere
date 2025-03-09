@@ -18,22 +18,15 @@ const JobDescription = () => {
     : '';
 
   const { job, loading, error } = useJob(id!);
-  const { similarJobs } = useSimilarJobs(decodedCategory);
+  const { similarJobs } = useSimilarJobs(decodedCategory, id!);
   const { user } = useUser();
   const isAuthenticated = user ? true : false;
   if (loading) return <Loader />;
-  if (error)
-    return (
-      <MessageDisplayCard
-        message={error || 'Unexpected Error. Please refresh the page.'}
-        type="error"
-      />
-    );
-  if (!job)
+  if (error || !job)
     return (
       <>
         <MessageDisplayCard
-          message={'Job not found. Please go back.'}
+          message={error || 'Job not found. Please go back.'}
           type="error"
         />
         <Link to="/jobs" className={styles.not_found_link}>
@@ -47,13 +40,16 @@ const JobDescription = () => {
       <div className={styles.job_description_page}>
         <JobDetailCard job={job} isAuthenticated={isAuthenticated} />
 
-        <div className={styles.similar_listings}>
-          <small>Similar Jobs</small>
-          <JobListing listing={similarJobs} />
-          <Link to="/jobs" className={styles.cta_button}>
-            See All Jobs
-          </Link>
-        </div>
+        {similarJobs.length > 0 && (
+          <div className={styles.similar_listings}>
+            <small>Similar Jobs</small>
+            <JobListing listing={similarJobs} />
+            <Link to="/jobs" className={styles.cta_button}>
+              <IoMdArrowRoundBack />
+              See All Jobs
+            </Link>
+          </div>
+        )}
       </div>
     </Container>
   );

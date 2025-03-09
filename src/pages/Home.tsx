@@ -41,7 +41,7 @@ const Home = () => {
         <section className={styles.hero}>
           <div className={styles.hero_overlay}>
             <div className={styles.hero_content}>
-              <h1>Find Your Dream Job Today</h1>
+              <h1>Find Your Dream Job Today!</h1>
               <p>
                 Join thousands of companies and candidates connecting on our
                 platform.
@@ -57,7 +57,7 @@ const Home = () => {
       </JobFilterProvider>
 
       <Container className="no_pad">
-        <section className={styles.featured_jobs}>
+        <section className={styles.home_top_section}>
           <h2>Featured Jobs</h2>
           <JobListing listing={featuredJobs} />
 
@@ -69,32 +69,36 @@ const Home = () => {
       </Container>
 
       <Container className="no_pad">
-        <section className={styles.featured_jobs}>
+        <section className={styles.home_top_section}>
           <h2>Explore by Category</h2>
           <JobCategoryListing listing={jobSectors} />
         </section>
       </Container>
+
       <section className={styles.hiring_stats}>
         <h2>Why Choose Job Sphere?</h2>
         <p>Thousands of job seekers and employers trust us. Here’s why:</p>
-        <div className={styles.stats_grid}>
-          <div className={styles.stat_card}>
-            <h3>10K+</h3>
-            <p>Jobs Listed</p>
+
+        <Container className='no_pad'>
+          <div className={styles.stats_grid}>
+            <div className={styles.stat_card}>
+              <h3>10K+</h3>
+              <p>Jobs Listed</p>
+            </div>
+            <div className={styles.stat_card}>
+              <h3>5K+</h3>
+              <p>Successful Hires</p>
+            </div>
+            <div className={styles.stat_card}>
+              <h3>500+</h3>
+              <p>Top Companies Hiring</p>
+            </div>
+            <div className={styles.stat_card}>
+              <h3>95%</h3>
+              <p>Satisfaction Rate</p>
+            </div>
           </div>
-          <div className={styles.stat_card}>
-            <h3>5K+</h3>
-            <p>Successful Hires</p>
-          </div>
-          <div className={styles.stat_card}>
-            <h3>500+</h3>
-            <p>Top Companies Hiring</p>
-          </div>
-          <div className={styles.stat_card}>
-            <h3>95%</h3>
-            <p>Satisfaction Rate</p>
-          </div>
-        </div>
+        </Container>
       </section>
       <section className={styles.employer_cta}>
         <h2>Are You Hiring?</h2>
@@ -128,7 +132,7 @@ const Home = () => {
 
       <section className={styles.job_seeker_cta}>
         <h2>Ready to Take the Next Step?</h2>
-        <p>Create a profile, upload your resume, and start applying today.</p>
+        <p>Create a profile and start applying for your dream job today.</p>
         <Link to="/" className={styles.cta_button}>
           Sign Up Now
         </Link>

@@ -1,13 +1,15 @@
 .header {
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 10;
   width: 100%;
-  background: #ffffffd2;
+  background-color: #ffffff;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
 }
 .header.static {
-  position: static;
+  position: relative;
   border-bottom: 1px solid #ddd;
 }
 .header_wrapper {

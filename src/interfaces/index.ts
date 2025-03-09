@@ -1,5 +1,5 @@
 export interface Job {
-  id: number;
+  id: number | string;
   company: string;
   logo: string;
   new: boolean;
@@ -32,4 +32,19 @@ export interface User {
   lastName: string;
   email: string;
   password: string;
+}
+export interface ApplicationFormDataState {
+  firstName: string;
+  lastName: string;
+  email: string;
+  resume: File | null;
+  coverLetter: string;
+}
+export interface SubmitApplicationParams {
+  jobId: string | undefined;
+  firstName: string;
+  lastName: string;
+  email: string;
+  coverLetter: string;
+  resume: string | null;
 }
