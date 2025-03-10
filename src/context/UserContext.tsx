@@ -20,6 +20,9 @@ type UserContextType = {
   }) => Promise<boolean>;
   signIn: (email: string, password: string) => Promise<boolean>;
   logout: () => void;
+  toggleMenuModal: () => void;
+  isMenuModalOpen: boolean;
+  clearErrors: () => void;
 };
 const UserContext = createContext<UserContextType>({
   user: null,
@@ -29,6 +32,9 @@ const UserContext = createContext<UserContextType>({
   signUp: async () => false,
   signIn: async () => false,
   logout: () => {},
+  toggleMenuModal: () => {},
+  isMenuModalOpen: false,
+  clearErrors: () => {},
 });
 
 const UserProvider = ({ children }: { children: ReactNode }) => {
@@ -36,6 +42,8 @@ const UserProvider = ({ children }: { children: ReactNode }) => {
   const [loading, setLoading] = useState(false);
   const [signInError, setSignInError] = useState<string | null>(null);
   const [signUpError, setSignUpError] = useState<string | null>(null);
+  const [isMenuModalOpen, setIsMenuModalOpen] = useState<boolean>(false);
+
   useEffect(() => {
     localStorage.setItem('jobSphereUser', JSON.stringify(user));
     return () => {
@@ -81,12 +89,17 @@ const UserProvider = ({ children }: { children: ReactNode }) => {
       return false;
     }
   };
-
+  const clearErrors = () => {
+    setSignInError(null);
+    setSignUpError(null);
+  };
   const logout = () => {
     localStorage.removeItem('jobSphereUser');
     setUser(null);
   };
-
+  const toggleMenuModal = () => {
+    setIsMenuModalOpen((prev) => !prev);
+  };
   const value = {
     user,
     loading,
@@ -95,6 +108,9 @@ const UserProvider = ({ children }: { children: ReactNode }) => {
     signUp,
     signIn,
     logout,
+    isMenuModalOpen,
+    toggleMenuModal,
+    clearErrors,
   };
 
   return <UserContext.Provider value={value}>{children}</UserContext.Provider>;

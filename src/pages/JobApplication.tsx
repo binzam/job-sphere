@@ -13,6 +13,7 @@ import { GridLoader } from 'react-spinners';
 import { ApplicationFormDataState } from '../interfaces';
 import { validateApplicationForm } from '../utils/validationUtils';
 import { submitApplication } from '../api/jobs';
+import DOMPurify from 'dompurify';
 
 const JobApplication: React.FC = () => {
   const { id } = useParams<{ category: string; id: string }>();
@@ -70,9 +71,10 @@ const JobApplication: React.FC = () => {
       setErrors((prev) => ({ ...prev, resume: '' }));
     }
   };
- 
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    const sanitizedCoverLetter = DOMPurify.sanitize(formData.coverLetter);
     const validationErrors = validateApplicationForm(formData);
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
@@ -86,7 +88,7 @@ const JobApplication: React.FC = () => {
       firstName: formData.firstName,
       lastName: formData.lastName,
       email: formData.email,
-      coverLetter: formData.coverLetter,
+      coverLetter: sanitizedCoverLetter,
       resume: fileName || formData.resume?.name || '',
     });
 
@@ -156,7 +158,9 @@ const JobApplication: React.FC = () => {
                       value={formData.firstName}
                       onChange={handleChange}
                       placeholder="First name"
-                      aria-describedby="firstNameError"
+                      aria-describedby={
+                        errors.firstName ? 'firstNameError' : undefined
+                      }
                       aria-invalid={!!errors.firstName}
                     />
                     {errors.firstName && (
@@ -177,7 +181,9 @@ const JobApplication: React.FC = () => {
                       value={formData.lastName}
                       onChange={handleChange}
                       placeholder="Last name"
-                      aria-describedby="lastNameError"
+                      aria-describedby={
+                        errors.firstName ? 'lastNameError' : undefined
+                      }
                       aria-invalid={!!errors.lastName}
                     />
                     {errors.lastName && (
@@ -200,7 +206,9 @@ const JobApplication: React.FC = () => {
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="Email address"
-                    aria-describedby="emailError"
+                    aria-describedby={
+                      errors.firstName ? 'emailError' : undefined
+                    }
                     aria-invalid={!!errors.email}
                   />
                   {errors.email && (
@@ -221,7 +229,9 @@ const JobApplication: React.FC = () => {
                     className={`${styles.input_text_area} ${
                       errors.coverLetter ? styles.error_border : ''
                     }`}
-                    aria-describedby="coverLetterError"
+                    aria-describedby={
+                      errors.firstName ? 'coverLetterError' : undefined
+                    }
                     aria-invalid={!!errors.coverLetter}
                   />
                   {errors.coverLetter && (
@@ -255,7 +265,9 @@ const JobApplication: React.FC = () => {
                     accept=".pdf,.doc,.docx"
                     onChange={handleFileChange}
                     className={styles.input_field_file}
-                    aria-describedby="resumeError"
+                    aria-describedby={
+                      errors.firstName ? 'resumeError' : undefined
+                    }
                     aria-invalid={!!errors.resume}
                   />
                   {errors.resume && (

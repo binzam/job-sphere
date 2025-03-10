@@ -39,9 +39,9 @@
 }
 .auth_form_container {
   background: #75757566;
-  backdrop-filter: blur(3px);
   border-radius: 10px;
   padding: 2rem 2rem;
+  backdrop-filter: blur(3px);
   box-shadow: 0 0px 10px #0057b357;
   width: 100%;
   height: max-content;
@@ -64,6 +64,21 @@
   color: #ffffff;
   text-align: center;
 }
+.sign_up_form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+  position: relative;
+}
+.sign_in_form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  position: relative;
+}
+
 .form_input_row {
   display: flex;
   align-items: flex-start;
@@ -71,7 +86,7 @@
 }
 .form_input_group,
 .form_input_group_chkbox {
-  margin-top: 0.7rem;
+  /* margin-top: 0.7rem; */
   position: relative;
 }
 .form_input_group label {
@@ -92,6 +107,9 @@
   border-radius: 4px;
   font-size: 0.9rem;
   font-weight: 500;
+}
+.form_input_group input.error_border {
+  border: 1px solid red;
 }
 .form_input_group input:focus {
   outline: 2px solid blue;
@@ -144,7 +162,7 @@
   font-weight: 600;
   border-radius: 5px;
   cursor: pointer;
-  margin-top: 1rem;
+  margin-top: 0.4rem;
   box-sizing: border-box;
 }
 
@@ -165,7 +183,16 @@
 .form_redirect_link a:hover {
   color: #333;
 }
-
+.error_msg {
+  position: absolute;
+  left: 0rem;
+  bottom: -17px;
+  color: rgb(223, 0, 0);
+  font-size: 0.7rem;
+  font-weight: 600;
+  line-height: 0.9;
+  height: 14px;
+}
 
 @media only screen and (max-width: 770px) {
   .auth_wrapper {
@@ -179,5 +206,8 @@
   }
   .auth_form_container {
     padding: 2rem 1.5rem;
+  }
+  .error_msg {
+    font-size: 0.7rem;
   }
 }

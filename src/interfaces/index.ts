@@ -10,12 +10,11 @@ export interface Job {
   postedAt: string;
   contract: string;
   location: string;
-  languages: string[];
+  skills: string[];
   description: string;
   salary: string;
   tools: string[];
   category: string;
-  categoryLink: string;
   slots: number;
   requirements: string[];
 }
@@ -47,4 +46,16 @@ export interface SubmitApplicationParams {
   email: string;
   coverLetter: string;
   resume: string | null;
+}
+export interface SignUpFormData {
+  email: string;
+  password: string;
+  firstName: string;
+  lastName: string;
+  confirmPassword: string;
+  agreeToTerms: boolean;
+}
+export interface SignInFormData {
+  email: string;
+  password: string;
 }

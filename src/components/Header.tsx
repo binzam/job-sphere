@@ -1,21 +1,16 @@
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import styles from '../styles/Header.module.css';
 import { HiOutlineMenuAlt2 } from 'react-icons/hi';
-import { useState } from 'react';
-import MobileMenu from './MobileMenu';
-import { ImSphere } from 'react-icons/im';
 import { MdLogout } from 'react-icons/md';
 import { useUser } from '../hooks/useUser';
+import { SiQuicklook } from 'react-icons/si';
 const Header = () => {
   const location = useLocation();
   const navigate = useNavigate();
-  const { user, logout } = useUser();
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const { user, logout, toggleMenuModal } = useUser();
+
   const staticHeader = location.pathname.startsWith('/jobs');
 
-  const toggleModal = () => {
-    setIsModalOpen((prev) => !prev);
-  };
   const handleLogout = () => {
     logout();
     navigate('/', { replace: true });
@@ -23,13 +18,13 @@ const Header = () => {
   return (
     <header className={`${styles.header} ${staticHeader && styles.static}`}>
       <div className={styles.header_wrapper}>
-        <button className={styles.menu_btn} onClick={toggleModal}>
+        <button className={styles.menu_btn} onClick={toggleMenuModal}>
           <HiOutlineMenuAlt2 />
         </button>
         <div className={styles.logo}>
           <Link to="/">
             <div className={styles.logo_link}>
-              <ImSphere />
+             <SiQuicklook />
               JOB SPHERE
             </div>
           </Link>
@@ -52,20 +47,25 @@ const Header = () => {
           {!user ? (
             <ul className={styles.nav_list_auth}>
               <li>
-                <Link to="/auth/sign-in" className={styles.sign_in}>Sign In</Link>
+                <Link to="/auth/sign-in" className={styles.sign_in}>
+                  Sign In
+                </Link>
               </li>
               <li>
-                <Link to="/auth/join" className={styles.sign_up}>Register</Link>
+                <Link to="/auth/join" className={styles.sign_up}>
+                  Register
+                </Link>
               </li>
             </ul>
           ) : (
             <button className={styles.logout_btn} onClick={handleLogout}>
-              <MdLogout />Sign out
+              <MdLogout />
+              Sign out
             </button>
           )}
         </nav>
       </div>
-      <MobileMenu isOpen={isModalOpen} onClose={toggleModal} />
+      
     </header>
   );
 };

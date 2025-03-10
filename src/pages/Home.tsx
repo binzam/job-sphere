@@ -30,14 +30,10 @@ const Home = () => {
 
   return (
     <div className={styles.home}>
+      {successMessage && (
+        <MessageDisplayCard message={successMessage} type="success" autoHide />
+      )}
       <JobFilterProvider>
-        {successMessage && (
-          <MessageDisplayCard
-            message={successMessage}
-            type="success"
-            autoHide
-          />
-        )}
         <section className={styles.hero}>
           <div className={styles.hero_overlay}>
             <div className={styles.hero_content}>
@@ -79,7 +75,7 @@ const Home = () => {
         <h2>Why Choose Job Sphere?</h2>
         <p>Thousands of job seekers and employers trust us. Here’s why:</p>
 
-        <Container className='no_pad'>
+        <Container className="no_pad">
           <div className={styles.stats_grid}>
             <div className={styles.stat_card}>
               <h3>10K+</h3>
@@ -103,7 +99,7 @@ const Home = () => {
       <section className={styles.employer_cta}>
         <h2>Are You Hiring?</h2>
         <p>Post your job openings and find the best talent.</p>
-        <Link to="/employer/signup" className={styles.cta_button}>
+        <Link to="/" className={styles.cta_button}>
           Post a Job
         </Link>
       </section>
@@ -133,8 +129,8 @@ const Home = () => {
       <section className={styles.job_seeker_cta}>
         <h2>Ready to Take the Next Step?</h2>
         <p>Create a profile and start applying for your dream job today.</p>
-        <Link to="/" className={styles.cta_button}>
-          Sign Up Now
+        <Link to="/jobs" className={styles.cta_button}>
+          Start Now
         </Link>
       </section>
     </div>

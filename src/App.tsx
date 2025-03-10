@@ -1,6 +1,6 @@
 import './styles/index.css';
 import { lazy, Suspense } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import { JobFilterProvider } from './context/JobFilterContext';
 import { UserProvider } from './context/UserContext';
 import ProtectedRoute from './components/ProtectedRoute';
@@ -13,7 +13,6 @@ const Home = lazy(() => import('./pages/Home'));
 const Jobs = lazy(() => import('./pages/Jobs'));
 const JobDescription = lazy(() => import('./pages/JobDescription'));
 const JobApplication = lazy(() => import('./pages/JobApplication'));
-const PostJob = lazy(() => import('./pages/PostJob'));
 const Contact = lazy(() => import('./pages/Contact'));
 const About = lazy(() => import('./pages/About'));
 const Privacy = lazy(() => import('./pages/Privacy'));
@@ -22,17 +21,19 @@ const NotFound = lazy(() => import('./pages/NotFound'));
 const Join = lazy(() => import('./pages/Join'));
 const SignIn = lazy(() => import('./pages/SignIn'));
 function App() {
+
   return (
     <UserProvider>
       <ScrollToTop />
       <Suspense fallback={<Loader />}>
         <Routes>
           <Route path="*" element={<NotFound />} />
-
-          <Route path="/auth" element={<AuthLayout />}>
-            <Route path="join" element={<Join />} />
-            <Route path="sign-in" element={<SignIn />} />
-          </Route>
+            <Route path="/auth" element={<AuthLayout />}>
+              <Route index element={<Navigate to="sign-in" replace />} />
+              <Route path="sign-in" element={<SignIn />} />
+              <Route path="join" element={<Join />} />
+            </Route>
+         
 
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
@@ -54,7 +55,6 @@ function App() {
                 </ProtectedRoute>
               }
             />
-            <Route path="post-a-job" element={<PostJob />} />
             <Route path="contact" element={<Contact />} />
             <Route path="about" element={<About />} />
             <Route path="privacy-policy" element={<Privacy />} />

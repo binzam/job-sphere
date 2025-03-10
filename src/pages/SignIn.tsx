@@ -7,36 +7,67 @@ import { FaEye, FaEyeSlash } from 'react-icons/fa6';
 import { GridLoader } from 'react-spinners';
 import MessageDisplayCard from '../components/MessageDisplayCard';
 import { useUser } from '../hooks/useUser';
-
+import DOMPurify from 'dompurify';
+import { SignInFormData } from '../interfaces';
 const SignIn = () => {
-  const { signIn, loading, signInError } = useUser();
+  const { signIn, loading, signInError, clearErrors } = useUser();
   const navigate = useNavigate();
   const location = useLocation();
   const successMessage = location.state?.successMessage;
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<SignInFormData>({
     email: '',
     password: '',
   });
+  const [errors, setErrors] = useState<
+    Partial<Record<keyof SignInFormData, string>>
+  >({});
   const [showPassword, setShowPassword] = useState(false);
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+
+    const { name, value } = e.target;
+    const sanitizedValue = DOMPurify.sanitize(value);
+
+    setFormData((prev) => ({
+      ...prev,
+      [name]: sanitizedValue,
+    }));
+
+    setErrors((prev) => ({
+      ...prev,
+      [name]: '',
+    }));
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    let formValid = true;
+    const newErrors = { email: '', password: '' };
 
+    if (!formData.email.trim()) {
+      newErrors.email = 'Email is required.';
+      formValid = false;
+    }
+    if (!formData.password.trim()) {
+      newErrors.password = 'Password is required.';
+      formValid = false;
+    }
+    if (!formValid) {
+      setErrors(newErrors);
+      return;
+    }
+
+    clearErrors();
     const success = await signIn(formData.email, formData.password);
     if (success) {
+      setFormData({ email: '', password: '' });
       navigate('/', {
-        state: {
-          successMessage: `Welcome ${formData.email}!`,
-        },
+        state: { successMessage: `Welcome ${formData.email}!` },
       });
     }
   };
 
   const togglePasswordVisibility = () => {
-    setShowPassword(!showPassword);
+    setShowPassword((prev) => !prev);
   };
   return (
     <div className={styles.auth_wrapper}>
@@ -47,19 +78,33 @@ const SignIn = () => {
             Back to website
           </Link>
           {successMessage && (
-            <MessageDisplayCard message={successMessage} type="success" />
+            <MessageDisplayCard
+              message={DOMPurify.sanitize(successMessage)}
+              type="success"
+            />
           )}
           <div className={styles.auth_form_container}>
             {loading && (
               <GridLoader
                 color="#333"
                 margin={30}
-                size={50}
+                size={40}
                 className={styles.auth_loading}
               />
             )}
             <h2>Welcome</h2>
-            <form onSubmit={handleSubmit} aria-labelledby="signin-form">
+            <form
+              onSubmit={handleSubmit}
+              aria-labelledby="signin-form"
+              className={styles.sign_in_form}
+            >
+              <input
+                type="text"
+                name="honeypot"
+                style={{ display: 'none' }}
+                tabIndex={-1}
+                autoComplete="off"
+              />
               <div className={styles.form_input_group}>
                 <label htmlFor="email">Email</label>
                 <input
@@ -70,7 +115,11 @@ const SignIn = () => {
                   value={formData.email}
                   onChange={handleChange}
                   aria-required="true"
+                  className={errors.email ? styles.error_border : ''}
                 />
+                {errors.email && (
+                  <p className={styles.error_msg}>{errors.email}</p>
+                )}
               </div>
               <div className={styles.form_input_group}>
                 <label htmlFor="password">Password</label>
@@ -82,13 +131,20 @@ const SignIn = () => {
                   value={formData.password}
                   onChange={handleChange}
                   aria-required="true"
+                  className={errors.password ? styles.error_border : ''}
                 />
-                <span
+
+                <button
+                  type="button"
                   className={styles.password_toggle}
                   onClick={togglePasswordVisibility}
+                  aria-label={showPassword ? 'Hide password' : 'Show password'}
                 >
                   {showPassword ? <FaEyeSlash /> : <FaEye />}
-                </span>
+                </button>
+                {errors.password && (
+                  <p className={styles.error_msg}>{errors.password}</p>
+                )}
               </div>
               {signInError && (
                 <div role="alert" aria-live="assertive">
@@ -96,8 +152,12 @@ const SignIn = () => {
                 </div>
               )}
 
-              <button type="submit" className={styles.form_btn}>
-                Sign In
+              <button
+                type="submit"
+                className={styles.form_btn}
+                disabled={loading}
+              >
+                {loading ? 'Signing in ...' : 'Sign In'}
               </button>
             </form>
 

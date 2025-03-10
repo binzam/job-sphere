@@ -2,9 +2,9 @@ import { RiseLoader } from 'react-spinners';
 
 export const Loader = () => (
   <RiseLoader
-    color="#13ccbb"
-    margin={10}
-    size={25}
+    color="#004386"
+    margin={8}
+    size={20}
     style={{
       position: 'absolute',
       top: '50%',

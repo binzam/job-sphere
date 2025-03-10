@@ -6,13 +6,13 @@
       "logo": "/assets/images/photosnap.svg",
       "new": true,
       "featured": true,
-      "position": "Senior Frontend Developer",
-      "role": "Frontend",
-      "level": "Senior",
+      "position": "Accounting",
+      "role": "Accounting",
+      "level": "Junior",
       "postedAt": "1d ago",
       "contract": "Full Time",
       "location": "USA",
-      "languages": ["HTML", "CSS", "JavaScript"],
+      "skills": ["HTML", "CSS", "JavaScript"],
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error fuga, a debitis tempore sunt dignissimos, aspernatur libero ducimus repellendus aliquam facere doloremque quidem sit soluta nemo, minima nobis architecto quasi ut doloribus laboriosam animi. Eum suscipit neque sint tempora tenetur.",
       "requirements": [
         "Lorem, ipsum dolor sit amet ",
@@ -23,9 +23,9 @@
         "quasi ut doloribus laboriosam animi. Eum suscipit",
         "neque sint tempora tenetur."
       ],
-      "salary": "$110,000 - $140,000",
+      "salary": "$50,000 - $70,000",
       "tools": [],
-      "slots": 2,
+      "slots": 3,
       "category": "Finance"
     },
     {
@@ -34,13 +34,13 @@
       "logo": "/assets/images/manage.svg",
       "new": true,
       "featured": true,
-      "position": "Fullstack Developer",
-      "role": "Fullstack",
+      "position": "Bookkeeper",
+      "role": "Bookkeeper",
       "level": "Mid Level",
       "postedAt": "1d ago",
       "contract": "Part Time",
       "location": "Remote",
-      "languages": ["Python"],
+      "skills": ["Python"],
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error fuga, a debitis tempore sunt dignissimos, aspernatur libero ducimus repellendus aliquam facere doloremque quidem sit soluta nemo, minima nobis architecto quasi ut doloribus laboriosam animi. Eum suscipit neque sint tempora tenetur.",
       "requirements": [
         "Lorem, ipsum dolor sit amet ",
@@ -54,22 +54,21 @@
       "salary": "$110,000 - $140,000",
       "slots": 2,
       "category": "Finance",
-      "categoryLink": "ict",
       "tools": ["React"]
     },
     {
       "id": "3",
-      "company": "Account",
+      "company": "Acrov",
       "logo": "/assets/images/account.svg",
       "new": true,
       "featured": false,
-      "position": "Junior Frontend Developer",
-      "role": "Frontend",
-      "level": "Junior",
+      "position": "Forensic Accounting",
+      "role": "Auditor",
+      "level": "Senior",
       "postedAt": "2d ago",
       "contract": "Part Time",
       "location": "Remote",
-      "languages": ["JavaScript"],
+      "skills": ["JavaScript"],
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error fuga, a debitis tempore sunt dignissimos, aspernatur libero ducimus repellendus aliquam facere doloremque quidem sit soluta nemo, minima nobis architecto quasi ut doloribus laboriosam animi. Eum suscipit neque sint tempora tenetur.",
       "requirements": [
         "Lorem, ipsum dolor sit amet ",
@@ -80,10 +79,9 @@
         "quasi ut doloribus laboriosam animi. Eum suscipit",
         "neque sint tempora tenetur."
       ],
-      "salary": "$110,000 - $140,000",
+      "salary": "$150,000 - $180,000",
       "slots": 2,
       "category": "Finance",
-      "categoryLink": "ict",
       "tools": ["React", "Sass"]
     },
     {
@@ -98,7 +96,7 @@
       "postedAt": "5d ago",
       "contract": "Contract",
       "location": "USA",
-      "languages": ["CSS", "JavaScript"],
+      "skills": ["CSS", "JavaScript"],
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error fuga, a debitis tempore sunt dignissimos, aspernatur libero ducimus repellendus aliquam facere doloremque quidem sit soluta nemo, minima nobis architecto quasi ut doloribus laboriosam animi. Eum suscipit neque sint tempora tenetur.",
       "requirements": [
         "Lorem, ipsum dolor sit amet ",
@@ -112,7 +110,6 @@
       "salary": "$110,000 - $140,000",
       "slots": 2,
       "category": "Social Science",
-      "categoryLink": "ict",
       "tools": []
     },
     {
@@ -127,7 +124,7 @@
       "postedAt": "1w ago",
       "contract": "Full Time",
       "location": "Japan",
-      "languages": ["JavaScript"],
+      "skills": ["JavaScript"],
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error fuga, a debitis tempore sunt dignissimos, aspernatur libero ducimus repellendus aliquam facere doloremque quidem sit soluta nemo, minima nobis architecto quasi ut doloribus laboriosam animi. Eum suscipit neque sint tempora tenetur.",
       "requirements": [
         "Lorem, ipsum dolor sit amet ",
@@ -141,7 +138,6 @@
       "salary": "$110,000 - $140,000",
       "slots": 2,
       "category": "ICT",
-      "categoryLink": "ict",
       "tools": ["Ruby", "Sass"]
     },
     {
@@ -156,7 +152,7 @@
       "postedAt": "2w ago",
       "contract": "Full Time",
       "location": "UK",
-      "languages": ["Ruby"],
+      "skills": ["Ruby"],
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error fuga, a debitis tempore sunt dignissimos, aspernatur libero ducimus repellendus aliquam facere doloremque quidem sit soluta nemo, minima nobis architecto quasi ut doloribus laboriosam animi. Eum suscipit neque sint tempora tenetur.",
       "requirements": [
         "Lorem, ipsum dolor sit amet ",
@@ -170,7 +166,6 @@
       "salary": "$110,000 - $140,000",
       "slots": 2,
       "category": "ICT",
-      "categoryLink": "ict",
       "tools": ["RoR"]
     },
     {
@@ -185,7 +180,7 @@
       "postedAt": "2w ago",
       "contract": "Full Time",
       "location": "Canada",
-      "languages": ["HTML", "JavaScript"],
+      "skills": ["HTML", "JavaScript"],
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error fuga, a debitis tempore sunt dignissimos, aspernatur libero ducimus repellendus aliquam facere doloremque quidem sit soluta nemo, minima nobis architecto quasi ut doloribus laboriosam animi. Eum suscipit neque sint tempora tenetur.",
       "requirements": [
         "Lorem, ipsum dolor sit amet ",
@@ -199,7 +194,6 @@
       "salary": "$110,000 - $140,000",
       "slots": 2,
       "category": "ICT",
-      "categoryLink": "ict",
       "tools": ["Sass"]
     },
     {
@@ -214,7 +208,7 @@
       "postedAt": "2w ago",
       "contract": "Full Time",
       "location": "USA",
-      "languages": ["JavaScript"],
+      "skills": ["JavaScript"],
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error fuga, a debitis tempore sunt dignissimos, aspernatur libero ducimus repellendus aliquam facere doloremque quidem sit soluta nemo, minima nobis architecto quasi ut doloribus laboriosam animi. Eum suscipit neque sint tempora tenetur.",
       "requirements": [
         "Lorem, ipsum dolor sit amet ",
@@ -228,7 +222,6 @@
       "salary": "$110,000 - $140,000",
       "slots": 2,
       "category": "ICT",
-      "categoryLink": "ict",
       "tools": ["Vue", "Sass"]
     },
     {
@@ -237,13 +230,13 @@
       "logo": "/assets/images/eyecam-co.svg",
       "new": false,
       "featured": false,
-      "position": "Full Stack Engineer",
-      "role": "Fullstack",
+      "position": "Accounting",
+      "role": "Accountant",
       "level": "Mid Level",
-      "postedAt": "3w ago",
+      "postedAt": "2w ago",
       "contract": "Full Time",
       "location": "Canada",
-      "languages": ["JavaScript", "Python"],
+      "skills": ["JavaScript", "Python"],
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error fuga, a debitis tempore sunt dignissimos, aspernatur libero ducimus repellendus aliquam facere doloremque quidem sit soluta nemo, minima nobis architecto quasi ut doloribus laboriosam animi. Eum suscipit neque sint tempora tenetur.",
       "requirements": [
         "Lorem, ipsum dolor sit amet ",
@@ -254,10 +247,9 @@
         "quasi ut doloribus laboriosam animi. Eum suscipit",
         "neque sint tempora tenetur."
       ],
-      "salary": "$110,000 - $140,000",
+      "salary": "$100,000 - $110,000",
       "slots": 2,
       "category": "Finance",
-      "categoryLink": "ict",
       "tools": ["Django"]
     },
     {
@@ -266,13 +258,13 @@
       "logo": "/assets/images/the-air-filter-company.svg",
       "new": false,
       "featured": false,
-      "position": "Front-end Dev",
-      "role": "Frontend",
+      "position": "Marketing Managment",
+      "role": "Marketing Manager",
       "level": "Junior",
       "postedAt": "1mo ago",
       "contract": "Part Time",
       "location": "Canada",
-      "languages": ["JavaScript"],
+      "skills": ["JavaScript"],
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error fuga, a debitis tempore sunt dignissimos, aspernatur libero ducimus repellendus aliquam facere doloremque quidem sit soluta nemo, minima nobis architecto quasi ut doloribus laboriosam animi. Eum suscipit neque sint tempora tenetur.",
       "requirements": [
         "Lorem, ipsum dolor sit amet ",
@@ -286,7 +278,6 @@
       "salary": "$110,000 - $140,000",
       "slots": 2,
       "category": "Business",
-      "categoryLink": "ict",
       "tools": ["React", "Sass"]
     },
     {
@@ -301,7 +292,7 @@
       "postedAt": "1mo ago",
       "contract": "Part Time",
       "location": "Los Angeles, CA",
-      "languages": ["JavaScript"],
+      "skills": ["JavaScript"],
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error fuga, a debitis tempore sunt dignissimos, aspernatur libero ducimus repellendus aliquam facere doloremque quidem sit soluta nemo, minima nobis architecto quasi ut doloribus laboriosam animi. Eum suscipit neque sint tempora tenetur.",
       "requirements": [
         "Lorem, ipsum dolor sit amet ",
@@ -315,7 +306,6 @@
       "salary": "$110,000 - $140,000",
       "slots": 2,
       "category": "Education",
-      "categoryLink": "ict",
       "tools": ["Adobe Illustrator", "Adobe photoshop"]
     },
     {
@@ -330,7 +320,7 @@
       "postedAt": "1mo ago",
       "contract": "Part Time",
       "location": "New York, NY ",
-      "languages": ["JavaScript"],
+      "skills": ["JavaScript"],
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error fuga, a debitis tempore sunt dignissimos, aspernatur libero ducimus repellendus aliquam facere doloremque quidem sit soluta nemo, minima nobis architecto quasi ut doloribus laboriosam animi. Eum suscipit neque sint tempora tenetur.",
       "requirements": [
         "Lorem, ipsum dolor sit amet ",
@@ -344,7 +334,6 @@
       "salary": "$110,000 - $140,000",
       "slots": 2,
       "category": "ICT",
-      "categoryLink": "ict",
       "tools": ["Adobe Illustrator", "Adobe photoshop"]
     },
     {
@@ -359,7 +348,7 @@
       "postedAt": "1mo ago",
       "contract": "Part Time",
       "location": "New York, NY ",
-      "languages": ["JavaScript"],
+      "skills": ["JavaScript"],
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error fuga, a debitis tempore sunt dignissimos, aspernatur libero ducimus repellendus aliquam facere doloremque quidem sit soluta nemo, minima nobis architecto quasi ut doloribus laboriosam animi. Eum suscipit neque sint tempora tenetur.",
       "requirements": [
         "Lorem, ipsum dolor sit amet ",
@@ -373,7 +362,6 @@
       "salary": "$110,000 - $140,000",
       "slots": 2,
       "category": "ICT",
-      "categoryLink": "ict",
       "tools": ["Adobe Illustrator", "Adobe photoshop"]
     },
     {
@@ -388,7 +376,7 @@
       "postedAt": "1mo ago",
       "contract": "Full Time",
       "location": "Ethiopia",
-      "languages": ["JavaScript"],
+      "skills": ["JavaScript"],
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error fuga, a debitis tempore sunt dignissimos, aspernatur libero ducimus repellendus aliquam facere doloremque quidem sit soluta nemo, minima nobis architecto quasi ut doloribus laboriosam animi. Eum suscipit neque sint tempora tenetur.",
       "requirements": [
         "Lorem, ipsum dolor sit amet ",
@@ -402,7 +390,6 @@
       "salary": "$110,000 - $140,000",
       "slots": 2,
       "category": "Business",
-      "categoryLink": "ict",
       "tools": ["React", "Sass"]
     },
     {
@@ -417,7 +404,7 @@
       "postedAt": "1mo ago",
       "contract": "Full Time",
       "location": "Ethiopia",
-      "languages": ["JavaScript"],
+      "skills": ["JavaScript"],
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error fuga, a debitis tempore sunt dignissimos, aspernatur libero ducimus repellendus aliquam facere doloremque quidem sit soluta nemo, minima nobis architecto quasi ut doloribus laboriosam animi. Eum suscipit neque sint tempora tenetur.",
       "requirements": [
         "Lorem, ipsum dolor sit amet ",
@@ -431,7 +418,6 @@
       "salary": "$110,000 - $140,000",
       "slots": 2,
       "category": "Education",
-      "categoryLink": "ict",
       "tools": ["React", "Sass"]
     },
     {
@@ -446,7 +432,7 @@
       "postedAt": "1mo ago",
       "contract": "Full Time",
       "location": "Ethiopia",
-      "languages": ["JavaScript"],
+      "skills": ["JavaScript"],
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error fuga, a debitis tempore sunt dignissimos, aspernatur libero ducimus repellendus aliquam facere doloremque quidem sit soluta nemo, minima nobis architecto quasi ut doloribus laboriosam animi. Eum suscipit neque sint tempora tenetur.",
       "requirements": [
         "Lorem, ipsum dolor sit amet ",
@@ -460,7 +446,34 @@
       "salary": "$110,000 - $140,000",
       "slots": 2,
       "category": "Engineering",
-      "categoryLink": "ict",
+      "tools": ["React", "Sass"]
+    },
+    {
+      "id": "17",
+      "company": "Naija corp.",
+      "logo": "/assets/images/photosnap.svg",
+      "new": false,
+      "featured": false,
+      "position": "Mechanical Engineer",
+      "role": "Mechanic",
+      "level": "Mid Level",
+      "postedAt": "1mo ago",
+      "contract": "Full Time",
+      "location": "Nigeria",
+      "skills": ["JavaScript"],
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error fuga, a debitis tempore sunt dignissimos, aspernatur libero ducimus repellendus aliquam facere doloremque quidem sit soluta nemo, minima nobis architecto quasi ut doloribus laboriosam animi. Eum suscipit neque sint tempora tenetur.",
+      "requirements": [
+        "Lorem, ipsum dolor sit amet ",
+        "consectetur adipisicing elit. Error fuga",
+        "a debitis tempore sunt dignissimos, aspernatur libero",
+        "ducimus repellendus aliquam facere doloremque quidem",
+        "sit soluta nemo, minima nobis architecto",
+        "quasi ut doloribus laboriosam animi. Eum suscipit",
+        "neque sint tempora tenetur."
+      ],
+      "salary": "$110,000 - $140,000",
+      "slots": 1,
+      "category": "Engineering",
       "tools": ["React", "Sass"]
     }
   ],
@@ -533,6 +546,15 @@
       "email": "email@example.com",
       "coverLetter": "I am excited to apply!",
       "resume": "resume.pdf"
+    },
+    {
+      "id": "b26f",
+      "jobId": "1",
+      "firstName": "jo",
+      "lastName": "niness",
+      "email": "u0@u.com",
+      "coverLetter": "dffh",
+      "resume": "Binyam Techan cv.docx"
     }
   ]
 }

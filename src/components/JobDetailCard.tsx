@@ -116,9 +116,9 @@ const JobDetailCard: React.FC<JobDetailCardProps> = ({
             </h3>
 
             <div className={styles.tags}>
-              {job.languages.map((lang) => (
-                <span key={lang} className={styles.tag}>
-                  {lang}
+              {job.skills.map((skill) => (
+                <span key={skill} className={styles.tag}>
+                  {skill}
                 </span>
               ))}
               {job.tools.map((tool) => (

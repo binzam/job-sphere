@@ -33,7 +33,12 @@ const useJobs = () => {
         setJobSectors(sectors);
         setJobs(allJobs);
 
-        setLocations([...new Set(allJobs.map((job) => job.location))]);
+        setLocations(
+          [...new Set(allJobs.map((job) => job.location))].sort((a, b) =>
+            a.toLowerCase().localeCompare(b.toLowerCase())
+          )
+        );
+
         setExperienceLevels([...new Set(allJobs.map((job) => job.level))]);
       } catch (error) {
         setError(error instanceof Error ? error.message : String(error));

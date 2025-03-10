@@ -26,6 +26,7 @@ const Jobs = () => {
     isAnyFilterApplied,
     clearAllFilters,
   } = useJobFilters();
+
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [category, location, experienceLevel]);
@@ -34,6 +35,11 @@ const Jobs = () => {
     location,
     experienceLevel,
   });
+  let title = 'Explore Jobs';
+  if (category) title = `${category} Jobs`;
+  if (role) title = `${role} Jobs`;
+  if (company) title = `Jobs at ${company}`;
+  if (position) title = `${position} Jobs`;
 
   if (loading) return <Loader />;
   if (error)
@@ -44,11 +50,6 @@ const Jobs = () => {
       />
     );
 
-  let title = 'Explore Jobs';
-  if (category) title = `${category} Jobs`;
-  if (role) title = `${role} Jobs`;
-  if (company) title = `Jobs @${company}`;
-  if (position) title = `${position} Jobs`;
   return (
     <div className={styles.job_listing_page}>
       <JobFilters
@@ -57,6 +58,7 @@ const Jobs = () => {
         locations={locations}
         experienceLevels={experienceLevels}
       />
+
       <Container>
         <section className={styles.job_listing_section}>
           <div className={styles.listing_header_wrap}>

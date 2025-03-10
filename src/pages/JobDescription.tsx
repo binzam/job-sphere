@@ -40,16 +40,14 @@ const JobDescription = () => {
       <div className={styles.job_description_page}>
         <JobDetailCard job={job} isAuthenticated={isAuthenticated} />
 
-        {similarJobs.length > 0 && (
           <div className={styles.similar_listings}>
-            <small>Similar Jobs</small>
+            <small>{similarJobs.length > 0 ? "Similar Jobs" : "no similar jobs at the moment"}</small>
             <JobListing listing={similarJobs} />
             <Link to="/jobs" className={styles.cta_button}>
               <IoMdArrowRoundBack />
               See All Jobs
             </Link>
           </div>
-        )}
       </div>
     </Container>
   );

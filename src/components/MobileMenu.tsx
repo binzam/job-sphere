@@ -1,48 +1,48 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { IoMdClose } from 'react-icons/io';
 import styles from '../styles/MobileMenu.module.css';
-import { ImSphere } from 'react-icons/im';
 import { useUser } from '../hooks/useUser';
 import { MdLogout } from 'react-icons/md';
-interface MobileMenuProps {
-  isOpen: boolean;
-  onClose: () => void;
-}
+import { SiQuicklook } from 'react-icons/si';
 
-const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
+const MobileMenu: React.FC = () => {
   const navigate = useNavigate();
-  const { user, logout } = useUser();
+  const { user, logout, isMenuModalOpen, toggleMenuModal } = useUser();
 
   const handleLogout = () => {
     logout();
     navigate('/', { replace: true });
-    onClose();
+    toggleMenuModal();
   };
   return (
     <>
-      <div className={`${styles.mobile_menu} ${isOpen ? styles.open : ''}`}>
+      <div
+        className={`${styles.mobile_menu} ${
+          isMenuModalOpen ? styles.open : ''
+        }`}
+      >
         <div className={styles.mobile_menu_content}>
-          <button className={styles.close_btn} onClick={onClose}>
+          <button className={styles.close_btn} onClick={toggleMenuModal}>
             <IoMdClose />
           </button>
           <ul className={styles.mobile_nav_list}>
             <li>
-              <Link to="/home" onClick={onClose}>
+              <Link to="/" onClick={toggleMenuModal}>
                 Home
               </Link>
             </li>
             <li>
-              <Link to="/jobs" onClick={onClose}>
+              <Link to="/jobs" onClick={toggleMenuModal}>
                 Find jobs
               </Link>
             </li>
             <li>
-              <Link to="/contact" onClick={onClose}>
+              <Link to="/contact" onClick={toggleMenuModal}>
                 Contact us
               </Link>
             </li>
             <li>
-              <Link to="/about" onClick={onClose}>
+              <Link to="/about" onClick={toggleMenuModal}>
                 About
               </Link>
             </li>
@@ -53,7 +53,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
                 <Link
                   to="/auth/sign-in"
                   className={styles.mob_nav_sign_in}
-                  onClick={onClose}
+                  onClick={toggleMenuModal}
                 >
                   Sign In
                 </Link>
@@ -62,7 +62,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
                 <Link
                   to="/auth/join"
                   className={styles.mob_nav_sign_up}
-                  onClick={onClose}
+                  onClick={toggleMenuModal}
                 >
                   Register
                 </Link>
@@ -78,15 +78,15 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
             </button>
           )}
           <span className={styles.mobile_menu_ftr}>
-            <ImSphere />
+            <SiQuicklook />
             Job Sphere
           </span>
         </div>
       </div>
-      {isOpen && (
+      {isMenuModalOpen && (
         <div
           className={`${styles.overlay} ${styles.show}`}
-          onClick={onClose}
+          onClick={toggleMenuModal}
         ></div>
       )}
     </>
