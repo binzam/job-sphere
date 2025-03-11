@@ -1,8 +1,8 @@
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import styles from '../styles/Header.module.css';
+import styles from '../../styles/Header.module.css';
 import { HiOutlineMenuAlt2 } from 'react-icons/hi';
 import { MdLogout } from 'react-icons/md';
-import { useUser } from '../hooks/useUser';
+import { useUser } from '../../hooks/useUser';
 import { SiQuicklook } from 'react-icons/si';
 const Header = () => {
   const location = useLocation();

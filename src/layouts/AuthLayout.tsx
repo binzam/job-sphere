@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router-dom';
 import styles from '../styles/Layout.module.css';
-import Footer from '../components/Footer';
+import Footer from '../components/layout/Footer';
 import { ImSphere } from 'react-icons/im';
 const AuthLayout = () => {
   return (

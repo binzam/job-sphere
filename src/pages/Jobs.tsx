@@ -1,16 +1,16 @@
-import JobListing from '../components/JobListing';
+import JobListing from '../components/job/JobListing';
 import styles from '../styles/Jobs.module.css';
-import Container from '../components/Container';
+import Container from '../components/common/Container';
 import { FaLocationDot } from 'react-icons/fa6';
 import { AiOutlineFileUnknown } from 'react-icons/ai';
 import { SiLevelsdotfyi } from 'react-icons/si';
 import useJobs from '../hooks/useJobs';
-import { Loader } from '../components/Loader';
+import { Loader } from '../components/common/Loader';
 import { useJobFilters } from '../hooks/useJobFilters';
 import useFilteredJobs from '../hooks/useFilteredJobs';
-import JobFilters from '../components/JobFilters';
+import JobFilters from '../components/job/JobFilters';
 import { IoMdClose } from 'react-icons/io';
-import MessageDisplayCard from '../components/MessageDisplayCard';
+import MessageDisplayCard from '../components/common/MessageDisplayCard';
 import { useEffect } from 'react';
 const Jobs = () => {
   const { jobs, jobSectors, locations, experienceLevels, loading, error } =
@@ -46,7 +46,7 @@ const Jobs = () => {
     return (
       <MessageDisplayCard
         message={error || 'Unexpected Error. Please Refresh the page.'}
-        type="success"
+        type="error"
       />
     );
 

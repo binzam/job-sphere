@@ -5,7 +5,7 @@ import {
   FaXTwitter,
   FaYoutube,
 } from 'react-icons/fa6';
-import styles from '../styles/Footer.module.css';
+import styles from '../../styles/Footer.module.css';
 import { Link } from 'react-router-dom';
 const Footer = () => {
   return (

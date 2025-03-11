@@ -1,9 +1,9 @@
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import Header from '../components/layout/Header';
+import Footer from '../components/layout/Footer';
 import { Outlet } from 'react-router-dom';
 import styles from '../styles/Layout.module.css';
-import BackToTopButton from '../components/BackToTopButton';
-import MobileMenu from '../components/MobileMenu';
+import BackToTopButton from '../components/common/BackToTopButton';
+import MobileMenu from '../components/layout/MobileMenu';
 import { useUser } from '../hooks/useUser';
 const Layout = () => {
   const { isMenuModalOpen } = useUser();

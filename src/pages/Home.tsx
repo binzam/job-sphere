@@ -1,14 +1,14 @@
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import styles from '../styles/Home.module.css';
-import JobListing from '../components/JobListing';
-import Container from '../components/Container';
-import JobCategoryListing from '../components/JobCategoryListing';
-import JobSearch from '../components/JobSearch';
+import JobListing from '../components/job/JobListing';
+import Container from '../components/common/Container';
+import JobCategoryListing from '../components/filters/JobCategoryListing';
+import JobSearch from '../components/filters/JobSearch';
 import useJobs from '../hooks/useJobs';
-import { Loader } from '../components/Loader';
+import { Loader } from '../components/common/Loader';
 import { JobFilterProvider } from '../context/JobFilterContext';
 import { FaLongArrowAltRight } from 'react-icons/fa';
-import MessageDisplayCard from '../components/MessageDisplayCard';
+import MessageDisplayCard from '../components/common/MessageDisplayCard';
 const Home = () => {
   const { featuredJobs, jobSectors, loading, error, jobs } = useJobs();
   const navigate = useNavigate();

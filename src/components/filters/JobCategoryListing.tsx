@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import { JobCategory } from '../interfaces';
-import styles from '../styles/JobCategoryListing.module.css';
+import { JobCategory } from '../../interfaces';
+import styles from '../../styles/JobCategoryListing.module.css';
 interface JobCategoryListingProps {
   listing: JobCategory[];
   isDropdown?: boolean;

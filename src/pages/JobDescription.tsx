@@ -1,11 +1,11 @@
 import { Link, useParams } from 'react-router-dom';
 import styles from '../styles/JobDescription.module.css';
-import Container from '../components/Container';
-import { Loader } from '../components/Loader';
-import JobListing from '../components/JobListing';
-import JobDetailCard from '../components/JobDetailCard';
+import Container from '../components/common/Container';
+import { Loader } from '../components/common/Loader';
+import JobListing from '../components/job/JobListing';
+import JobDetailCard from '../components/job/JobDetailCard';
 import { useJob, useSimilarJobs } from '../hooks/useJobs';
-import MessageDisplayCard from '../components/MessageDisplayCard';
+import MessageDisplayCard from '../components/common/MessageDisplayCard';
 import { IoMdArrowRoundBack } from 'react-icons/io';
 import { useUser } from '../hooks/useUser';
 const JobDescription = () => {
@@ -40,14 +40,18 @@ const JobDescription = () => {
       <div className={styles.job_description_page}>
         <JobDetailCard job={job} isAuthenticated={isAuthenticated} />
 
-          <div className={styles.similar_listings}>
-            <small>{similarJobs.length > 0 ? "Similar Jobs" : "no similar jobs at the moment"}</small>
-            <JobListing listing={similarJobs} />
-            <Link to="/jobs" className={styles.cta_button}>
-              <IoMdArrowRoundBack />
-              See All Jobs
-            </Link>
-          </div>
+        <div className={styles.similar_listings}>
+          <small>
+            {similarJobs.length > 0
+              ? 'Similar Jobs'
+              : 'no similar jobs at the moment'}
+          </small>
+          <JobListing listing={similarJobs} />
+          <Link to="/jobs" className={styles.cta_button}>
+            <IoMdArrowRoundBack />
+            See All Jobs
+          </Link>
+        </div>
       </div>
     </Container>
   );

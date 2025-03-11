@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import styles from '../styles/Contact.module.css';
-import MessageDisplayCard from '../components/MessageDisplayCard';
+import MessageDisplayCard from '../components/common/MessageDisplayCard';
 
 const Contact = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);

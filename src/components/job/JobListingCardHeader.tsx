@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaLocationDot } from 'react-icons/fa6';
-import styles from '../styles/JobListingCard.module.css';
-import { Job } from '../interfaces';
+import styles from '../../styles/JobListingCard.module.css';
+import { Job } from '../../interfaces';
 
 interface JobListingCardHeaderProps {
   job: Job;

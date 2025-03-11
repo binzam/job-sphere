@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import styles from '../styles/JobFilters.module.css';
+import styles from '../../styles/JobFilters.module.css';
 import { FaChevronDown, FaChevronUp, FaXmark } from 'react-icons/fa6';
-import JobCategoryListing from './JobCategoryListing';
-import JobFilterOptionsListing from './JobFilterOptionsListing';
-import JobSearch from './JobSearch';
-import { useJobFilters } from '../hooks/useJobFilters';
-import { Job, JobCategory } from '../interfaces';
+import JobCategoryListing from '../filters/JobCategoryListing';
+import JobFilterOptionsListing from '../filters/JobFilterOptionsListing';
+import JobSearch from '../filters/JobSearch';
+import { useJobFilters } from '../../hooks/useJobFilters';
+import { Job, JobCategory } from '../../interfaces';
 
 interface JobFiltersProps {
   jobs: Job[];

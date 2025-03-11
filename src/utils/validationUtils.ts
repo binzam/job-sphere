@@ -1,4 +1,4 @@
-import { ApplicationFormDataState } from '../interfaces';
+import { ApplicationFormDataState, SignUpFormData, ValidationErrors } from '../interfaces';
 
 export const validateApplicationForm = (formData: ApplicationFormDataState) => {
   const errors: Partial<Record<keyof ApplicationFormDataState, string>> = {};
@@ -14,20 +14,8 @@ export const validateApplicationForm = (formData: ApplicationFormDataState) => {
 
   return errors;
 };
-interface ValidationErrors {
-  [key: string]: string;
-}
 
-interface AuthData {
-  email: string;
-  password: string;
-  firstName: string;
-  lastName: string;
-  confirmPassword: string;
-  agreeToTerms: boolean;
-}
-
-export const validateSignUpForm = (formData: AuthData): ValidationErrors => {
+export const validateSignUpForm = (formData: SignUpFormData): ValidationErrors => {
   const errors: ValidationErrors = {};
 
   // First Name and Last Name validation

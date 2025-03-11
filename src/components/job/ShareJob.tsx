@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
-import styles from '../styles/ShareJob.module.css';
-import { FaFacebook, FaWhatsapp, FaXTwitter } from 'react-icons/fa6';
+import styles from '../../styles/ShareJob.module.css';
+import { FaFacebook, FaLink, FaWhatsapp, FaXTwitter } from 'react-icons/fa6';
 import { FaShareAlt } from 'react-icons/fa';
 import { SiGmail } from 'react-icons/si';
+import MessageDisplayCard from '../common/MessageDisplayCard';
 
 interface ShareJobProps {
   jobId: string | number;
@@ -12,7 +13,7 @@ interface ShareJobProps {
 const ShareJob = ({ jobCategory, jobId }: ShareJobProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [jobUrl, setJobUrl] = useState('');
-
+  const [copied, setCopied] = useState(false);
   useEffect(() => {
     if (typeof window !== 'undefined') {
       setJobUrl(`${window.location.origin}/jobs/${jobCategory}/${jobId}`);
@@ -55,7 +56,12 @@ const ShareJob = ({ jobCategory, jobId }: ShareJobProps) => {
         break;
     }
   };
-
+  const copyToClipboard = () => {
+    if (!jobUrl) return;
+    navigator.clipboard.writeText(jobUrl);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
   return (
     <div className={styles.share_job}>
       <button
@@ -96,7 +102,22 @@ const ShareJob = ({ jobCategory, jobId }: ShareJobProps) => {
           >
             <SiGmail className={styles.icon_mail} />
           </button>
+          <button
+            title="Copy Link"
+            onClick={copyToClipboard}
+            aria-label="Copy Link"
+          >
+            <FaLink className={styles.icon_copy} />
+          </button>
         </div>
+      )}
+      {copied && (
+        <MessageDisplayCard
+          autoHide
+          type="success"
+          message="Link Copied."
+          bottom
+        />
       )}
     </div>
   );

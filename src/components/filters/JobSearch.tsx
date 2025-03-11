@@ -1,9 +1,9 @@
-import styles from '../styles/JobSearch.module.css';
-import { Job } from '../interfaces';
+import styles from '../../styles/JobSearch.module.css';
+import { Job } from '../../interfaces';
 import { useState } from 'react';
 import { MdClose } from 'react-icons/md';
 import { IoSearch } from 'react-icons/io5';
-import { useJobFilters } from '../hooks/useJobFilters';
+import { useJobFilters } from '../../hooks/useJobFilters';
 
 type JobSearchProps = {
   jobs: Job[];

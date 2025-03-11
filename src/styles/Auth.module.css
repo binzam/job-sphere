@@ -10,7 +10,7 @@
 .auth_container {
   width: 100%;
   height: 100%;
-  padding: 2rem 1rem 1rem;
+  padding: 2rem 1rem;
   position: relative;
 }
 .back_link {
@@ -38,7 +38,7 @@
   height: 22px;
 }
 .auth_form_container {
-  background: #75757566;
+  background: #a0ade8a6;
   border-radius: 10px;
   padding: 2rem 2rem;
   backdrop-filter: blur(3px);

@@ -1,7 +1,7 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { IoMdClose } from 'react-icons/io';
-import styles from '../styles/MobileMenu.module.css';
-import { useUser } from '../hooks/useUser';
+import styles from '../../styles/MobileMenu.module.css';
+import { useUser } from '../../hooks/useUser';
 import { MdLogout } from 'react-icons/md';
 import { SiQuicklook } from 'react-icons/si';
 

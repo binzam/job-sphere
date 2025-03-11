@@ -2,11 +2,11 @@ import { useState } from 'react';
 import styles from '../styles/Auth.module.css';
 import { Link, useNavigate } from 'react-router-dom';
 import { IoArrowBackCircleSharp } from 'react-icons/io5';
-import Container from '../components/Container';
+import Container from '../components/common/Container';
 import { FaEye, FaEyeSlash } from 'react-icons/fa6';
 import { GridLoader } from 'react-spinners';
 import { useUser } from '../hooks/useUser';
-import MessageDisplayCard from '../components/MessageDisplayCard';
+import MessageDisplayCard from '../components/common/MessageDisplayCard';
 import { SignUpFormData } from '../interfaces';
 import { validateSignUpForm } from '../utils/validationUtils';
 

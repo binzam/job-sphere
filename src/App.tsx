@@ -3,11 +3,11 @@ import { lazy, Suspense } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { JobFilterProvider } from './context/JobFilterContext';
 import { UserProvider } from './context/UserContext';
-import ProtectedRoute from './components/ProtectedRoute';
-import ScrollToTop from './components/ScrollToTop';
+import ProtectedRoute from './components/routes/ProtectedRoute';
+import ScrollToTop from './components/common/ScrollToTop';
 import AuthLayout from './layouts/AuthLayout';
 import Layout from './layouts/Layout';
-import { Loader } from './components/Loader';
+import { Loader } from './components/common/Loader';
 
 const Home = lazy(() => import('./pages/Home'));
 const Jobs = lazy(() => import('./pages/Jobs'));

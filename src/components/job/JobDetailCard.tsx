@@ -1,4 +1,4 @@
-import styles from '../styles/JobDetail.module.css';
+import styles from '../../styles/JobDetail.module.css';
 import {
   FaBusinessTime,
   FaFileSignature,
@@ -11,7 +11,7 @@ import { FaFileUpload } from 'react-icons/fa';
 import { SiLevelsdotfyi } from 'react-icons/si';
 import { MdOutlineDescription, MdOutlineWork } from 'react-icons/md';
 import { IoMdInformationCircleOutline } from 'react-icons/io';
-import { Job } from '../interfaces';
+import { Job } from '../../interfaces';
 import { Link } from 'react-router-dom';
 import { HiOutlineIdentification } from 'react-icons/hi';
 import ShareJob from './ShareJob';

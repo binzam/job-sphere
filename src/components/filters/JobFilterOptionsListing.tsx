@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../styles/JobCategoryListing.module.css';
+import styles from '../../styles/JobCategoryListing.module.css';
 
 interface JobFilterOptionsListingProps {
   listing: string[];

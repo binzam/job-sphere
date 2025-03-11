@@ -80,7 +80,8 @@
 .icon_fb,
 .icon_x,
 .icon_wa,
-.icon_mail {
+.icon_mail,
+.icon_copy {
   width: 16px;
   height: 16px;
 }
@@ -99,6 +100,10 @@
 .icon_mail {
   stroke: #c71610;
   fill: #c71610;
+}
+.icon_copy {
+  stroke: #004386;
+  fill: #00796d;
 }
 @media (max-width: 770px) {
   .share_job {

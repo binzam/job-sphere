@@ -6,10 +6,17 @@
   text-align: center;
   margin: 0.3rem 0;
 }
-.message_card.fixed{
+.message_card.fixed {
   position: fixed;
   transform: translateY(-50%);
-  top:50%;
+  top: 50%;
+  left: 0;
+  right: 0;
+  z-index: 12;
+}
+.message_card.bottom {
+  position: fixed;
+  bottom: 0;
   left: 0;
   right: 0;
   z-index: 12;

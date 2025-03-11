@@ -1,6 +1,6 @@
-import styles from '../styles/JobListingCard.module.css';
+import styles from '../../styles/JobListingCard.module.css';
 import { Link } from 'react-router-dom';
-import { Job } from '../interfaces';
+import { Job } from '../../interfaces';
 import { TbMoneybag } from 'react-icons/tb';
 import JobListingCardHeader from './JobListingCardHeader';
 

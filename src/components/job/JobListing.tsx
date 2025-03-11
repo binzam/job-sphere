@@ -1,6 +1,6 @@
 import JobListingCard from './JobListingCard';
-import styles from '../styles/JobListing.module.css';
-import { Job } from '../interfaces';
+import styles from '../../styles/JobListing.module.css';
+import { Job } from '../../interfaces';
 
 interface JobListingProps {
   listing: Job[];
