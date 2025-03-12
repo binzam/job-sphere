@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styles from '../styles/PrivacyTerms.module.css';
 
 const Privacy = () => {
@@ -36,6 +37,10 @@ const Privacy = () => {
       </p>
 
       <p className={styles.footer_note}>Last updated: March 2025</p>
+      <p>
+        You may also want to read our
+        <Link to="/terms-and-conditions">Terms & conditions</Link>.
+      </p>
     </div>
   );
 };

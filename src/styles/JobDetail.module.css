@@ -66,7 +66,7 @@
 .meta_desc_wrap {
   display: flex;
   align-items: flex-start;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
   gap: 2rem;
 }
 .desc_req_wrap {

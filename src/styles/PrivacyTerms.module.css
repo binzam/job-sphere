@@ -24,7 +24,11 @@
   color: #333;
   font-weight: 500;
 }
-
+.legal_container a{
+  color: #00366b;
+  text-decoration: underline;
+  margin-left: 5px;
+}
 .footer_note {
   font-size: 0.9rem;
   color: #777;

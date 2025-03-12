@@ -45,6 +45,8 @@ const JobFilters: React.FC<JobFiltersProps> = ({
   ) => {
     clearSpecificFilter(filterType);
   };
+  
+
   return (
     <div className={styles.filters}>
       <div className={styles.filters_wrapper}>
@@ -57,8 +59,12 @@ const JobFilters: React.FC<JobFiltersProps> = ({
               category && styles.selected
             }`}
             onClick={() => toggleDropdown('category')}
+            aria-expanded={openDropdown === 'category'}
+            aria-controls="category-dropdown"
+            aria-label="Filter by job category"
+            tabIndex={0}
           >
-           <p className={styles.btn_txt}>{category || 'Choose Category'}</p> 
+            <p className={styles.btn_txt}>{category || 'Choose Category'}</p>
             {category ? (
               <span
                 className={styles.filter_clear}
@@ -66,6 +72,7 @@ const JobFilters: React.FC<JobFiltersProps> = ({
                   e.stopPropagation();
                   clearSelection('category');
                 }}
+                aria-label="Clear category filter"
               >
                 <FaXmark />
               </span>
@@ -90,8 +97,12 @@ const JobFilters: React.FC<JobFiltersProps> = ({
               location && styles.selected
             }`}
             onClick={() => toggleDropdown('location')}
+            aria-expanded={openDropdown === 'location'}
+            aria-controls="location-dropdown"
+            aria-label="Filter by location"
+            tabIndex={0}
           >
-           <p className={styles.btn_txt}>{location || 'Location'}</p> 
+            <p className={styles.btn_txt}>{location || 'Location'}</p>
             {location ? (
               <span
                 className={styles.filter_clear}
@@ -99,6 +110,7 @@ const JobFilters: React.FC<JobFiltersProps> = ({
                   e.stopPropagation();
                   clearSelection('location');
                 }}
+                aria-label="Clear location filter"
               >
                 <FaXmark />
               </span>
@@ -122,8 +134,12 @@ const JobFilters: React.FC<JobFiltersProps> = ({
               experienceLevel && styles.selected
             }`}
             onClick={() => toggleDropdown('experienceLevel')}
+            aria-expanded={openDropdown === 'experienceLevel'}
+            aria-controls="experience-dropdown"
+            aria-label="Filter by experience level"
+            tabIndex={0}
           >
-          <p className={styles.btn_txt}>{experienceLevel || 'Experience'}</p>  
+            <p className={styles.btn_txt}>{experienceLevel || 'Experience'}</p>
             {experienceLevel ? (
               <span
                 className={styles.filter_clear}
@@ -131,6 +147,7 @@ const JobFilters: React.FC<JobFiltersProps> = ({
                   e.stopPropagation();
                   clearSelection('experienceLevel');
                 }}
+                aria-label="Clear experience level filter"
               >
                 <FaXmark />
               </span>

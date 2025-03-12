@@ -64,7 +64,7 @@ const JobSearch: React.FC<JobSearchProps> = ({
     );
     setSuggestions(uniqueSuggestions);
   };
-  
+
   const handleClearSearch = () => {
     setSearchInput('');
     setSuggestions([]);
@@ -90,10 +90,12 @@ const JobSearch: React.FC<JobSearchProps> = ({
         className={`${styles.search_form} ${addStyle}`}
         onSubmit={handleSubmit}
       >
+        <label htmlFor="search"></label>
         <input
           className={` ${styles.search_input} ${addStyle} ${
             searchInput ? styles.active : ''
           }`}
+          id="search"
           type="text"
           value={searchInput}
           placeholder="Search position, company, role ..."

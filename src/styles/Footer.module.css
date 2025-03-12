@@ -13,7 +13,7 @@
 }
 .footer p {
   color: rgb(255, 255, 255);
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   font-weight: 500;
 }
 
@@ -21,7 +21,7 @@
 .platform_links {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1.2rem;
   color: #fff;
 }
 .platform_links a {

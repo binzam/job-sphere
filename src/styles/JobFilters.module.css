@@ -65,6 +65,9 @@
 .dropdownButton:hover {
   background-color: #33333385;
 }
+.dropdownButton:focus {
+  outline: 1px solid #0073e6;
+}
 .dropdownButton.selected {
   background-color: #0073e6;
   border: 1px solid #333;

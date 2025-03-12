@@ -11,7 +11,7 @@ import useFilteredJobs from '../hooks/useFilteredJobs';
 import JobFilters from '../components/job/JobFilters';
 import { IoMdClose } from 'react-icons/io';
 import MessageDisplayCard from '../components/common/MessageDisplayCard';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 const Jobs = () => {
   const { jobs, jobSectors, locations, experienceLevels, loading, error } =
     useJobs();
@@ -27,19 +27,28 @@ const Jobs = () => {
     clearAllFilters,
   } = useJobFilters();
 
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, [category, location, experienceLevel]);
   const filteredJobs = useFilteredJobs(jobs, searchTerm, {
     category,
     location,
     experienceLevel,
   });
+  const [currentPage, setCurrentPage] = useState(1);
+  const jobsPerPage = 8;
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setCurrentPage(1);
+  }, [category, location, experienceLevel, searchTerm]);
+
+  const totalPages = Math.ceil(filteredJobs.length / jobsPerPage);
+  const indexOfLastJob = currentPage * jobsPerPage;
+  const indexOfFirstJob = indexOfLastJob - jobsPerPage;
+  const currentJobs = filteredJobs.slice(indexOfFirstJob, indexOfLastJob);
+
   let title = 'Explore Jobs';
   if (category) title = `${category} Jobs`;
+  if (position) title = `${position} Jobs`;
   if (role) title = `${role} Jobs`;
   if (company) title = `Jobs at ${company}`;
-  if (position) title = `${position} Jobs`;
 
   if (loading) return <Loader />;
   if (error)
@@ -86,8 +95,8 @@ const Jobs = () => {
               )}
             </div>
           </div>
-          {filteredJobs.length > 0 ? (
-            <JobListing listing={filteredJobs} />
+          {currentJobs.length > 0 ? (
+            <JobListing listing={currentJobs} />
           ) : (
             <p className={styles.no_listing}>
               <AiOutlineFileUnknown />
@@ -96,6 +105,43 @@ const Jobs = () => {
           )}
         </section>
       </Container>
+      {totalPages > 1 && (
+        <div
+          className={styles.pagination}
+          role="navigation"
+          aria-label="Pagination Navigation"
+          onKeyDown={(e) => {
+            if (e.key === 'ArrowLeft' && currentPage > 1) {
+              setCurrentPage((prev) => Math.max(prev - 1, 1));
+            }
+            if (e.key === 'ArrowRight' && currentPage < totalPages) {
+              setCurrentPage((prev) => Math.min(prev + 1, totalPages));
+            }
+          }}
+        >
+          <button
+            onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
+            disabled={currentPage === 1}
+            className={styles.page_button}
+                  aria-label="Go to previous page"
+          >
+            Previous
+          </button>
+          <span className={styles.page_info}>
+            Page {currentPage} of {totalPages}
+          </span>
+          <button
+            onClick={() =>
+              setCurrentPage((prev) => Math.min(prev + 1, totalPages))
+            }
+            disabled={currentPage === totalPages}
+            className={styles.page_button}
+            aria-label="Go to next page"
+          >
+            Next
+          </button>
+        </div>
+      )}
     </div>
   );
 };

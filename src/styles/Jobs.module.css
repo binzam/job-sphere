@@ -1,6 +1,8 @@
 .job_listing_page {
   background-color: #fff;
-  padding: 0.5rem 0;
+  padding: 0.5rem 0 4rem;
+  min-height: calc(100vh - 70px);
+  position: relative;
 }
 
 .job_listing_section {
@@ -50,7 +52,7 @@
   font-size: 0.8rem;
   font-weight: 600;
   border: 1px solid #333;
- }
+}
 .clear_all_Button svg {
   width: 19px;
   height: 19px;
@@ -69,6 +71,50 @@
   align-items: center;
   justify-content: center;
   gap: 0.3rem;
+}
+.pagination {
+  position: absolute;
+  bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.page_button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 35px;
+  border-radius: 100vw;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.page_button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+.page_button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+.page_info {
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin: 0 1rem;
+  color: #333;
+}
+.page_button:focus {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
 }
 @media only screen and (max-width: 1100px) {
   .job_listing_section {

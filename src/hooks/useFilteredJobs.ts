@@ -19,13 +19,13 @@ const useFilteredJobs = (
         ? ''
         : searchTerm[Object.keys(searchTerm)[0]]?.toLowerCase() || '';
     return jobs.filter((job) => {
+     
       const matchesSearchTerm = trimmedSearchTerm
-        ? Object.values(job).some(
-            (value) =>
-              typeof value === 'string' &&
-              value.toLowerCase().includes(trimmedSearchTerm)
-          )
-        : true;
+      ? [job.company, job.role, job.position].some(
+          (value) =>
+            typeof value === 'string' && value.toLowerCase().includes(trimmedSearchTerm)
+        )
+      : true;
 
       const matchesCategory = category ? job.category === category : true;
       const matchesLocation = location ? job.location === location : true;
