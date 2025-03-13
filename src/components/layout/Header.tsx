@@ -3,7 +3,7 @@ import styles from '../../styles/Header.module.css';
 import { HiOutlineMenuAlt2 } from 'react-icons/hi';
 import { MdLogout } from 'react-icons/md';
 import { useUser } from '../../hooks/useUser';
-import { SiQuicklook } from 'react-icons/si';
+// import { SiQuicklook } from 'react-icons/si';
 const Header = () => {
   const location = useLocation();
   const navigate = useNavigate();
@@ -24,7 +24,8 @@ const Header = () => {
         <div className={styles.logo}>
           <Link to="/">
             <div className={styles.logo_link}>
-             <SiQuicklook />
+             {/* <SiQuicklook /> */}
+              <img src='/assets/images/briefcase-icon.svg' alt="Job Sphere" />
               JOB SPHERE
             </div>
           </Link>

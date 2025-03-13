@@ -104,11 +104,6 @@ npm run build
 Check out the live version of Job-Sphere here:  
 [https://job-sphere-alx.netlify.app/](https://job-sphere-alx.netlify.app/)
 
-## 🎥 Video Demo
-
-Watch the demonstration of the project on YouTube:  
-[https://www.youtube.com/watch?v=RWxqzyIN3f0](https://www.youtube.com/watch?v=RWxqzyIN3f0)
-
 ## 🔮 Future Enhancements
 
 🚀 **Upcoming features:**

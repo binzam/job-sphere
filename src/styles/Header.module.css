@@ -49,10 +49,14 @@
   gap: 2px;
   font-weight: 900;
 }
-.logo_link svg {
+.logo_link img{
+  width: 36px;
+  height: 36px;
+}
+/* .logo_link svg {
   width: 28px;
   height: 28px;
-}
+} */
 .nav {
   display: flex;
   gap: 2rem;

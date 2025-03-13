@@ -23,38 +23,18 @@ const ShareJob = ({ jobCategory, jobId }: ShareJobProps) => {
   const shareToSocialMedia = (platform: string) => {
     if (!jobUrl) return;
 
-    switch (platform) {
-      case 'facebook':
-        window.open(
-          `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
-            jobUrl
-          )}`,
-          '_blank'
-        );
-        break;
-      case 'x':
-        window.open(
-          `https://x.com/intent/post?url=${encodeURIComponent(jobUrl)}`,
-          '_blank'
-        );
-        break;
-      case 'whatsapp':
-        window.open(
-          `https://wa.me/?text=${encodeURIComponent(jobUrl)}`,
-          '_blank'
-        );
-        break;
-      case 'email':
-        window.open(
-          `mailto:?subject=Check out this job&body=${encodeURIComponent(
-            jobUrl
-          )}`,
-          '_blank'
-        );
-        break;
-      default:
-        break;
-    }
+    const urls: { [key: string]: string } = {
+      facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+        jobUrl
+      )}`,
+      x: `https://x.com/intent/post?url=${encodeURIComponent(jobUrl)}`,
+      whatsapp: `https://wa.me/?text=${encodeURIComponent(jobUrl)}`,
+      email: `mailto:?subject=Check out this job&body=${encodeURIComponent(
+        jobUrl
+      )}`,
+    };
+
+    window.open(urls[platform], '_blank');
   };
   const copyToClipboard = () => {
     if (!jobUrl) return;
@@ -68,12 +48,14 @@ const ShareJob = ({ jobCategory, jobId }: ShareJobProps) => {
         className={`${styles.share_btn} ${isOpen ? styles.open : ''}`}
         onClick={() => setIsOpen((prev) => !prev)}
         aria-label="Toggle share options"
+        aria-expanded={isOpen}
+        aria-haspopup="menu"
       >
         <span className={styles.share_btn_txt}>Share Job</span>{' '}
         <FaShareAlt className={styles.share_icon} />
       </button>
       {isOpen && (
-        <div className={styles.share_buttons}>
+        <div className={styles.share_buttons}  role="menu">
           <button
             title="Share on Facebook"
             onClick={() => shareToSocialMedia('facebook')}
@@ -117,6 +99,7 @@ const ShareJob = ({ jobCategory, jobId }: ShareJobProps) => {
           type="success"
           message="Link Copied."
           bottom
+          aria-live="assertive"
         />
       )}
     </div>

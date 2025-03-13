@@ -75,6 +75,7 @@ const Jobs = () => {
               <button
                 className={styles.clear_all_Button}
                 onClick={clearAllFilters}
+                tabIndex={0}
               >
                 <IoMdClose /> Clear All Filters
               </button>
@@ -123,7 +124,7 @@ const Jobs = () => {
             onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
             disabled={currentPage === 1}
             className={styles.page_button}
-                  aria-label="Go to previous page"
+            aria-label="Go to previous page"
           >
             Previous
           </button>

@@ -252,6 +252,7 @@ const JobApplication: React.FC = () => {
                     className={`${styles.file_input_label} ${
                       fileName && styles.selected
                     }`}
+                    tabIndex={0}
                   >
                     <TbHandClick />
                     Click to {fileName ? 'choose a different ' : 'select'} CV

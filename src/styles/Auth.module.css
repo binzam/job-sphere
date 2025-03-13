@@ -126,6 +126,11 @@
   width: 20px;
   height: 20px;
 }
+.password_toggle:focus {
+  outline: 1px solid #001a28;
+  outline-offset: 1px;
+  color: #333;
+}
 .password_toggle:hover {
   color: #333;
 }
@@ -165,7 +170,10 @@
   margin-top: 0.4rem;
   box-sizing: border-box;
 }
-
+.form_btn:focus{
+  outline: 2px solid #ddd;
+  outline-offset: 2px;
+}
 .form_btn:hover {
   background-color: #0056b3;
 }

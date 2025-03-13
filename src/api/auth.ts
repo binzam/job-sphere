@@ -1,6 +1,6 @@
 import axios from 'axios';
 import bcrypt from 'bcryptjs';
-
+import API_URL from '../constants';
 export const signUpUser = async (userData: {
   firstName: string;
   lastName: string;
@@ -30,7 +30,7 @@ export const signUpUser = async (userData: {
 
   try {
     const { data: existingUser } = await axios.get(
-      `${import.meta.env.VITE_API_URL}users?email=${userData.email}`
+      `${API_URL}users?email=${userData.email}`
     );
     if (existingUser.length > 0) {
       return { success: false, message: 'Email already exists.' };
@@ -38,7 +38,7 @@ export const signUpUser = async (userData: {
 
     const hashedPassword = await bcrypt.hash(userData.password, 10);
 
-    const response = await axios.post(`${import.meta.env.VITE_API_URL}users`, {
+    const response = await axios.post(`${API_URL}users`, {
       firstName: userData.firstName,
       lastName: userData.lastName,
       email: userData.email,
@@ -61,7 +61,7 @@ export const signInUser = async (email: string, password: string) => {
 
   try {
     const { data: users } = await axios.get(
-      `${import.meta.env.VITE_API_URL}users?email=${email}`
+      `${API_URL}users?email=${email}`
     );
 
     if (users.length === 0) {

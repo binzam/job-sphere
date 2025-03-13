@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 import { JobCategory } from '../../interfaces';
 import styles from '../../styles/JobCategoryListing.module.css';
+import { useEffect, useRef, useState } from 'react';
+import { handleDropdownKeyDown } from '../../utils/keyboardUtils';
 interface JobCategoryListingProps {
   listing: JobCategory[];
   isDropdown?: boolean;
@@ -14,22 +16,47 @@ const JobCategoryListing: React.FC<JobCategoryListingProps> = ({
   onCategorySelect,
   onClose,
 }) => {
-  const handleCategoryClick = (category: string) => {
-    if (onCategorySelect && onClose) {
-      onCategorySelect(category);
-      onClose();
-    }
-  };
+  const [focusedIndex, setFocusedIndex] = useState(0);
+  const listRef = useRef<HTMLUListElement>(null);
+  useEffect(() => {
+    setFocusedIndex(0);
+  }, [listing]);
 
   if (isDropdown && onClose) {
     return (
-      <div className={styles.dropdown}>
-        <ul className={styles.dropdownMenu}>
-          {listing.map((sector) => (
+      <div className={styles.dropdown} role="menu">
+        <ul
+          className={styles.dropdownMenu}
+          ref={listRef}
+          tabIndex={0}
+          onKeyDown={(event) =>
+            handleDropdownKeyDown(
+              event,
+              listing,
+              focusedIndex,
+              setFocusedIndex,
+              (category) => onCategorySelect?.(category.title),
+              onClose
+            )
+          }
+          onBlur={(e) => {
+            if (!e.currentTarget.contains(e.relatedTarget)) {
+              onClose();
+            }
+          }}
+        >
+          {listing.map((sector, index) => (
             <li
               key={sector.title}
-              className={styles.dropdownItem}
-              onClick={() => handleCategoryClick(sector.title)}
+              className={`${styles.dropdownItem} ${
+                focusedIndex === index ? styles.focused : ''
+              }`}
+              onClick={() => {
+                onCategorySelect?.(sector.title);
+                onClose?.();
+              }}
+              tabIndex={-1}
+              aria-selected={focusedIndex === index}
             >
               <img src={sector.icon} alt={sector.title} /> <p>{sector.title}</p>
             </li>

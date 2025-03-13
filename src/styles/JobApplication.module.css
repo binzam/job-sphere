@@ -15,7 +15,7 @@
 .job_card_wrapper {
   width: 50%;
   min-width: 300px;
-  padding: 0.2rem 2rem ;
+  padding: 0.2rem 2rem;
   background-color: #007bff11;
   border-radius: 10px;
   border: 1px solid #0056b3;
@@ -101,7 +101,7 @@
   line-height: 1;
   height: 14px;
 }
-.input_field:focus {
+.input_field:focus{
   outline: 2px solid blue;
   outline-offset: 2px;
 }
@@ -142,6 +142,11 @@
   color: #000;
   border: 1px solid #006986;
   box-shadow: none;
+}
+.file_input_label:focus{
+  outline: 2px solid blue;
+  outline-offset: 2px;
+  background-color: #f3efef;
 }
 .input_text_area {
   resize: vertical;
@@ -185,7 +190,11 @@
   margin-top: 0.5rem;
 }
 
-.submit_btn:hover {
+.submit_btn:focus {
+  outline: 2px solid #000000;
+  outline-offset: 2px;
+}
+.input_field_file .submit_btn:hover {
   background: #0056b3;
 }
 
@@ -200,7 +209,6 @@
   }
 }
 @media only screen and (max-width: 1000px) {
-  
   .application_form_wrapper {
     padding: 1rem 2rem 3rem;
   }

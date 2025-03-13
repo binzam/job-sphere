@@ -1,10 +1,11 @@
 import axios from 'axios';
 import { Job, JobCategory, SubmitApplicationParams } from '../interfaces';
+import API_URL from '../constants';
 
 export const fetchFeaturedJobs = async () => {
   try {
     const response = await axios.get<Job[]>(
-      `${import.meta.env.VITE_API_URL}jobs/`,
+      `${API_URL}jobs/`,
       {
         params: { featured: true },
       }
@@ -19,7 +20,7 @@ export const fetchFeaturedJobs = async () => {
 export const fetchJobSectors = async () => {
   try {
     const response = await axios.get<JobCategory[]>(
-      `${import.meta.env.VITE_API_URL}sectors/`
+      `${API_URL}sectors/`
     );
     return response.data;
   } catch (error) {
@@ -31,7 +32,7 @@ export const fetchJobSectors = async () => {
 export const fetchJobs = async () => {
   try {
     const response = await axios.get<Job[]>(
-      `${import.meta.env.VITE_API_URL}jobs/`
+      `${API_URL}jobs/`
     );
     return response.data;
   } catch (error) {
@@ -42,7 +43,7 @@ export const fetchJobs = async () => {
 export const fetchJobById = async (id: string) => {
   try {
     const response = await axios.get<Job>(
-      `${import.meta.env.VITE_API_URL}jobs/${id}/`
+      `${API_URL}jobs/${id}/`
     );
     // console.log(response);
     return response.data;
@@ -54,7 +55,7 @@ export const fetchJobById = async (id: string) => {
 export const fetchJobsByCategory = async (category: string) => {
   try {
     const response = await axios.get<Job[]>(
-      `${import.meta.env.VITE_API_URL}jobs/`,
+      `${API_URL}jobs/`,
       {
         params: {
           category,
@@ -73,7 +74,7 @@ export const submitApplication = async (
 ): Promise<boolean> => {
   try {
     const response = await axios.post(
-      `${import.meta.env.VITE_API_URL}applications`,
+      `${API_URL}applications`,
       params
     );
     return response.status === 201;
