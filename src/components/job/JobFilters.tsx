@@ -45,7 +45,6 @@ const JobFilters: React.FC<JobFiltersProps> = ({
   ) => {
     clearSpecificFilter(filterType);
   };
-  
 
   return (
     <div className={styles.filters}>
@@ -66,16 +65,24 @@ const JobFilters: React.FC<JobFiltersProps> = ({
           >
             <p className={styles.btn_txt}>{category || 'Choose Category'}</p>
             {category ? (
-              <button
+              <span
                 className={styles.filter_clear}
                 onClick={(e) => {
                   e.stopPropagation();
                   clearSelection('category');
                 }}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    clearSelection('category');
+                  }
+                }}
                 aria-label="Clear category filter"
+                role="button"
+                tabIndex={0}
               >
                 <FaXmark />
-              </button>
+              </span>
             ) : openDropdown === 'category' ? (
               <FaChevronUp />
             ) : (
@@ -100,20 +107,29 @@ const JobFilters: React.FC<JobFiltersProps> = ({
             aria-expanded={openDropdown === 'location'}
             aria-controls="location-dropdown"
             aria-label="Filter by location"
+            role="button"
             tabIndex={0}
           >
             <p className={styles.btn_txt}>{location || 'Location'}</p>
             {location ? (
-              <button
+              <span
                 className={styles.filter_clear}
                 onClick={(e) => {
                   e.stopPropagation();
                   clearSelection('location');
                 }}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    clearSelection('location');
+                  }
+                }}
                 aria-label="Clear location filter"
+                role="button"
+                tabIndex={0}
               >
                 <FaXmark />
-              </button>
+              </span>
             ) : openDropdown === 'location' ? (
               <FaChevronUp />
             ) : (
@@ -141,16 +157,24 @@ const JobFilters: React.FC<JobFiltersProps> = ({
           >
             <p className={styles.btn_txt}>{experienceLevel || 'Experience'}</p>
             {experienceLevel ? (
-              <button
+              <span
                 className={styles.filter_clear}
                 onClick={(e) => {
                   e.stopPropagation();
                   clearSelection('experienceLevel');
                 }}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    clearSelection('experienceLevel');
+                  }
+                }}
+                role="button"
+                tabIndex={0}
                 aria-label="Clear experience level filter"
               >
                 <FaXmark />
-              </button>
+              </span>
             ) : openDropdown === 'experienceLevel' ? (
               <FaChevronUp />
             ) : (
